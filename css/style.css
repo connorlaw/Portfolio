@@ -425,6 +425,10 @@ canvas {
     width: 30px;
 }
 
+#msg {
+    margin-bottom: 50px;
+}
+
 @media only screen and (min-width: 800px) {
     .large-width {
         margin-left: 25%;
