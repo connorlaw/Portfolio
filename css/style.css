@@ -216,6 +216,7 @@ canvas {
     background-color: white;
     opacity: 0.8;
     clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
 }
 
 .section-5:after {
@@ -229,6 +230,7 @@ canvas {
     background-color: white;
     opacity: 1;
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
 }
 
 .line {
@@ -315,6 +317,7 @@ canvas {
     background-color: #e3f1f2;
     opacity: 1;
     clip-path: polygon(0 40%, 100% 0%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
 }
 
 .section-4:after {
@@ -328,6 +331,7 @@ canvas {
     background-color: #e3f1f2;
     opacity: 0.4;
     clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
 }
 
 .section-5 {
