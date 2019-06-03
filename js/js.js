@@ -7,6 +7,12 @@ function showPage() {
     loading.style.display = "none";
 }
 
+var brewHeight = $('#brew-1').height();
+console.log(brewHeight);
+var brew = document.getElementById('brew');
+console.log(brew);
+brew.style.height = brewHeight + "px";
+
 window.addEventListener('scroll', () => {
             let parent = document.getElementById('parallax-container');
             let children = parent.getElementsByClassName('para');

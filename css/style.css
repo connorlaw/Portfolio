@@ -429,6 +429,12 @@ canvas {
     margin-bottom: 50px;
 }
 
+#brew {
+    position: relative;
+    width: 90%;
+    text-align: center;
+}
+
 @media only screen and (min-width: 800px) {
     .large-width {
         margin-left: 25%;
@@ -451,7 +457,7 @@ canvas {
         margin-top: 0px;
     }
     
-    .img {
+    .img, #brew {
         width: 50%;
         min-width: 700px;
     }
