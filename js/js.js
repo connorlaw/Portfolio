@@ -1,5 +1,3 @@
-//document.body.classList.add('js-loading');
-
 window.addEventListener("load", showPage);
 
 function showPage() {
@@ -16,38 +14,10 @@ window.addEventListener('scroll', () => {
             }
         }, false)
 
-/*var fade1 = document.getElementById("fade-1");
-console.log(fade1);
-fade1.addEventListener("webkitAnimationEnd", bodOverflow);
-fade1.addEventListener("animationend", bodOverflow);
-
-function bodOverflow() {
-    var bod = document.getElementsByTagName("body")[0];
-    console.log(bod);
-    bod.style.overflow = "visible";
-}*/
-
 var width = $(window.parent.document).width();
 console.log(width);
 
-/*var tl = new TimelineMax();
 
-        tl.from("#fade-2", 2, {
-                left: 0,
-                width: width * 2
-            })
-            .from("#fade-1", 2, {
-                left: 0,
-                width: width * 2
-            }, "-=3")
-
-window.addEventListener('scroll', () => {
-   let parent = document.getElementById('section-1');
-    let children = parent.getElementsByTagName('div');
-   for(let i = 0; i < children.length; i++) {
-     children[i].style.transform = 'translateY(-' + (window.pageYOffset * i) + 'px)';
-   }
-}, false)*/
 var controllerGlobe = new ScrollMagic.Controller();
 var scene01 = new ScrollMagic.Scene({triggerElement: '#h1-1',
     triggerHook: 0.7,
@@ -109,6 +79,12 @@ var scene08 = new ScrollMagic.Scene({triggerElement: '#h1-4',
     opacity: "0",
     delay: 0.3
 })).addTo(controllerGlobe);
+
+
+
+
+
+
 
 if (width <= 500) {
     var controller1 = new ScrollMagic.Controller();
@@ -232,7 +208,34 @@ var scene33 = new ScrollMagic.Scene({
     opacity: "0",
     delay: 0.8
 })).addTo(controller1);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 } else {
+    
+    
+    
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 var controller1 = new ScrollMagic.Controller();
 var scene1 = new ScrollMagic.Scene({
     triggerElement: '.section-3',

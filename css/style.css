@@ -54,9 +54,10 @@ canvas {
 
 #welcome {
     width: 100%;
-    height: 730px;
+    height: 100%;
     text-align: center;
-    line-height: 730px;
+    line-height: 100vh;
+    font-family: 'Special Elite',cursive;
 }
 
 .btn-outer {
@@ -146,7 +147,7 @@ canvas {
     height: 730px;
 }
 
-#parallax-container div {
+#parallax-container div, #parallax-container h3 {
     position: fixed;
     top: 0;
     background-position: center !important;
