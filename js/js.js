@@ -1,8 +1,8 @@
 window.addEventListener("load", showPage);
 
 function showPage() {
-  document.body.classList.remove('js-loading');
-    
+    var loading = document.getElementById('loading');
+    loading.style.display = "none";
 }
 
 window.addEventListener('scroll', () => {

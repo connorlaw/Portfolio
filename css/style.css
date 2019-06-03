@@ -52,12 +52,22 @@ canvas {
     background-color: red;
 }
 
+#loading {
+    background-color: red;
+    width: 100%;
+    height: 10000px;
+    z-index: 10;
+    overflow-y: hidden;
+    position: absolute;
+}
+
 #welcome {
     width: 100%;
     height: 100%;
     text-align: center;
     line-height: 100vh;
     font-family: 'Special Elite',cursive;
+    transform: translateY(0px);
 }
 
 .btn-outer {
@@ -147,7 +157,7 @@ canvas {
     height: 730px;
 }
 
-#parallax-container div, #parallax-container h3 {
+#parallax-container div {
     position: fixed;
     top: 0;
     background-position: center !important;
@@ -356,16 +366,6 @@ canvas {
     animation-direction: alternate;
 }
 
-.email-icon {
-    background-image: url(images/mail-icon-white-1.png);
-    background-repeat: no-repeat;
-    height: 16px;
-    width: 25px;
-    position: absolute;
-    left: 20px;
-    top: 15px
-}
-
 .html-loader {
     border: 10px solid green;
     border-top: 10px solid red;
@@ -424,5 +424,9 @@ canvas {
     .img {
         width: 50%;
         min-width: 700px;
+    }
+    
+    #h1-4 {
+        padding-top: 50px;
     }
 }
