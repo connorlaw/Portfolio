@@ -59,7 +59,7 @@ canvas {
     text-align: center;
 }
 
-.dot {
+/*.dot {
     width: 8px;
     height: 8px;
     background-color: #444;
@@ -90,7 +90,7 @@ canvas {
     0% {top: 45%}
     50% {top: 55%}
     100% {top: 45%}
-}
+}*/
 
 #welcome {
     width: 100%;
