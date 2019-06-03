@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
             let children = parent.getElementsByClassName('para');
             for (let i = 0; i < children.length; i++) {
                 children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / children.length) + 'px)';
-                console.log(children[i]);
+                //console.log(children[i]);
             }
         }, false)
 
