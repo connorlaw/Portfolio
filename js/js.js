@@ -2,6 +2,8 @@ window.addEventListener("load", showPage);
 
 function showPage() {
     var loading = document.getElementById('loading');
+    var body = document.getElementsByTagName('body')[0];
+    body.style.overflow = "scroll";
     loading.style.display = "none";
 }
 
