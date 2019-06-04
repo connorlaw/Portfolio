@@ -403,6 +403,10 @@ canvas {
     animation-iteration-count: infinite;
     animation-duration: 5s;
     animation-direction: alternate;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .brew-2 {
@@ -411,6 +415,8 @@ canvas {
     animation-iteration-count: infinite;
     animation-duration: 5s;
     animation-direction: alternate;
+    position: relative;
+    box-shadow: none;
 }
 
 .section-6 {
@@ -427,15 +433,6 @@ canvas {
     margin-bottom: 50px;
 }
 /*remove this?*/
-
-#brew-1 {
-    position: absolute;
-}
-
-#brew-2 {
-    position: relative;
-    box-shadow: none;
-}
 
 @media only screen and (min-width: 800px) {
     .large-width {
