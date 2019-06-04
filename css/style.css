@@ -355,7 +355,6 @@ canvas {
 .brew {
     position: absolute;
     width: 100%;
-    left: 0;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
@@ -428,11 +427,15 @@ canvas {
 #msg {
     margin-bottom: 50px;
 }
+/*remove this?*/
 
-#brew {
+#brew-1 {
+    position: absolute;
+}
+
+#brew-2 {
     position: relative;
-    width: 90%;
-    text-align: center;
+    box-shadow: none;
 }
 
 @media only screen and (min-width: 800px) {
@@ -457,7 +460,7 @@ canvas {
         margin-top: 0px;
     }
     
-    .img, #brew {
+    .img {
         width: 50%;
         min-width: 700px;
     }
