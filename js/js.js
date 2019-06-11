@@ -21,14 +21,14 @@ console.log(width);
 
 
 var controllerGlobe = new ScrollMagic.Controller();
-var scene01 = new ScrollMagic.Scene({triggerElement: '#h1-1',
+var scene01 = new ScrollMagic.Scene({triggerElement: '#h2-1',
     triggerHook: 0.7,
     reverse: false
-}).setTween(TweenMax.from("#h1-1", 1, {
+}).setTween(TweenMax.from("#h2-1", 1, {
     x: -100,
     opacity: "0"
 })).addTo(controllerGlobe);
-var scene02 = new ScrollMagic.Scene({triggerElement: '#h1-1',
+var scene02 = new ScrollMagic.Scene({triggerElement: '#h2-1',
     triggerHook: 0.7,
     reverse: false
 }).setTween(TweenMax.from("#line-1", 1, {
@@ -36,14 +36,14 @@ var scene02 = new ScrollMagic.Scene({triggerElement: '#h1-1',
     opacity: "0",
     delay: 0.3
 })).addTo(controllerGlobe);
-var scene03 = new ScrollMagic.Scene({triggerElement: '#h1-2',
+var scene03 = new ScrollMagic.Scene({triggerElement: '#h2-2',
     triggerHook: 0.7,
     reverse: false
-}).setTween(TweenMax.from("#h1-2", 1, {
+}).setTween(TweenMax.from("#h2-2", 1, {
     x: -100,
     opacity: "0"
 })).addTo(controllerGlobe);
-var scene04 = new ScrollMagic.Scene({triggerElement: '#h1-2',
+var scene04 = new ScrollMagic.Scene({triggerElement: '#h2-2',
     triggerHook: 0.7,
     reverse: false
 }).setTween(TweenMax.from("#line-2", 1, {
@@ -51,14 +51,14 @@ var scene04 = new ScrollMagic.Scene({triggerElement: '#h1-2',
     opacity: "0",
     delay: 0.3
 })).addTo(controllerGlobe);
-var scene05 = new ScrollMagic.Scene({triggerElement: '#h1-3',
+var scene05 = new ScrollMagic.Scene({triggerElement: '#h2-3',
     triggerHook: 0.7,
     reverse: false
-}).setTween(TweenMax.from("#h1-3", 1, {
+}).setTween(TweenMax.from("#h2-3", 1, {
     x: -100,
     opacity: "0"
 })).addTo(controllerGlobe);
-var scene06 = new ScrollMagic.Scene({triggerElement: '#h1-3',
+var scene06 = new ScrollMagic.Scene({triggerElement: '#h2-3',
     triggerHook: 0.7,
     reverse: false
 }).setTween(TweenMax.from("#line-3", 1, {
@@ -66,14 +66,14 @@ var scene06 = new ScrollMagic.Scene({triggerElement: '#h1-3',
     opacity: "0",
     delay: 0.3
 })).addTo(controllerGlobe);
-var scene07 = new ScrollMagic.Scene({triggerElement: '#h1-4',
+var scene07 = new ScrollMagic.Scene({triggerElement: '#h2-4',
     triggerHook: 0.7,
     reverse: false
-}).setTween(TweenMax.from("#h1-4", 1, {
+}).setTween(TweenMax.from("#h2-4", 1, {
     x: -100,
     opacity: "0"
 })).addTo(controllerGlobe);
-var scene08 = new ScrollMagic.Scene({triggerElement: '#h1-4',
+var scene08 = new ScrollMagic.Scene({triggerElement: '#h2-4',
     triggerHook: 0.7,
     reverse: false
 }).setTween(TweenMax.from("#line-4", 1, {

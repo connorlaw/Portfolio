@@ -18,7 +18,7 @@ body {
     overflow: hidden;
 }
 
-h1 {
+h2 {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 28px;
@@ -178,7 +178,7 @@ canvas {
     width: 100%;
 }
 
-#h1-1,
+#h2-1,
 #line-1 {
     left: -9999;
 }
@@ -461,7 +461,7 @@ canvas {
         min-width: 700px;
     }
     
-    #h1-4 {
+    #h2-4 {
         padding-top: 50px;
     }
     
