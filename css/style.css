@@ -475,21 +475,63 @@ canvas {
     }
 }
 
+#countdown-body {
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: #FFEBEC;
+    overflow: scroll;
+    height: auto;
+}
+
+.countdown h3 {
+    color: #888
+}
+
 #countdown-title {
-    top: 40vh;
-    position: absolute;
+    color: #555
+}
+
+.countdown-h3 {
+    margin-top: 20vh;
     z-index: 2;
     width: 100%;
     text-align: center;
+    font-size: 30px;
 }
 
-#target {
-    position: absolute;
-    height: 100vh;
+#target-container {
     width: 100%;
-    line-height: 100vh;
-    background-color: aqua;
-    margin-left: auto;
-    margin-right: auto;
-    display: inline;
+    margin-top: 5vh;
+}
+
+.target-wrapper {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-color: #84DCC6;
+    border-radius: 15px;
+}
+
+.target {
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    font-size: 60px;
+    color: white;
+}
+
+.day-card {
+    margin: 5vh 15px;
+    display: inline-block;
+    height: 100px;
+    width: 10%;
+    text-align: center;
+}
+
+#surprise {
+    margin-top: 40vh;
+    display: none;
+}
+
+#destination {
+    font-size: 100px;
 }
