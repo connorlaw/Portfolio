@@ -46,6 +46,7 @@ b {
 
 a {
     text-decoration: none;
+    color: #333;
 }
 
 canvas {
@@ -472,4 +473,23 @@ canvas {
     .i-b-4 {
         margin-bottom: 50px;
     }
+}
+
+#countdown-title {
+    top: 40vh;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+}
+
+#target {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    line-height: 100vh;
+    background-color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline;
 }
