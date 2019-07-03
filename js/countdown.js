@@ -55,25 +55,22 @@ var x = setInterval(function () {
 }, 1000);
 
 let xhr = new XMLHttpRequest();
-alert("new XHR var created");
 let url = 'https://api.openweathermap.org/data/2.5/forecast?q=Milan&APPID=f5cc3895d0badad4fb074a429dec5528&units=metric';
-alert("url defined");
 
 xhr.response = 'json';
-alert("set response type");
 xhr.onreadystatechange = () => {
-    alert("listen for ready state change");
     if (xhr.readyState === XMLHttpRequest.DONE) {
         alert("ready state = DONE");
         let response = JSON.parse(xhr.response);
-        alert(response.list);
         console.log(response.list);
         var i;
         for (i = 0; i < response.list.length; i++) {
+            alert("loop and find first day with 12pm");
             var newNum = response.list[i].dt_txt;
             var nextDayDate = new Date(newNum).getTime();
             var tomorrowHours = Math.floor((nextDayDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + 1;
             if (tomorrowHours === 12) {
+                alert("found it! stop!");
                 break
             }
         }
