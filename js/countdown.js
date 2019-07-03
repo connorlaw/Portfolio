@@ -4,7 +4,6 @@ console.log(countdownDate);
 var x = setInterval(function () {
     var now = new Date().getTime();
     var difference = countdownDate - now;
-    console.log(difference);
     var days = Math.floor(difference / (1000 * 60 * 60 * 24));
     var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
@@ -62,6 +61,7 @@ xhr.response = 'json';
 xhr.onreadystatechange = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
         let response = JSON.parse(xhr.response);
+        alert(response.list);
         console.log(response.list);
         var i;
         for (i = 0; i < response.list.length; i++) {
