@@ -65,10 +65,10 @@ xhr.onreadystatechange = () => {
         console.log(response.list);
         var i;
         for (i = 0; i < response.list.length; i++) {
-            alert("loop and find first day with 12pm");
             var newNum = response.list[i].dt_txt;
             var nextDayDate = new Date(newNum).getTime();
             var tomorrowHours = Math.floor((nextDayDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + 1;
+            alert("loop and find first day with 12pm. Current: " + tomorrowHours);
             if (tomorrowHours === 12) {
                 alert("found it! stop!");
                 break
