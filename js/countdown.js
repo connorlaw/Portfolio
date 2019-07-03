@@ -1,4 +1,4 @@
-var countdownDate = new Date("Aug 3, 2019 00:15:10").getTime();
+var countdownDate = new Date("Aug 16, 2019 06:30:00").getTime();
 console.log(countdownDate);
 
 var x = setInterval(function () {
@@ -19,38 +19,41 @@ var x = setInterval(function () {
         document.getElementById('surprise').style.display = "block";
         document.getElementById('destination').style.display = "block";
         var n = 0;
-        var m = 0;
-        var txt = ' MILAN';
-        var txtIntro = " YOU"
-        var speed = 500;
-        var speedIntro = 300;
-
-        function typeWriterIntro() {
-            return new Promise(resolve => {
-                if (m < txtIntro.length) {
-                    document.getElementById("surprise").innerHTML += txtIntro.charAt(m);
-                    m++;
-                    setTimeout(typeWriterIntro, speedIntro);
-                    if (m === txtIntro.length) {
-                        resolve('Success!');
-                        console.log("resolving");
-                    }
-                }
-            })
-        };
-        
-        async function typeWriter() {
-            console.log("awaiting");
-            await typeWriterIntro();
-            console.log("awaited");
+        var txt = ' ?????';
+        var speed = 1600;
+    
+         function typeWriter() {
             if (n < txt.length) {
                 document.getElementById("destination").innerHTML += txt.charAt(n);
                 n++;
+                speed -= 250;
                 setTimeout(typeWriter, speed);
             }
         }
         
         typeWriter();
+        
+        const confettiFactory = (speed, xPos, spin, color) => {
+            return {
+                'speed': speed,
+                'xPos': xPos,
+                'spin': spin,
+                'color': color,
+                move() {
+                    var newDiv = document.createElement('div');
+                    newDiv.classList.add('confetti');
+                    var surprise = document.getElementById("surprise"); 
+                    console.log(newDiv);
+  document.body.insertBefore(newDiv, surprise); 
+                    console.log('made a new confetti element');
+                    //make multiple, give random color, speed for translateY, random start on x axis, random spin (between x and x, not too much spin). these need to be defined randomly by creating a loop and setting them using math.random, with the confettione call in this loop too
+                }
+            }
+        }
+        
+        const confettiOne = confettiFactory(2, 3, 3, 'green');
+        confettiOne.move();
+        
     }
 }, 1000);
 
@@ -60,7 +63,6 @@ let url = 'https://api.openweathermap.org/data/2.5/forecast?q=Milan&APPID=f5cc38
 xhr.response = 'json';
 xhr.onreadystatechange = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
-        alert("ready state = DONE");
         let response = JSON.parse(xhr.response);
         console.log(response.list);
         var i;
@@ -69,10 +71,7 @@ xhr.onreadystatechange = () => {
             //var newNumFormatted = 
             var nextDayDate = new Date(newNum.replace(/-/g, '/')).getTime();
             var tomorrowHours = Math.floor((nextDayDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + 1;
-            alert("loop and find first day with 12pm. newNum: " + newNum + ", nextDayDate: " + nextDayDate + ", tomorrowHours: " + tomorrowHours);
-            console.log(tomorrowHours);
             if (tomorrowHours === 12) {
-                alert("found it! stop!");
                 break
             }
         }
