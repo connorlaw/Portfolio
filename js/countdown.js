@@ -66,7 +66,8 @@ xhr.onreadystatechange = () => {
         var i;
         for (i = 0; i < response.list.length; i++) {
             var newNum = response.list[i].dt_txt;
-            var nextDayDate = new Date(newNum).getTime();
+            //var newNumFormatted = 
+            var nextDayDate = new Date(newNum.replace(/-/g, '/')).getTime();
             var tomorrowHours = Math.floor((nextDayDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + 1;
             alert("loop and find first day with 12pm. newNum: " + newNum + ", nextDayDate: " + nextDayDate + ", tomorrowHours: " + tomorrowHours);
             console.log(tomorrowHours);
