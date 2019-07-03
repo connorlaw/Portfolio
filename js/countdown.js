@@ -56,7 +56,7 @@ var x = setInterval(function () {
 
 let xhr = new XMLHttpRequest();
 alert("new XHR var created");
-let url = 'http://api.openweathermap.org/data/2.5/forecast?q=Milan&APPID=f5cc3895d0badad4fb074a429dec5528&units=metric';
+let url = 'https://api.openweathermap.org/data/2.5/forecast?q=Milan&APPID=f5cc3895d0badad4fb074a429dec5528&units=metric';
 alert("url defined");
 
 xhr.response = 'json';
@@ -64,7 +64,7 @@ alert("set response type");
 xhr.onreadystatechange = () => {
     alert("listen for ready state change");
     if (xhr.readyState === XMLHttpRequest.DONE) {
-        alert("ready stae = DONE");
+        alert("ready state = DONE");
         let response = JSON.parse(xhr.response);
         alert(response.list);
         console.log(response.list);
