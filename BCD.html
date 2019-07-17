@@ -1,0 +1,398 @@
+<!doctype HTML>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Burton's Car Disposal</title>
+    <meta name="author" content="Connor Law">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style type="text/css">
+        body {
+            margin: 0 auto;
+            padding: 0px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 14px;
+            background-color: #8C3039;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+            margin: 0px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-family: 'Cabin', sans-serif;
+            font-weight: 300;
+        }
+
+        h1 {
+            font-family: 'Racing Sans One', cursive;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-family: 'Racing Sans One', cursive;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            z-index: 2;
+            padding-top: 60px;
+        }
+
+        a {
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .nav-p {
+            width: 60px;
+            display: block;
+            margin: 28px 0px 28px 1rem;
+            position: absolute;
+            line-height: 20px;
+            letter-spacing: 0.05rem;
+            font-family: 'Satisfy', sans-serif;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .white {
+            background-color: white;
+        }
+
+        .quote,
+        .mobile-nav {
+            width: 100%;
+            z-index: 10000;
+        }
+
+        .mobile-nav {
+            height: 6rem;
+            position: fixed;
+            /* box-shadow: 0px 0px 10px #f0f0f0; */
+            line-height: 4rem;
+            background-color: #fff;
+            top: 0px;
+        }
+
+        .mobile-nav img {
+            height: 80%;
+            margin-top: 0.5rem;
+        }
+
+        .quote {
+            height: 3rem;
+            background-color: #8C3039;
+            margin-top: 6rem;
+            position: fixed;
+            text-transform: uppercase;
+            font-size: 8px;
+            line-height: 3rem;
+            color: white;
+            top: 0px;
+        }
+
+        .nav-icons {
+            position: absolute;
+            width: 25px;
+            right: 0px;
+            margin: 34px 24px;
+            top: 0px
+        }
+
+        .ni {
+            background-color: #555;
+            height: 4px;
+            width: 25px;
+            display: block;
+            margin: 4px 0px;
+            border-radius: 1.2px;
+        }
+
+        #section-one {
+            height: 50%;
+            width: 100%;
+            position: relative;
+            display: block;
+            margin-top: 9rem;
+            overflow: hidden;
+            color: white;
+        }
+
+        #section-one img {
+            width: 100%;
+            opacity: 0.5;
+            position: fixed;
+            z-index: -1;
+        }
+
+        #section-one h2 {
+            padding-top: 30%;
+        }
+
+        #section-one p {
+            text-transform: uppercase;
+            font-size: 0.75rem
+        }
+
+        #section-two {
+            margin-top: 20%;
+            font-family: 'Cabin', sans-serif;
+            font-weight: 300;
+            padding-bottom: 20%;
+        }
+
+        #section-two p,
+        #section-four p,
+        #section-five p {
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+        }
+
+        #section-three {
+            height: 950px;
+            width: 100%;
+            position: relative;
+            display: block;
+            overflow: hidden;
+        }
+
+        #section-three p {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        #section-three-inner {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            z-index: 1;
+        }
+
+        #aerial {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: 0.3;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            object-fit: cover;
+        }
+
+        .icon {
+            height: 8rem;
+        }
+
+        #section-three h3,
+        #section-three p {
+            position: relative;
+            margin-bottom: 40px
+        }
+
+        #section-four {
+            padding-bottom: 30px;
+        }
+
+        #section-five {
+            height: auto;
+            background-color: #8C3039;
+            color: white;
+            position: relative;
+        }
+
+        #section-five:before {
+            content: '';
+            position: absolute;
+            clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+            width: 50%;
+            height: 41px;
+            right: 0px;
+            margin-top: -40px;
+            background-color: #8C3039;
+        }
+
+        #section-five:after {
+            content: '';
+            position: absolute;
+            clip-path: polygon(0 100%, 0% 0, 100% 100%, 0 100%);
+            width: 50%;
+            height: 41px;
+            left: 0px;
+            margin-top: -40px;
+            background-color: #8C3039;
+            top: 0px;
+        }
+
+        button {
+            height: 50px;
+            width: 200px;
+            font-size: 20px;
+            font-family: 'Oswald', sans-serif;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            border: 1px solid #8C3039;
+            background-color: #8C3039;
+            border-radius: 5px;
+            color: white;
+            box-shadow: 0px 5px 10px -5px #888;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            transition: 0.4s;
+            color: #8C3039;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        button:active {
+            transition: 0.4s;
+            color: #8C3039;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        iframe {
+            height: 50vh;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            border: none;
+            margin-top: 50px;
+        }
+
+        footer {
+            width: 100%;
+            height: auto;
+            background-color: #333;
+            position: relative;
+            color: white;
+        }
+
+        #flex-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: baseline;
+            padding-top: 30px
+        }
+
+        #flex-container div {
+            flex-basis: 200px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            width: auto;
+        }
+
+        .copyright-a {
+            display: block;
+            margin: 0;
+            font-size: 12px;
+            line-height: 12px;
+            padding: 15px 0px 1px 0px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        footer img {
+            width: 60px;
+            /* margin: 20px 40px; */
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <!-- <script src="script.js" type="text/javascript"></script> -->
+</head>
+
+<body>
+    <header>
+        <nav class="mobile-nav center">
+            <p class="nav-p">01832 293336</p>
+            <img src="images/BCD-LOGO.png">
+            <div class="nav-icons">
+                <span class="ni"></span>
+                <span class="ni"></span>
+                <span class="ni"></span>
+            </div>
+        </nav>
+        <div class="quote center">
+            <h1>Get an instant <a href="www.google.com">quote</a> or <a href="www.google.com">call</a> now</h1>
+        </div>
+    </header>
+    <section id="section-one">
+        <img src="images/BCD-LORRY.jpg">
+        <h2 class="center">Burton's Car Disposal</h2>
+        <p class="center" style="font-family: 'Oswald', sans-serif;">Fast and reliable service established over 50 years</p>
+    </section>
+    <section id="section-two" class="center white">
+        <h3>How can we help?</h3>
+        <p>We offer our smooth and efficient business to private individuals, companies and local government in the disposal of all cars and light commercial vehicles.</p>
+        <p>Give us a call and we can usually arrange collection within 24 hours.</p>
+        <p style="font-family: 'Satisfy', sans-serif">If you're interested in parts, you're in luck!</p>
+        <p>We have three acres of vehicles and can supply used parts for a wide range of popular makes and models - body parts, starters, coded radios unlocked, radios for sale... you name it!</p>
+        <p>Whatever you're looking for, give us a call to find if we have it, then come on over. Our friendly staff are on hand to give you assistance.</p>
+        <p> All areas on our site that are open to the public are concreted for your added comfort and safety.</p>
+    </section>
+    <section id="section-three" class="white">
+        <div id="section-three-inner" class="center">
+            <h3>What do we offer?</h3>
+            <img class="icon" src="images/BCD-TRUCK-Dark-RED.png">
+            <p>Abandoned and unwanted cars collected</p>
+            <img class="icon" src="images/BCD-MONEY-2.png">
+            <p>Immediate payment</p>
+            <img class="icon" src="images/BCD-CAR.png">
+            <p>Second-hand spares and fitting</p>
+            <img class="icon" src="images/BCD-ICE.png">
+            <p>Vehicle air con re-charging</p>
+        </div>
+        <img id="aerial" class="center" src="images/BCD-AERIAL.jpg">
+        <!--<p class="center">little imgs here?  Abandoned and unwanted cars collected (little lorry truck?), immediate payment (money?), Second-hand spares and fitting (car? old?), vehicle air con re-charging (snowflake icon?)</p>
+        
+        
+       <p>Summarise::: We're happy to receive cars that have been abandoned, involved in accidents or have simply reached their best-before date.</p> -->
+    </section>
+    <section id="section-four" class="center white">
+        <h3>What next?</h3>
+        <p>We buy hundreds of vehicles every month, to dismantle and scrap.</p>
+        <p>Click the button below to complete a FREE quote and offer for your vehicle. We will then pick up the scrap vehicle at a time convenient to you!</p>
+        <button>FREE QUOTE</button>
+    </section>
+    <section id="section-five" class="center">
+        <h3>How to find us</h3>
+        <p>We are located in Cockbrook Lane, Old Weston, Huntingdon PE28 5LU</p>
+        <p>Please see the maps below where you can see our location and get directions.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17028.52704764217!2d-0.42403126059840984!3d52.3940008230724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487795233474e031%3A0xab32672709d933e8!2sBurton&#39;s+Car+Disposal!5e0!3m2!1sen!2suk!4v1563318310126!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+    <footer class="center">
+        <div id="flex-container"></div>
+        <div><a href="tel:01832293336"><img src="images/BCD-PHONE.png"></a>
+            <p>01832293336</p>
+        </div>
+        <div><a href="mailto:burtoncardisposal@gmail.com?subject=Burtons%20Car%20Disposal%20Enquiry"><img src="images/BCD-EMAIL.png"></a>
+            <p>burtoncardisposal@gmail.com</p>
+        </div>
+        <div><a href="https://www.facebook.com/Burton-Car-Disposal-388285818042107/"><img src="images/BCD-FB.png"></a>
+            <p>Find us on Facebook</p>
+        </div>
+        <div><a href="https://www.google.com/maps/place/Burton's+Car+Disposal/@52.393549,-0.409175,1115m/data=!3m1!1e3!4m5!3m4!1s0x0:0xab32672709d933e8!8m2!3d52.392785!4d-0.409408?hl=en"><img src="images/BCD-ADDRESS.png"></a>
+            <p>Cockbrook Lane<br>Old Weston<br>Nr Huntingdon<br>Cambs<br>PE28 5LU</p>
+        </div>
+        <a class="copyright-a" href="https://connorlaw.co.uk">
+            <p class="copyright">© 2019 Connor Law</p>
+        </a>
+    </footer>
+</body>
+</html>
