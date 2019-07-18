@@ -119,7 +119,7 @@
         }
 
         #section-one {
-            height: 50%;
+            height: 250px;
             width: 100%;
             position: relative;
             display: block;
@@ -135,20 +135,25 @@
             z-index: -1;
         }
 
-        #section-one h2 {
-            padding-top: 30%;
-        }
-
         #section-one p {
             text-transform: uppercase;
             font-size: 0.75rem
+        }
+        
+        .section-one-inner {
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 100%;
+            top: 50%;
         }
 
         #section-two {
             margin-top: 20%;
             font-family: 'Cabin', sans-serif;
             font-weight: 300;
-            padding-bottom: 20%;
+            padding-bottom: 50px;
         }
 
         #section-two p,
@@ -312,6 +317,41 @@
             width: 60px;
             /* margin: 20px 40px; */
         }
+        
+        @media only screen and (min-width: 800px) {
+            #section-one {
+                height: 400px;
+            }
+            
+            #section-one img {
+                height: 100%;
+                object-fit: cover;
+                top: -150px;
+            }
+            
+            #section-two {
+                margin-top: 0;
+            }
+            
+            .section-three-div {
+                display: inline-block;
+                 width: 24%;
+            }
+            
+            #section-three-inner {
+                width: 100%;
+            }
+            
+            #section-three {
+                height: 380px;
+            }
+        }
+        
+        @media only screen and (min-width: 1500px) {
+            #section-one {
+                height: 700px;
+            }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
@@ -337,8 +377,8 @@
     </header>
     <section id="section-one">
         <img src="images/BCD-LORRY.jpg">
-        <h2 class="center">Burton's Car Disposal</h2>
-        <p class="center" style="font-family: 'Oswald', sans-serif;">Fast and reliable service established over 50 years</p>
+        <div class="section-one-inner"><h2 class="center">Burton's Car Disposal</h2>
+        <p class="center" style="font-family: 'Oswald', sans-serif;">Fast and reliable service established over 50 years</p></div>
     </section>
     <section id="section-two" class="center white">
         <h3>How can we help?</h3>
@@ -352,14 +392,14 @@
     <section id="section-three" class="white">
         <div id="section-three-inner" class="center">
             <h3>What do we offer?</h3>
-            <img class="icon" src="images/BCD-TRUCK-Dark-RED.png">
-            <p>Abandoned and unwanted cars collected</p>
-            <img class="icon" src="images/BCD-MONEY-2.png">
-            <p>Immediate payment</p>
-            <img class="icon" src="images/BCD-CAR.png">
-            <p>Second-hand spares and fitting</p>
-            <img class="icon" src="images/BCD-ICE.png">
-            <p>Vehicle air con re-charging</p>
+            <div class="section-three-div"><img class="icon" src="images/BCD-TRUCK-Dark-RED.png">
+            <p>Abandoned and unwanted cars collected</p></div>
+            <div class="section-three-div"><img class="icon" src="images/BCD-MONEY-2.png">
+            <p>Immediate payment</p></div>
+            <div class="section-three-div"><img class="icon" src="images/BCD-CAR.png">
+            <p>Second-hand spares and fitting</p></div>
+            <div class="section-three-div"><img class="icon" src="images/BCD-ICE.png">
+            <p>Vehicle air con re-charging</p></div>
         </div>
         <img id="aerial" class="center" src="images/BCD-AERIAL.jpg">
         <!--<p class="center">little imgs here?  Abandoned and unwanted cars collected (little lorry truck?), immediate payment (money?), Second-hand spares and fitting (car? old?), vehicle air con re-charging (snowflake icon?)</p>
@@ -380,8 +420,7 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17028.52704764217!2d-0.42403126059840984!3d52.3940008230724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487795233474e031%3A0xab32672709d933e8!2sBurton&#39;s+Car+Disposal!5e0!3m2!1sen!2suk!4v1563318310126!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
     <footer class="center">
-        <div id="flex-container"></div>
-        <div><a href="tel:01832293336" style="text-decoration: none"><img src="images/BCD-PHONE.png"></a>
+        <div id="flex-container"><div><a href="tel:01832293336" style="text-decoration: none"><img src="images/BCD-PHONE.png"></a>
             <p>01832293336</p>
         </div>
         <div><a href="mailto:burtoncardisposal@gmail.com?subject=Burtons%20Car%20Disposal%20Enquiry"><img src="images/BCD-EMAIL.png"></a>
@@ -392,7 +431,7 @@
         </div>
         <div><a href="https://www.google.com/maps/place/Burton's+Car+Disposal/@52.393549,-0.409175,1115m/data=!3m1!1e3!4m5!3m4!1s0x0:0xab32672709d933e8!8m2!3d52.392785!4d-0.409408?hl=en"><img src="images/BCD-ADDRESS.png"></a>
             <p>Cockbrook Lane<br>Old Weston<br>Nr Huntingdon<br>Cambs<br>PE28 5LU</p>
-        </div>
+        </div></div>
         <a class="copyright-a" href="https://connorlaw.co.uk">
             <p class="copyright">© 2019 Connor Law</p>
         </a>
