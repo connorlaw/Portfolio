@@ -68,25 +68,68 @@
         .white {
             background-color: white;
         }
-
-        .quote,
-        .mobile-nav {
-            width: 100%;
-            z-index: 10000;
-        }
-
-        .mobile-nav {
+        
+        nav {
             height: 6rem;
             position: fixed;
-            /* box-shadow: 0px 0px 10px #f0f0f0; */
-            line-height: 4rem;
             background-color: #fff;
             top: 0px;
         }
 
-        .mobile-nav img {
+        .quote,
+        .mobile-nav,
+        .desktop-nav {
+            width: 100%;
+            z-index: 10000;
+        }
+        
+        .desktop-nav {
+            display: none;
+        }
+
+        .mobile-nav {
+            line-height: 4rem;
+            display: block;
+        }
+
+        .mobile-nav img, .desktop-nav img {
             height: 80%;
             margin-top: 0.5rem;
+        }
+        
+        .desktop-nav img {
+            margin-left: 30px;
+        }
+        
+        .nav-inner {
+            position: absolute;
+            z-index: 1000001;
+            right: 0px;
+            top: 0px;
+            height: 6rem;
+        }
+        
+        .nav-inner ul {
+            list-style: none;
+            margin: 0px 30px 0px;
+        }
+        
+        .nav-inner li {
+            display: inline-block;
+            line-height: 6rem;
+            padding: 0px 10px;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: 0.6s;
+        }
+        
+        .nav-inner li:hover {
+            color: #8C3039;
+            transition: 0.6s;
+        }
+        
+        .active {
+            color: #8C3039;
         }
 
         .quote {
@@ -315,10 +358,20 @@
 
         footer img {
             width: 60px;
-            /* margin: 20px 40px; */
+            transition: 0.4s;
+        }
+        
+        footer img:hover {
+            opacity: 0.6;
+            transition: 0.4s;
         }
         
         @media only screen and (min-width: 800px) {
+            
+            #section-two p, #section-four p {
+                max-width: 50%;    
+            }
+            
             #section-one {
                 height: 400px;
             }
@@ -345,6 +398,14 @@
             #section-three {
                 height: 380px;
             }
+            
+            .mobile-nav {
+                display: none;
+            }
+            
+            .desktop-nav {
+                display: block;
+            }
         }
         
         @media only screen and (min-width: 1500px) {
@@ -369,6 +430,19 @@
                 <span class="ni"></span>
                 <span class="ni"></span>
                 <span class="ni"></span>
+            </div>
+        </nav>
+        <nav class="desktop-nav">
+            <img src="images/BCD-LOGO.png">
+            <div class="nav-inner">
+                <ul>
+                    <a><li class="active">Home</li></a>
+                    <a><li>Second Hand Spares</li></a>
+                    <a><li>Get Quote</li></a>
+                    <a><li>Gallery</li></a>
+                    <a><li>FAQs</li></a>
+                    <a><li>Contact Us</li></a>
+                </ul>
             </div>
         </nav>
         <div class="quote center">
