@@ -189,11 +189,11 @@
             margin-right: auto;
             text-align: center;
             width: 100%;
-            top: 50%;
+            top: 35%;
         }
 
         #section-two {
-            margin-top: 20%;
+            /* margin-top: 20%; */
             font-family: 'Cabin', sans-serif;
             font-weight: 300;
             padding-bottom: 50px;
@@ -366,20 +366,28 @@
             transition: 0.4s;
         }
         
-        @media only screen and (min-width: 800px) {
-            
-            #section-two p, #section-four p {
-                max-width: 50%;    
-            }
-            
+        @media only screen and (min-width: 728px) {
             #section-one {
                 height: 400px;
             }
             
             #section-one img {
+                width: 100%;
+                object-fit: cover;
+                top: 0px;
+            }
+        }
+        
+        @media only screen and (min-width: 1025px) {
+            
+            #section-one img {
                 height: 100%;
                 object-fit: cover;
                 top: -150px;
+            }
+            
+            #section-two p, #section-four p {
+                max-width: 50%;    
             }
             
             #section-two {
