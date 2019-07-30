@@ -1,0 +1,274 @@
+<!doctype HTML>
+<html>
+    <head>
+    <link rel="stylesheet" href="style-cokefest.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="carousel-container">
+        <img class="carousel" src="images/IMG_1213.JPG">
+        <img class="carousel" src="images/IMG_1541.PNG">
+        <img class="carousel" src="images/IMG_1542.PNG">
+        <img class="carousel" src="images/IMG_8910.JPG">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="btn-container">
+            <span onclick="currentSlide(1)" class="btn-1"></span>
+            <span onclick="currentSlide(2)" class="btn-2"></span>
+            <span onclick="currentSlide(3)" class="btn-3"></span>
+            <span onclick="currentSlide(4)" class="btn-4"></span>
+        </div>
+    </div>
+    <p class="intro" style="margin-top: 100px">It's a tale as old as time itself...</p>
+    <p class="intro">Two best friends who were closer than ever, almost crossing the border from platonic to romantic; thick as thieves enjoying daily work-place proximity, boss-man steak nights and impromtu beer filled rampages</p>
+    <p class="intro">Today, a friendship unwavered despite a separation of 2&#189; hours of English countryside; full to the brim of Area 51 memes and finish-the-job persuasions, their weary hearts were longing for a reunion</p>
+    <p class="intro">All hope was lost for August.... Until... A sparkle of hope, at the end of the tunnel...</p>
+    <p class="intro">Finally, the day has come to touch tips on the ultimate lads Bank Holiday weekend</p>
+    <p class="intro">Ladies.... Gentlemen... This is it.</p>
+    <p class="intro">The event you've all been waiting for.</p>
+    <p class="intro">The event to which Ben was not invited.</p>
+    <p class="intro">The event that ultimately pushed him over the edge.</p>
+    <p class="intro">IT'S<br>MOTHERFUCKING</p>
+    <div class="logo-container"><img src="images/cokefest.png" class="logo"></div>
+    <div id="sticky-container" class="offset">
+        <div id="sticky-outer">
+            <div class="image-container">
+                <img class="sticky-img 1 blops" src="images/blops-small.png">
+                <img class="sticky-img 2 fade" src="images/blops-large.png">
+                <img class="sticky-img 3 fade" src="images/HTTYD-LOGO%20(1).png">
+                <img class="sticky-img 4 fade" src="images/pokemon-logo.png">
+                <img class="sticky-img 5 fade" src="images/beer.png">
+                <img class="sticky-img 6 fade" src="images/sausage%20(1).gif">
+                <img class="sticky-img 7 fade" src="images/jake.png">
+                <img class="sticky-img 8 fade" src="images/ben.png">
+                <img class="sticky-img 9 fade" src="images/tracy.png">
+            </div>
+        </div>
+        <div id="content">
+            <p>Nothing</p>
+            <p>But</p>
+            <p></p>
+            <p>All night long baby.</p>
+            <p>PLUS</p>
+            <p>The critically acclaimed</p>
+            <p>Third installment</p>
+            <p>And more...</p>
+            <p>Cheekt lunt? Perhaps...</p>
+            <p>Bevvies? Likely.</p>
+            <p>Whatever this is? More likely.</p>
+            <p>I know it.</p>
+            <p>This guy knows it.</p>
+            <p>Ben knows it.</p>
+            <p>Tracy knows it.</p>
+            <p>Rip</p>
+        </div>
+    </div>
+    <section class="countdown">
+        <h1>But when, oh when is this joyous occasion occuring?</h1>
+        <p>Fret-not. The countdown clock will tell us exactly how long we have to wait!</p>
+        <div id="countdown">
+        <div id="target-container" class="centre">
+            <div class="target-wrapper centre">
+                <h2 class="target" id="target-days" class="centre"></h2>
+                <h3>DAYS</h3>
+            </div>
+            <div class="target-wrapper centre">
+                <h2 class="target" id="target-hours"></h2>
+                <h3>HOURS</h3>
+            </div>
+            <div class="target-wrapper centre">
+                <h2 class="target" id="target-minutes"></h2>
+                <h3>MINUTES</h3>
+            </div>
+            <div class="target-wrapper centre">
+                <h2 class="target" id="target-seconds"></h2>
+                <h3>SECONDS</h3>
+            </div>
+        </div>
+    </div>
+    <h3 id="surprise" class="countdown-h3">YOU'RE GOING TO...</h3>
+        <h4 id="destination" class="centre" style="display: none;"></h4>
+    </section>
+    
+    
+    
+    
+    <!-- SCRIPT -->
+    
+    
+    
+    
+    <script type="text/javascript">
+        
+        
+        // sticky header/sticky img code
+        
+        
+        var logoC = document.getElementsByClassName("logo-container")[0];
+        var logoOffset = logoC.offsetTop;
+        window.onscroll = function() {
+            if (window.pageYOffset >= logoOffset) {
+                document.getElementsByClassName("logo")[0].classList.add("shrink");
+                logoC.classList.add("small");
+            } else {
+                document.getElementsByClassName("logo")[0].classList.remove("shrink");
+                logoC.classList.remove("small");
+            }
+            var contentPos = document.getElementById("content").getBoundingClientRect().top;
+            var docHeight = document.documentElement.clientHeight;
+            console.log(`contentPos: ${contentPos}, -docHeight*3: ${-(docHeight * 3)}`);
+
+            function hideAll() {
+                var stickys = document.getElementsByClassName("sticky-img");
+                for (let i = 0; i < stickys.length; i++) {
+                    stickys[i].classList.add("fade");
+                    stickys[i].classList.remove("show");
+                }
+            }
+
+            if (contentPos <= -(docHeight * 16)) {
+
+                hideAll();
+
+            } else if (contentPos <= -(docHeight * 14)) {
+
+                hideAll();
+                document.getElementsByClassName("9")[0].classList.remove("fade");
+                document.getElementsByClassName("9")[0].classList.add("show");
+
+            } else if (contentPos <= -(docHeight * 13)) {
+
+                hideAll();
+                document.getElementsByClassName("8")[0].classList.remove("fade");
+                document.getElementsByClassName("8")[0].classList.add("show");
+
+            } else if (contentPos <= -(docHeight * 12)) {
+
+                hideAll();
+                document.getElementsByClassName("7")[0].classList.remove("fade");
+                document.getElementsByClassName("7")[0].classList.add("show");
+
+            } else if (contentPos <= -(docHeight * 10)) {
+
+                hideAll();
+                document.getElementsByClassName("6")[0].classList.remove("fade");
+                document.getElementsByClassName("6")[0].classList.add("show");
+
+            } else if (contentPos <= -(docHeight * 9)) {
+
+                hideAll();
+                document.getElementsByClassName("5")[0].classList.remove("fade");
+                document.getElementsByClassName("5")[0].classList.add("show");
+
+            } else if (contentPos <= -(docHeight * 8)) {
+
+                hideAll();
+                document.getElementsByClassName("4")[0].classList.remove("fade");
+                document.getElementsByClassName("4")[0].classList.add("show");
+
+            } else if (contentPos <= -(docHeight * 5)) {
+
+                hideAll();
+                document.getElementsByClassName("3")[0].classList.remove("fade");
+                document.getElementsByClassName("3")[0].classList.add("show");
+
+            } else if (contentPos <= -(docHeight * 2)) {
+
+                hideAll();
+                document.getElementsByClassName("2")[0].classList.remove("fade");
+                document.getElementsByClassName("2")[0].classList.add("show");
+
+            } else if (contentPos + (docHeight * 2) > 200) {
+
+                hideAll();
+                document.getElementsByClassName("1")[0].classList.remove("fade");
+                document.getElementsByClassName("1")[0].classList.add("show");
+
+            }
+        };
+        
+        
+        
+        // carousel code
+        
+        
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("carousel");
+            var dots = document.getElementsByTagName("span");
+            if (n > slides.length) {
+                slideIndex = 1
+            };
+            if (n < 1) {
+                slideIndex = slides.length
+            };
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            };
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        };
+        
+        
+        
+        
+        // countdown code
+        
+        
+        
+        
+        var countdownDate = new Date("Aug 24, 2019 12:00:00").getTime();
+console.log(countdownDate);
+
+var x = setInterval(function () {
+    var now = new Date().getTime();
+    var difference = countdownDate - now;
+    var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    document.getElementById('target-days').innerHTML = days;
+    document.getElementById('target-hours').innerHTML = hours;
+    document.getElementById('target-minutes').innerHTML = minutes;
+    document.getElementById('target-seconds').innerHTML = seconds;
+    if (difference < 1000) {
+        clearInterval(x);
+        document.getElementById('countdown').style.display = "none";
+        document.getElementById('surprise').style.display = "block";
+        document.getElementById('destination').style.display = "block";
+        var n = 0;
+        var txt = ' ?????';
+        var speed = 1600;
+    
+         function typeWriter() {
+            if (n < txt.length) {
+                document.getElementById("destination").innerHTML += txt.charAt(n);
+                n++;
+                speed -= 250;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        
+        typeWriter(); 
+    }
+}, 1000);
+    </script>
+</body>
+</html>
