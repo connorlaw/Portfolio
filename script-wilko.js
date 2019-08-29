@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", ready);
+var w = window.innerWidth;
+console.log(w);
 
 function ready() {
     var targets = [].slice.call(document.querySelectorAll(".target"));
@@ -84,24 +86,26 @@ function ready() {
     var historyDivScrollHeight = historyDiv.scrollHeight;
     hideAll();
     stickyImgs[0].style.opacity = ".8";
-    window.addEventListener("scroll", function () {
-        if (historyDiv.getBoundingClientRect().top < 0 && historyDiv.getBoundingClientRect().top < 1) {
-            var height = historyDiv.getBoundingClientRect().top;
-            var pos = showPos(height);
-            console.log(pos.toFixed(2));
-            if (pos > 0 && pos <= 0.33) {
-                hideAll();
-                stickyImgs[0].style.opacity = ".8";
-                scale(pos);
-            } else if (pos > 0.33 && pos <= 0.5) {
-                hideAll();
-                stickyImgs[1].style.opacity = ".8";
-                scale(pos);
-            } else if (pos > 0.5) {
-                console.log("Kill Scale");
+    if (w >= 768) {
+        window.addEventListener("scroll", function () {
+            if (historyDiv.getBoundingClientRect().top < 0 && historyDiv.getBoundingClientRect().top < 1) {
+                var height = historyDiv.getBoundingClientRect().top;
+                var pos = showPos(height);
+                console.log(pos.toFixed(2));
+                if (pos > 0 && pos <= 0.33) {
+                    hideAll();
+                    stickyImgs[0].style.opacity = ".8";
+                    scale(pos);
+                } else if (pos > 0.33 && pos <= 0.5) {
+                    hideAll();
+                    stickyImgs[1].style.opacity = ".8";
+                    scale(pos);
+                } else if (pos > 0.5) {
+                    console.log("Kill Scale");
+                };
             };
-        };
-    });
+        });
+    };
 
     function scale(posi) {
         for (let i = 0; i < stickyImgs.length; i++) {
