@@ -776,7 +776,7 @@ section {
 
 #history {
     height: 250%;
-    position: relative
+    position: relative;
 }
 
 .history-outer {
@@ -814,8 +814,8 @@ section {
 }
 
 .history-sticky-outer img {
-    height: 100%;
-    width: auto;
+    width: 100%;
+    /* width: auto; */
     position: absolute;
     left: 60%;
     top: 50%;
@@ -1051,7 +1051,8 @@ footer p {
     }
     
     .history-sticky-outer img {
-        height: 100vh;
+        height: auto;
+        width: 100%;
         object-fit: cover;
     }
     
