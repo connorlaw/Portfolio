@@ -1054,6 +1054,7 @@ footer p {
         height: auto;
         width: 100%;
         object-fit: cover;
+        left: 50%;
     }
     
     .history-sticky-outer img:nth-child(2) {
