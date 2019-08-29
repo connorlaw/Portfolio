@@ -1006,7 +1006,7 @@ footer p {
         margin: auto;
     }
     
-    #legacy p {
+    #legacy p, #intro p {
         float: none;
     }
     
@@ -1057,5 +1057,18 @@ footer p {
     
     .history-sticky-outer img:nth-child(2) {
         display: none;
+    }
+    
+    #stats {
+        margin-top: 0;
+        height: 400px;
+    }
+    
+    #stats::before {
+        height: 400px;
+    }
+    
+    #intro > .intro-right > .wrapper {
+        margin: 0 auto;
     }
 }
