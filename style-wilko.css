@@ -1025,4 +1025,37 @@ footer p {
     #legacy-2, #legacy-3 {
         margin-top: 0px;
     }
+    
+    #legacy-2 div.intro-left:nth-child(1) {
+        top: 50vh;
+    }
+    
+    #legacy-2 div:nth-child(2) {
+        margin-top: -50vh;
+    }
+    
+    #legacy-3 {
+        margin-top: 35vh;
+    }
+    
+    #legacy-2 img {
+        margin: 0 auto;
+    }
+    
+    #legacy-3 div.intro-right {
+        height: 25vh;
+    }
+    
+    #legacy-3 img {
+        margin: 0 auto;
+    }
+    
+    .history-sticky-outer img {
+        height: 100vh;
+        object-fit: cover;
+    }
+    
+    .history-sticky-outer img:nth-child(2) {
+        display: none;
+    }
 }
