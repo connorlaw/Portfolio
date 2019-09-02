@@ -18,6 +18,13 @@ body {
     overflow: hidden;
 }
 
+@font-face {
+    font-family: Baron-Neue;
+    src: url(fonts/Baron-Neue.woff) format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
 h1 {
     font-size: 1.17em;
 }
@@ -426,36 +433,6 @@ canvas {
 }
 /*remove this?*/
 
-@media only screen and (min-width: 800px) {
-    .large-width {
-        margin-left: 25%;
-        margin-right: 25%;
-    }
-    
-    .section-2 p, .section-4 p, .section-5 p {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-    
-    p {
-        font-size: 14px;
-    }
-    
-    .img {
-        width: 50%;
-        min-width: 700px;
-    }
-    
-    #h2-4 {
-        padding-top: 50px;
-    }
-    
-    .i-b-4 {
-        margin-bottom: 50px;
-    }
-}
-
 #countdown-body {
     font-family: 'Barlow Condensed', sans-serif;
     background-color: #FFEBEC;
@@ -563,7 +540,7 @@ i {
 
         svg {
             height: 400px;
-            width: 400px;
+            width: 100%;
             top: 0;
             left: 50%;
             margin: auto;
@@ -862,3 +839,53 @@ i {
             100% {transform: rotate(-150deg); opacity: 1}
         }
 
+@media only screen and (max-width: 767px) {
+    .wrapper {
+        display: block;
+        
+    }
+    
+    .description, .animation {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .large-width {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    
+    .section-2 p, .section-4 p, .section-5 p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+    p {
+        font-size: 14px;
+    }
+    
+    .img {
+        width: 50%;
+        min-width: 700px;
+    }
+    
+    #h2-4 {
+        padding-top: 50px;
+    }
+    
+    .i-b-4 {
+        margin-bottom: 50px;
+    }
+    
+    svg {
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .wrapper {
+        width: 50%;
+    }
+}
