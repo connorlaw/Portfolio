@@ -1,4 +1,4 @@
-var countdownDate = new Date("Aug 16, 2019 06:30:00").getTime();
+var countdownDate = new Date("Aug 2, 2019 20:38:35").getTime();
 console.log(countdownDate);
 
 var x = setInterval(function () {
@@ -19,7 +19,7 @@ var x = setInterval(function () {
         document.getElementById('surprise').style.display = "block";
         document.getElementById('destination').style.display = "block";
         var n = 0;
-        var txt = ' ?????';
+        var txt = ' MILAN';
         var speed = 1600;
     
          function typeWriter() {
