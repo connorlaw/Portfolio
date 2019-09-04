@@ -176,6 +176,11 @@ var scene08 = new ScrollMagic.Scene({
     opacity: "0",
     delay: 0.3
 })).addTo(controllerGlobe);
+var scene09 = new ScrollMagic.Scene({
+    triggerElement: '.skillset',
+    triggerHook: 0.7,
+    reverse: false
+}).setClassToggle('.skillset', 'skillset-animation').addTo(controllerGlobe);
 
 //
 

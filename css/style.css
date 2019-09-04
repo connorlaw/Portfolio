@@ -376,9 +376,12 @@ a {
     width: 100%;
     color: #6b969d;
     width: auto;
-    animation: rotateWords 10s linear forwards 0s;
     text-indent: 5px;
     margin-top: 1px;
+}
+
+.skillset-animation span {
+    animation: rotateWords 10s linear forwards 0s;
 }
 
 .outer-span {
@@ -389,42 +392,42 @@ a {
     white-space: nowrap;
 }
 
-.skillset span:nth-child(2) {
+.skillset-animation span:nth-child(2) {
     animation-delay: 0.8s;
     color: #ed897b;
 }
 
-.skillset span:nth-child(3) {
+.skillset-animation span:nth-child(3) {
     animation-delay: 1.6s;
     color: #7ba6ed;
 }
 
-.skillset span:nth-child(4) {
+.skillset-animation span:nth-child(4) {
     animation-delay: 2.4s;
     color: #c27bed;
 }
 
-.skillset span:nth-child(5) {
+.skillset-animation span:nth-child(5) {
     animation-delay: 3.2s;
     color: #7ba6ed;
 }
 
-.skillset span:nth-child(6) {
+.skillset-animation span:nth-child(6) {
     animation-delay: 4s;
     color: #ed897b;
 }
 
-.skillset span:nth-child(7) {
+.skillset-animation span:nth-child(7) {
     animation-delay: 4.8s;
     color: #c27bed;
 }
 
-.skillset span:nth-child(8) {
+.skillset-animation span:nth-child(8) {
     animation-delay: 5.6s;
     color: #ed897b;
 }
 
-.skillset span:nth-child(9) {
+.skillset-animation span:nth-child(9) {
     animation: rotateWordsFinal 10s linear forwards 0s;
     animation-delay: 6.4s;
     color: #eab865;
