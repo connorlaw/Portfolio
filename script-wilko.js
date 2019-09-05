@@ -84,9 +84,9 @@ function ready() {
     var stickyImgs = document.getElementsByClassName('sticky-img');
     var historyDiv = document.getElementsByClassName('history-outer')[0];
     var historyDivScrollHeight = historyDiv.scrollHeight;
-    hideAll();
-    stickyImgs[0].style.opacity = ".8";
     if (w >= 768) {
+        hideAll();
+        stickyImgs[0].style.opacity = ".8";
         window.addEventListener("scroll", function () {
             if (historyDiv.getBoundingClientRect().top < 0 && historyDiv.getBoundingClientRect().top < 1) {
                 var height = historyDiv.getBoundingClientRect().top;
