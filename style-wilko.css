@@ -722,7 +722,7 @@ section {
     background-color: #cac2bd;
     opacity: 1;
     clip-path: polygon(0 0, 250% 100%, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 0, 250% 100%, 100% 100%, 0 70%);
+    -webkit-clip-path: polygon(0 0, 250% 100%, 100% 100%, 0 100%);
     display: block
 }
 
@@ -991,6 +991,14 @@ footer p {
     footer p {
         line-height: 14px
     }
+    
+    #history {
+        display: none;
+    }
+    
+    #stats-inner .wrapper {
+        height: 100px;
+    }
 }
 
 @media only screen and (max-width:600px) {
@@ -1074,11 +1082,15 @@ footer p {
     
     #stats {
         margin-top: 0;
-        height: 400px;
+        height: 300px;
     }
     
     #stats::before {
-        height: 400px;
+        height: 310px;
+    }
+    
+    #intro {
+        padding-bottom: 100px;
     }
     
     #intro > .intro-right > .wrapper {
