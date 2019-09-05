@@ -684,6 +684,14 @@ section {
     display: flex
 }
 
+#intro p {
+    float: left;
+}
+
+.float p {
+    float: left;
+}
+
 .intro-left {
     overflow: hidden
 }

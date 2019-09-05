@@ -18,7 +18,10 @@ function ready() {
                     lazyAnimationObserver.unobserve(animate);
                 } else if (entry.isIntersecting && entry.target.localName == "h4") {
                     let end = entry.target.dataset.stat;
-                    stats(entry.target, end);
+                    let animate = entry.target;
+                    stats(animate, end);
+                    lazyAnimationObserver.unobserve(animate);
+                    console.log("stop watching!");
                 } else if (entry.isIntersecting) {
                     let animate = entry.target;
                     animate.classList.add("fadeUpText");
@@ -68,7 +71,10 @@ function ready() {
         var current = 0;
         setTimeout(function () {
             var int = setInterval(function () {
-                if (current < end && end > 1000) {
+                console.log("inside setInterval");
+                if (end == entry.innerHTML) {
+                    clearInterval(int);
+                } else if (current < end && end > 1000) {
                     entry.innerHTML = current + 3;
                     current += 6;
                 } else if (current < end) {
@@ -79,6 +85,7 @@ function ready() {
                 }
             }, duration);
         }, 1000);
+        console.log("last");
     };
 
     var stickyImgs = document.getElementsByClassName('sticky-img');
