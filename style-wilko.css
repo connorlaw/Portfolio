@@ -993,6 +993,10 @@ footer p {
     .history-left p:nth-child(2) {
         float: none;
     }
+    
+    .img-2 {
+        display: none;
+    }
 }
 
 @media only screen and (max-width:700px) {
