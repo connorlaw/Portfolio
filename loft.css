@@ -60,7 +60,7 @@ section {
 }
 
 #hero {
-    grid-template-rows: 1fr 60px;
+    grid-template-rows: 1fr 100px;
     height: 100vh;
 }
 
@@ -95,7 +95,6 @@ section {
     height: 30px;
     border: 2px solid white;
     border-radius: 20px;
-    align-self: center;
     grid-column: 6 / 8;
     grid-row: 2;
     position: relative;
