@@ -238,6 +238,7 @@ li:hover::before {
     top: 0;
     z-index: 8999;
     opacity: 0.6;
+    transition: 0.4s;
 }
 
 .sticky .nav-logo {
