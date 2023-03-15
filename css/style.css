@@ -110,6 +110,11 @@ footer {
   display: flex;
 }
 
+.nav__links a {
+  text-decoration: none;
+  color: var(--text);
+}
+
 .nav__links--btn {
   height: 34px;
   width: 34px;
@@ -280,7 +285,7 @@ footer {
  -------------------------------------------------------------------------------- */
 
 .hero {
-  background: url('../images/brew.png') right/550px no-repeat;
+  background: url('../images/brew-half.png') right/550px no-repeat;
   padding: 200px 16px;
 }
 
@@ -289,7 +294,7 @@ footer {
 }
 
 .hero--img {
-  background: url('../images/brew.png') right/contain no-repeat;
+  background: url('../images/brew-half.png') right/contain no-repeat;
   position: absolute;
   height: 300px;
   width: 300px;
@@ -330,6 +335,14 @@ footer {
 .callout {
  position: relative;
  transform: translateY(150px);
+ transition: transform 0.1s ease;
+ transform-style: preserve-3d;
+ will-change: transform;
+ transform-origin: bottom;
+}
+
+.callout:hover .callout--inner {
+  transform: translateZ(12px);
 }
 
 .callout--inner {
@@ -362,6 +375,240 @@ footer {
  position: absolute;
  bottom: -10px;
  border-radius: 50px;
+}
+
+/** --------------------------------------------------------------------------------
+ * LOGO SCROLLER
+ -------------------------------------------------------------------------------- */
+
+ #logo-scroller {
+   display: flex;
+   margin-top: 100px;
+ }
+
+ .logo-scroller--wrap {
+   position: relative;
+   right: calc((100vw - 950px) / 2);
+   width: 100vw;
+   overflow: hidden;
+   transition: 0.4s;
+   transition-timing-function: ease-out;
+ }
+
+ @media (max-width: 981px) {
+   .logo-scroller--wrap {
+     left: -16px;
+   }
+ }
+
+ #logo-scroller img {
+   margin-right: 30px;
+ }
+
+ /** --------------------------------------------------------------------------------
+  * CASE STUDIES
+  -------------------------------------------------------------------------------- */
+  .case-study {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 100px;
+  }
+
+  .case-study--hero {
+    width: 100%;
+  }
+
+  .case-study--small {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .case-study--main h2 {
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .case-study--main p {
+    margin-bottom: 16px;
+  }
+
+  .case-study--info {
+    width: 264px;
+    min-width: 264px;
+    margin-left: 32px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 3px 6px -4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 24px;
+  }
+
+ .case-study-tiles {
+   display: flex;
+   flex-wrap: wrap;
+ }
+
+ .case-study-tile-wrap {
+   width: calc(33.333% - 12px);
+   margin-bottom: 16px;
+   position: relative;
+   transition: 0.2s;
+ }
+
+ .case-study-tile-wrap:not(:nth-of-type(3n)) {
+   margin-right: 16px;
+ }
+
+ .case-study-tile-wrap::before {
+   content: '';
+   background-color: var(--green);
+   width: 85%;
+   margin: 0 auto;
+   left: 0;
+   right: 0;
+   height: 50px;
+   position: absolute;
+   bottom: 0px;
+   border-radius: 50px;
+   display: block;
+   transition: 0.2s;
+ }
+
+ .case-study-tile-wrap:hover {
+   transform: translateY(-4px);
+ }
+
+ .case-study-tile-wrap:hover:before {
+   bottom: -8px;
+ }
+
+ .case-study-tile-wrap:hover .case-study-tile {
+   border: 1px solid var(--green);
+ }
+
+ .case-study-tile {
+   background-color: #fff;
+   border-radius: 12px;
+   padding: 12px;
+   box-shadow: 0px 3px 6px -4px rgba(0, 0, 0, 0.2);
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   text-decoration: none;
+   color: inherit;
+   border: 1px solid #fff;
+ }
+
+ .case-study-tile img {
+   width: 100%;
+   margin-bottom: 20px;
+   height: 196px;
+   border-radius: 12px;
+   object-fit: cover;
+   object-position: center;
+ }
+
+ .case-study-tile--title {
+   font-size: 20px;
+   font-weight: 600;
+   margin-bottom: 12px;
+   display: block;
+ }
+
+ .case-study-tile p {
+   margin: 0;
+ }
+
+ .case-study--tags {
+   margin-top: 16px;
+   display: flex;
+   flex-wrap: wrap;
+ }
+
+ .case-study--tag {
+   margin-bottom: 4px;
+   margin-right: 8px;
+   background-color: var(--green-fade);
+   color: var(--green);
+   border: 1.5px solid var(--green);
+   border-radius: 4px;
+   font-size: 12px;
+   padding: 3px 6px;
+ }
+
+ .case-study--tools {
+   display: flex;
+   flex-wrap: wrap;
+ }
+
+ .case-study--tools img:not(:last-of-type) {
+   margin-bottom: 8px;
+   margin-right: 8px;
+ }
+
+ /** --------------------------------------------------------------------------------
+  * TESTIMONIAL
+  -------------------------------------------------------------------------------- */
+
+  .testimonial {
+    transform: none;
+  }
+
+  .testimonial::before {
+    background-color: var(--green);
+  }
+
+  .testimonial .callout--inner {
+    background-color: var(--green-fade);
+    border: 1px solid var(--green);
+  }
+
+  .testimonial p {
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  .testimonial-quoter {
+    display: flex;
+    margin-top: 24px;
+    align-items: center;
+  }
+
+  .testimonial-quoter img {
+    border-radius: 50px;
+    height: 44px;
+    width: 44px;
+    object-fit: cover;
+    margin-right: 12px;
+  }
+
+ /** --------------------------------------------------------------------------------
+  * TOOLTIPS
+  -------------------------------------------------------------------------------- */
+
+ .tooltip-text {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  font-size: 12px;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
 }
 
 /** --------------------------------------------------------------------------------
@@ -436,6 +683,23 @@ body.dark-mode {
   background-color: #191D1B;
 }
 
+.dark-mode .case-study-tile {
+  background-color: #232524;
+}
+
+.dark-mode .case-study--tag {
+  background-color: var(--green);
+  color: #fff;
+}
+
+.dark-mode .case-study--info {
+  background-color: #232524;
+}
+
+.dark-mode .case-study-tile {
+  border-color: #232524;
+}
+
 /** --------------------------------------------------------------------------------
  * MEDIA QUERIES
  -------------------------------------------------------------------------------- */
@@ -474,6 +738,52 @@ body.dark-mode {
    .services--item:nth-of-type(3), .services--item:nth-of-type(2) {
      order: 1;
    }
+
+   .case-study {
+     flex-wrap: wrap-reverse;
+   }
+
+   .case-study--info {
+     margin-left: 0;
+     width: 100%;
+     margin-bottom: 72px;
+     position: relative;
+     transition: 0.2s;
+     height: auto;
+   }
+
+   .case-study--info-cover {
+     height: 80px;
+     overflow: hidden;
+   }
+
+   .case-study--info-cover::before {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.20073967086834732) 25%, rgba(255,255,255,1) 100%);
+     top: 0;
+     left: 0;
+     z-index: 1;
+     cursor: pointer;
+   }
+
+   .case-study--info-cover::after {
+     position: absolute;
+     left: 50%;
+     bottom: 16px;
+     z-index: 2;
+     border-style: solid;
+     border-width: 0.15em 0.15em 0 0;
+  	 content: '';
+  	 display: inline-block;
+     height: 0.5em;
+     transform: rotate(135deg);
+     vertical-align: top;
+     width: 0.5em;
+     border-color: var(--green);
+   }
  }
 
  @media (min-width: 700px) {
@@ -486,6 +796,10 @@ body.dark-mode {
    .hero {
      background: none;
      padding: 100px 16px 200px;
+   }
+
+   .case-study-tile-wrap {
+     width: calc(50% - 12px);
    }
  }
 
@@ -546,7 +860,7 @@ body.dark-mode {
      grid-gap: 60px;
    }
 
-   .callout {
+   .callout:not(.testimonial) {
      transform: translateY(80px);
    }
 
@@ -558,4 +872,27 @@ body.dark-mode {
      padding-top: 250px;
      padding-bottom: 200px;
    }
+
+   .case-study {
+     margin-top: 44px;
+   }
+
+   .desktop-only {
+     display: none;
+   }
+
+   .testimonial p {
+     font-size: 24px;
+   }
+
+   .case-study-tile-wrap {
+     width: 100%;
+     margin-right: 0 !important;
+   }
  }
+
+ @media (prefers-reduced-motion) {
+  .callout {
+    transform: none !important;
+  }
+}
