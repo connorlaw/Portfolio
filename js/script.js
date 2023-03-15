@@ -27,4 +27,88 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.body.classList.remove('nav__mob-open');
       }
     });
+
+    if (document.getElementById('logo-scroller')) {
+      fancyScroll();
+    }
+
+    if (document.getElementsByClassName('tooltip').length > 0) {
+      registerTooltips();
+    }
+
+    if (document.getElementsByClassName('callout').length > 0) {
+      registerCallouts();
+    }
 });
+
+function fancyScroll(scroller) {
+  const logoScroller = document.getElementById('logo-scroller');
+  const windowHeight = window.innerHeight;
+  if (!logoScroller) throw('Missing logo scroller');
+
+  let scrollPos = 0;
+  window.addEventListener('scroll', (event) => {
+    if (logoScroller.getBoundingClientRect().y < windowHeight) {
+      scrollPos = logoScroller.getBoundingClientRect().y - windowHeight;
+      logoScroller.style.transform = `translateX(${scrollPos}px)`
+    }
+  });
+}
+
+function registerTooltips() {
+  const tooltips = document.getElementsByClassName('tooltip');
+  for (let i = 0; i < tooltips.length; i++) {
+    tooltip(tooltips[i]);
+  }
+}
+
+function tooltip(tooltip) {
+  const tooltipText = tooltip.getAttribute('data-tooltip');
+  if (!tooltipText) throw('Missing tooltip text');
+  tooltip.addEventListener('mouseover', () => {
+    const span = document.createElement('span');
+    span.classList.add('tooltip-text');
+    span.innerHTML = tooltipText;
+    document.body.appendChild(span);
+    window.addEventListener('mousemove', tellPos);
+  });
+  tooltip.addEventListener('mouseout', () => {
+    document.getElementsByClassName('tooltip-text')[0].remove();
+    window.removeEventListener('mousemove', tellPos);
+  });
+}
+
+function tellPos(p) {
+  const tooltip = document.getElementsByClassName('tooltip-text')[0];
+  const tooltipWidth = tooltip.offsetWidth / 2;
+  tooltip.style.left = `${p.pageX - tooltipWidth}px`;
+  tooltip.style.top = `${p.pageY - tooltip.offsetHeight - 12}px`;
+}
+
+function registerCallouts() {
+  const callouts = document.getElementsByClassName('callout');
+  for (let i = 0; i < callouts.length; i++) {
+    callout(callouts[i]);
+  }
+}
+
+function callout(callout) {
+  const motionMatchMedia = window.matchMedia('(prefers-reduced-motion)');
+  const THRESHOLD = 15;
+  if (!motionMatchMedia.matches && !callout.classList.contains('testimonial')) {
+    callout.addEventListener('mousemove', (e) => {
+      const { clientX, clientY, currentTarget } = e;
+      const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
+      const horizontal = (clientX - offsetLeft) / clientWidth;
+      const vertical = (clientY - currentTarget.getBoundingClientRect().top) / clientHeight;
+      const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
+      const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
+
+  	  callout.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1) translateY(150px)`;
+    });
+
+    callout.addEventListener('mouseleave', (e) => {
+      callout.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg) translateY(150px)`;
+    });
+  }
+}
