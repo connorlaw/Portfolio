@@ -115,6 +115,10 @@ footer {
   color: var(--text);
 }
 
+.nav__links li {
+  cursor: pointer;
+}
+
 .nav__links--btn {
   height: 34px;
   width: 34px;
