@@ -462,11 +462,7 @@ footer {
    transition: 0.2s;
  }
 
- .case-study-tile-wrap:not(:nth-of-type(3n)) {
-   margin-right: 16px;
- }
-
- .case-study-tile-wrap::before {
+ .case-study-tile-wrap:not(.case-study-tile-wrap--coming-soon)::before {
    content: '';
    background-color: var(--green);
    width: 85%;
@@ -481,16 +477,52 @@ footer {
    transition: 0.2s;
  }
 
- .case-study-tile-wrap:hover {
+ .case-study-tile-wrap--coming-soon::before {
+   content: '';
+   background-color: rgba(0, 0, 0, 0.2);
+   border-radius: 12px;
+   width: 100%;
+   left: 0;
+   right: 0;
+   height: 100%;
+   position: absolute;
+   bottom: 0;
+   display: block;
+   top: 0;
+   z-index: 99;
+ }
+
+ .case-study-tile-wrap--coming-soon::after {
+   content: 'Coming soon';
+   background-color: var(--green-fade);
+   border-radius: 5px;
+   border: 1.5px solid var(--green);
+   color: var(--green);
+   padding: 4px 8px;
+   font-size: 16px;
+   position: absolute;
+   margin: 0 auto;
+   display: block;
+   top: 50%;
+   z-index: 100;
+   left: 50%;
+   transform: translateX(-50%);
+ }
+
+ .case-study-tile-wrap:not(.case-study-tile-wrap--coming-soon):hover {
    transform: translateY(-4px);
  }
 
- .case-study-tile-wrap:hover:before {
+ .case-study-tile-wrap:not(.case-study-tile-wrap--coming-soon):hover:before {
    bottom: -8px;
  }
 
- .case-study-tile-wrap:hover .case-study-tile {
+ .case-study-tile-wrap:not(.case-study-tile-wrap--coming-soon):hover .case-study-tile {
    border: 1px solid var(--green);
+ }
+
+ .case-study-tile-wrap--coming-soon a {
+   cursor: default;
  }
 
  .case-study-tile {
@@ -504,6 +536,8 @@ footer {
    text-decoration: none;
    color: inherit;
    border: 1px solid #fff;
+   height: 100%;
+   box-sizing: border-box;
  }
 
  .case-study-tile img {
@@ -714,6 +748,22 @@ body.dark-mode {
    }
  }
 
+ @media (min-width: 965px) {
+   .case-study-tile-wrap:not(:nth-of-type(3n)) {
+     margin-right: 16px;
+   }
+ }
+
+ @media (max-width: 964px) {
+   .case-study-tile-wrap {
+     width: calc(50% - 16px);
+   }
+
+   .case-study-tile-wrap:not(:nth-of-type(2n)) {
+     margin-right: 16px;
+   }
+ }
+
  @media (max-width: 949px) {
    .hero {
      background-size: 350px;
@@ -793,6 +843,10 @@ body.dark-mode {
  @media (min-width: 700px) {
    .hero--img {
      display: none;
+   }
+
+   .case-study-tile-wrap {
+     min-width: 300px;
    }
  }
 
