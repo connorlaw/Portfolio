@@ -114,6 +114,11 @@ footer {
   cursor: pointer;
 }
 
+.nav__links a {
+  text-decoration: none;
+  color: var(--text);
+}
+
 .nav__links--btn {
   height: 34px;
   width: 34px;
