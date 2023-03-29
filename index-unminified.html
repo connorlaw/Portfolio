@@ -7,7 +7,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="I'm a UK-based web designer and developer who loves making stuff on the web. I'm passionate about building beautiful user interfaces and helping businesses provide their users a seamless web experience. And dogs, of course.">
       <link rel="apple-touch-icon" href="images/logo.svg" />
-      <link rel="stylesheet" href="css/style.min.css">
+      <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+      <link rel="stylesheet" href="css/style.css">
       <link rel="icon" href="images/logo.svg">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -200,26 +201,71 @@
         </div>
       </div>
     </section>
-    <section class="section">
-      <div class="section__inner section__inner--flex">
-        <div class="callout testimonial left-aligned">
-          <div class="callout--inner">
-            <p>
-              "Working with Connor is a dream thanks to the fact that he's laid back and relaxed whilst also
-              being hugely talented and able to exceed expectations on every brief."
-            </p>
-            <div class="testimonial-quoter">
-              <img alt="Laurence Boon" src="images/laurence.jpg" />
-              <div>
+    <section class="section section--center">
+      <div class="section__inner">
+        <div class="testimonial--wrapper">
+          <div class="callout testimonial left-aligned">
+            <div class="callout--inner">
+              <p>
+                "Connor has excellent design and technical skills, and is also an excellent organiser, communicator
+                and team player - and very good with clients and customers too. I can't recommend him highly enough."
+              </p>
+              <div class="testimonial-quoter">
+                <img alt="Nick Nettleton" src="images/nick.jpeg" />
                 <div>
-                  <strong>Laurence Boon</strong>
-                </div>
-                <div>
-                  Product Manager, Cyclescheme
+                  <div>
+                    <strong>Nick Nettleton</strong>
+                  </div>
+                  <div>
+                    Founder & CEO, Loft Digital
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="callout testimonial left-aligned">
+            <div class="callout--inner">
+              <p>
+                "Working with Connor is a dream thanks to the fact that he's laid back and relaxed whilst also
+                being hugely talented and able to exceed expectations on every brief."
+              </p>
+              <div class="testimonial-quoter">
+                <img alt="Laurence Boon" src="images/laurence.jpg" />
+                <div>
+                  <div>
+                    <strong>Laurence Boon</strong>
+                  </div>
+                  <div>
+                    Product Manager, Cyclescheme
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="callout testimonial left-aligned">
+            <div class="callout--inner">
+              <p>
+                "Connor has absolutely great customer service and technical skills; his integrity and honesty are impeccable."
+              </p>
+              <div class="testimonial-quoter">
+                <img alt="Alison Fitzhugh" src="images/alison.jpg" />
+                <div>
+                  <div>
+                    <strong>Alison Fitzhugh</strong>
+                  </div>
+                  <div>
+                    Owner, Brewbabu
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br/><br/>
+        <div class="testimonial-btns">
+          <button type="button" class="first active"></button>
+          <button type="button" class="second"></button>
+          <button type="button" class="third"></button>
         </div>
       </div>
     </section>
@@ -229,7 +275,7 @@
         <h1 class="section__inner--title">My latest projects</h1>
         <div class="case-study-tiles">
           <div class="case-study-tile-wrap">
-            <a href="/case-study-ts" class="case-study-tile">
+            <a href="case-studies/techscheme" class="case-study-tile">
               <img alt="Case study mockup" src="images/ts.jpg" />
               <span class="case-study-tile--title">
                 Techscheme
@@ -254,7 +300,7 @@
             </a>
           </div>
           <div class="case-study-tile-wrap">
-            <a href="/case-study-brew" class="case-study-tile">
+            <a href="case-studies/brewbabu" class="case-study-tile">
               <img alt="Case study mockup" src="images/brew.jpg" />
               <span class="case-study-tile--title">
                 Brewbabu
@@ -271,6 +317,28 @@
                 </div>
                 <div class="case-study--tag">
                   E-commerce
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="case-study-tile-wrap">
+            <a href="case-studies/cyclescheme" class="case-study-tile">
+              <img alt="Case study mockup" src="images/cs.jpg" />
+              <span class="case-study-tile--title">
+                Cyclescheme
+              </span>
+              <p>
+                Platform development for the UK's largest cycle-to-work provider.
+              </p>
+              <div class="case-study--tags">
+                <div class="case-study--tag">
+                  Angular
+                </div>
+                <div class="case-study--tag">
+                  UI/UX
+                </div>
+                <div class="case-study--tag">
+                  JavaScript
                 </div>
               </div>
             </a>
@@ -319,8 +387,8 @@
               </div>
             </a>
           </div>
-          <div class="case-study-tile-wrap case-study-tile-wrap--coming-soon">
-            <a class="case-study-tile">
+          <!-- <div class="case-study-tile-wrap">
+            <a href="case-studies/cyclescheme" class="case-study-tile">
               <img alt="Case study mockup" src="images/cs.jpg" />
               <span class="case-study-tile--title">
                 Cyclescheme
@@ -336,11 +404,11 @@
                   UI/UX
                 </div>
                 <div class="case-study--tag">
-                  CI/CD Testing
+                  JavaScript
                 </div>
               </div>
             </a>
-          </div>
+          </div> -->
           <div class="case-study-tile-wrap case-study-tile-wrap--coming-soon">
             <a class="case-study-tile">
               <img alt="Case study mockup" src="images/ba.jpg" />
@@ -400,6 +468,7 @@
         </div>
       </section>
     </footer>
-    <script type="text/javascript" src="js/script.min.js"></script>
+    <!-- <script type="text/javascript" src="js/script.min.js"></script> -->
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

@@ -1,44 +1,48 @@
 let mobNavOpen = false;
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    const themeBtns = document.querySelectorAll('.nav__links--btn');
-    themeBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-          document.body.classList.toggle('dark-mode');
-      });
+  const themeBtns = document.querySelectorAll('.nav__links--btn');
+  themeBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
     });
+  });
 
-    const mobNavBtn = document.getElementsByClassName('nav__mob-btn')[0];
-    const mobNav = document.getElementsByClassName('nav__mob')[0];
-    mobNavBtn.addEventListener('click', () => {
-        mobNavOpen = !mobNavOpen;
-        mobNav.style.left = mobNavOpen ? '10%' : '100%';
-        document.body.classList.toggle('nav__mob-open');
-    });
+  const mobNavBtn = document.getElementsByClassName('nav__mob-btn')[0];
+  const mobNav = document.getElementsByClassName('nav__mob')[0];
+  mobNavBtn.addEventListener('click', () => {
+      mobNavOpen = !mobNavOpen;
+      mobNav.style.left = mobNavOpen ? '10%' : '100%';
+      document.body.classList.toggle('nav__mob-open');
+  });
 
-    mobNav.addEventListener('click', (event) => {
-      if (
-        event.target.classList.contains('nav__mob-item')
-        || event.target.classList.contains('nav__mob-close')
-        || event.target.parentNode.classList.contains('nav__mob-close')
-      ) {
-        mobNavOpen = false;
-        mobNav.style.left = '100%';
-        document.body.classList.remove('nav__mob-open');
-      }
-    });
-
-    if (document.getElementById('logo-scroller')) {
-      fancyScroll();
+  mobNav.addEventListener('click', (event) => {
+    if (
+      event.target.classList.contains('nav__mob-item')
+      || event.target.classList.contains('nav__mob-close')
+      || event.target.parentNode.classList.contains('nav__mob-close')
+    ) {
+      mobNavOpen = false;
+      mobNav.style.left = '100%';
+      document.body.classList.remove('nav__mob-open');
     }
+  });
 
-    if (document.getElementsByClassName('tooltip').length > 0) {
-      registerTooltips();
-    }
+  if (document.getElementById('logo-scroller')) {
+    fancyScroll();
+  }
 
-    if (document.getElementsByClassName('callout').length > 0) {
-      registerCallouts();
-    }
+  if (document.getElementsByClassName('tooltip').length > 0) {
+    registerTooltips();
+  }
+
+  if (document.getElementsByClassName('callout').length > 0) {
+    registerCallouts();
+  }
+
+  if (document.getElementsByClassName('testimonial--wrapper').length > 0) {
+    registerTestimonial();
+  }
 });
 
 function fancyScroll(scroller) {
@@ -110,5 +114,46 @@ function callout(callout) {
     callout.addEventListener('mouseleave', (e) => {
       callout.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg) translateY(150px)`;
     });
+  }
+}
+
+function registerTestimonial() {
+  const btns = document.getElementsByClassName('testimonial-btns')[0].querySelectorAll('button');
+  let interval;
+  Array.from(btns).forEach(btn => {
+    btn.addEventListener('click', () => {
+      slide(btn, btns);
+      clearInterval(interval);
+      interval = setInterval(repeatSlide, 5000, btns);
+    });
+  });
+
+  interval = setInterval(repeatSlide, 5000, btns);
+}
+
+function repeatSlide(btns) {
+  let active = Array.from(btns).find(x => x.classList.contains('active'));
+  let currentIndex = Array.from(btns).indexOf(active);
+  currentIndex == 2 ? currentIndex = 0 : currentIndex++;
+  slide(btns[currentIndex], btns);
+}
+
+function slide(clickedBtn, btns) {
+  Array.from(btns).forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  const firstTestimonial = document.getElementsByClassName('testimonial')[0];
+
+  clickedBtn.classList.add('active');
+  switch(clickedBtn.classList[0]) {
+    case 'first':
+      firstTestimonial.style.marginLeft = '0';
+      break;
+    case 'second':
+      firstTestimonial.style.marginLeft = '-100%';
+      break;
+    default:
+      firstTestimonial.style.marginLeft = '-200%';
   }
 }

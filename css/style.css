@@ -593,6 +593,8 @@ footer {
 
   .testimonial {
     transform: none;
+    min-width: 100%;
+    transition: 0.3s;
   }
 
   .testimonial::before {
@@ -621,6 +623,46 @@ footer {
     width: 44px;
     object-fit: cover;
     margin-right: 12px;
+  }
+
+  .testimonial--wrapper {
+    display: flex;
+    overflow-x: clip;
+    align-items: flex-start;
+  }
+
+  .testimonial-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .testimonial-btns::before, .testimonial-btns::after {
+    content: '';
+    height: 1.5px;
+    width: 8px;
+    background-color: var(--green);
+  }
+
+  .testimonial-btns button {
+    height: 12px;
+    width: 12px;
+    border-radius: 50px;
+    border: 1.5px solid var(--green);
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .testimonial-btns button:not(:nth-of-type(2)) {
+    margin: 0 10px;
+  }
+
+  .testimonial-btns button.active {
+    background-color: var(--green);
+  }
+
+  .testimonial-btns::before {
+
   }
 
  /** --------------------------------------------------------------------------------
