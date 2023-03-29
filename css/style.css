@@ -72,6 +72,7 @@ footer {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
+  border: none;
 }
 
 .button:hover {
@@ -659,10 +660,6 @@ footer {
 
   .testimonial-btns button.active {
     background-color: var(--green);
-  }
-
-  .testimonial-btns::before {
-
   }
 
  /** --------------------------------------------------------------------------------
