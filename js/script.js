@@ -43,7 +43,48 @@ window.addEventListener('DOMContentLoaded', (event) => {
   if (document.getElementsByClassName('testimonial--wrapper').length > 0) {
     registerTestimonial();
   }
+
+  const cookieBtns = document.querySelectorAll('a[data-cookie-consent]');
+  cookieBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+     let accepted = btn.getAttribute('data-cookie-consent');
+     document.cookie = `cookie_notice_accepted=${accepted}`;
+    });
+  });
+
+  if (getCookie('cookie_notice_accepted') === 'true') {
+    let head = document.getElementsByTagName('head')[0];
+    let js = document.createElement('script');
+    js.type = 'text/javascript';
+    js.src = 'https://www.googletagmanager.com/gtag/js?id=G-YRWY66FH14';
+    head.appendChild(js);
+      
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YRWY66FH14');
+  } else if (getCookie('cookie_notice_accepted') !== 'false') {
+    document.getElementById('cookie-banner').classList.add('show');
+    // Add listener to banner dismissal, add cookie to storage if clicked
+  }
 });
+
+function getCookie(cname) {
+  var name = cname + '=';
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return '';
+}
 
 function fancyScroll(scroller) {
   const logoScroller = document.getElementById('logo-scroller');
@@ -99,7 +140,7 @@ function registerCallouts() {
 function callout(callout) {
   const motionMatchMedia = window.matchMedia('(prefers-reduced-motion)');
   const THRESHOLD = 15;
-  if (!motionMatchMedia.matches && !callout.classList.contains('testimonial')) {
+  if (!motionMatchMedia.matches && !callout.classList.contains('testimonial') && !callout.classList.contains('cookie-banner')) {
     callout.addEventListener('mousemove', (e) => {
       const { clientX, clientY, currentTarget } = e;
       const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
