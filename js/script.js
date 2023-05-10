@@ -49,7 +49,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     btn.addEventListener('click', () => {
      let accepted = btn.getAttribute('data-cookie-consent');
      document.cookie = `cookie_notice_accepted=${accepted}`;
-     location.reload();
+     if (accepted == 'true') {
+      location.reload();
+     } else {
+      document.getElementById('cookie-banner').classList.remove('show');
+     }
     });
   });
 
