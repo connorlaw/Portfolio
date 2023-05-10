@@ -993,6 +993,14 @@ body.dark-mode {
  }
 
  @media (max-width: 499px) {
+   .cookie-banner {
+    width: calc(100% - 40px);
+   }
+   
+   .cookie-banner.show {
+    bottom: 100px;
+   }
+
    .section .section__inner .section__inner--title {
      font-size: 32px;
    }
