@@ -995,8 +995,9 @@ body.dark-mode {
  @media (max-width: 499px) {
    .cookie-banner {
     width: calc(100% - 40px);
+    bottom: 160px;
    }
-   
+
    .cookie-banner.show {
     bottom: 100px;
    }
