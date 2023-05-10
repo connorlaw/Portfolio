@@ -49,6 +49,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     btn.addEventListener('click', () => {
      let accepted = btn.getAttribute('data-cookie-consent');
      document.cookie = `cookie_notice_accepted=${accepted}`;
+     location.reload();
     });
   });
 
@@ -66,7 +67,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     gtag('config', 'G-YRWY66FH14');
   } else if (getCookie('cookie_notice_accepted') !== 'false') {
     document.getElementById('cookie-banner').classList.add('show');
-    // Add listener to banner dismissal, add cookie to storage if clicked
   }
 });
 
