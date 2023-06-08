@@ -1,0 +1,261 @@
+<!doctype HTML>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Connor Law - UK Freelance Web Developer</title>
+      <meta name="author" content="Connor Law">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="I'm a UK-based web designer and developer who loves making stuff on the web. I'm passionate about building beautiful user interfaces and helping businesses provide their users a seamless web experience. And dogs, of course.">
+      <link rel="apple-touch-icon" href="images/logo.svg" />
+      <!-- <link rel="stylesheet" href="style.css"> -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="icon" href="images/logo.svg">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="nav__inner">
+        <img alt="Connor Law's Logo" src="images/logo.svg" />
+        <div class="nav__links">
+          <ul>
+            <li onclick="window.scrollTo({top: document.getElementById('about').offsetTop,left: 0,behavior: 'smooth'});">
+              About
+            </li>
+            <li onclick="window.scrollTo({top: document.getElementById('services').offsetTop,left: 0,behavior: 'smooth'});">
+              Services
+            </li>
+            <li onclick="window.scrollTo({top: document.getElementById('case-studies').offsetTop,left: 0,behavior: 'smooth'});">
+              Case studies
+            </li>
+            <li onclick="window.scrollTo({top: document.getElementById('contact').offsetTop,left: 0,behavior: 'smooth'});">
+              Contact
+            </li>
+            <li>
+              <div class="nav__links--btn"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__mob-btn">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav__mob">
+          <div class="nav__mob-close">
+            <span></span>
+            <span></span>
+          </div>
+          <ul>
+            <li class="nav__mob-item" onclick="window.scrollTo({top: document.getElementById('about').offsetTop,left: 0,behavior: 'smooth'});">
+              About
+            </li>
+            <li class="nav__mob-item" onclick="window.scrollTo({top: document.getElementById('services').offsetTop,left: 0,behavior: 'smooth'});">
+              Services
+            </li>
+            <li class="nav__mob-item" onclick="window.scrollTo({top: document.getElementById('case-studies').offsetTop,left: 0,behavior: 'smooth'});">
+              Case studies
+            </li>
+            <li class="nav__mob-item" onclick="window.scrollTo({top: document.getElementById('contact').offsetTop,left: 0,behavior: 'smooth'});">
+              Contact
+            </li>
+            <li>
+              <div class="nav__links--btn"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__inner">
+        <h1 class="section__inner--title">Case study generator</h1>
+        <form id="js--case-study-generate">
+            <div class="input-flex">
+                <div>
+                    <h2>Meta title:</h2>
+                    <input type="text" data-id="meta-title" data-type="text" />
+                </div>
+                <div>
+                    <h2>Image slug:</h2>
+                    <input type="text" data-id="image" data-type="text" />
+                </div>
+            </div>
+            <br /><br /><br />
+            <div class="input-flex">
+                <div>
+                    <h2>Title (first half):</h2>
+                    <input type="text" data-id="title-first" data-type="text" />
+                </div>
+                <div>
+                    <h2>Title (last half):</h2>
+                    <input type="text" data-id="title-last" data-type="text" />
+                </div>
+            </div>
+            <br /><br /><br />
+            <div class="input-flex">
+                <div>
+                    <h2>Details:</h2>
+                    <input type="text" data-id="details" data-type="text" />
+                </div>
+            </div>
+            <br /><br /><br />
+            <div class="input-flex">
+                <div>
+                    <h2>Skills:</h2>
+                    <fieldset data-id="skills" data-type="checkbox">
+                        <input type="checkbox" id="skills-ui-ux" />
+                        <label for="skills-ui-ux">UI/UX</label>
+                        <br/>
+                        <input type="checkbox" id="skills-html" />
+                        <label for="skills-html">HTML</label>
+                        <br/>
+                        <input type="checkbox" id="skills-css" />
+                        <label for="skills-css">CSS</label>
+                        <br/>
+                        <input type="checkbox" id="skills-javascript" />
+                        <label for="skills-javascript">JavaScript</label>
+                        <br/>
+                        <input type="checkbox" id="skills-angular" />
+                        <label for="skills-angular">Angular</label>
+                        <br/>
+                        <input type="checkbox" id="skills-squarespace" />
+                        <label for="skills-squarespace">Squarespace</label>
+                        <br/>
+                        <input type="checkbox" id="skills-wordpress" />
+                        <label for="skills-wordpress">Wordpress</label>
+                        <br/>
+                        <input type="checkbox" id="skills-e-commerce" />
+                        <label for="skills-e-commerce">E-commerce</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <h2>Tools:</h2>
+                    <fieldset data-id="tools" data-type="checkbox">
+                        <input type="checkbox" id="tools-xd" />
+                        <label for="tools-xd">Adobe XD</label>
+                        <br/>
+                        <input type="checkbox" id="tools-angular" />
+                        <label for="tools-angular">Angular</label>
+                        <br/>
+                        <input type="checkbox" id="tools-html" />
+                        <label for="tools-html">HTML</label>
+                        <br/>
+                        <input type="checkbox" id="tools-css" />
+                        <label for="tools-css">CSS</label>
+                        <br/>
+                        <input type="checkbox" id="tools-js" />
+                        <label for="tools-js">JavaScript</label>
+                        <br/>
+                        <input type="checkbox" id="tools-squarespace" />
+                        <label for="tools-squarespace">Squarespace</label>
+                        <br/>
+                        <input type="checkbox" id="tools-wordpress" />
+                        <label for="tools-wordpress">Wordpress</label>
+                        <br/>
+                        <input type="checkbox" id="tools-notion" />
+                        <label for="tools-notion">Notion</label>
+                        <br/>
+                        <input type="checkbox" id="tools-react" />
+                        <label for="tools-react">React</label>
+                        <br/>
+                        <input type="checkbox" id="tools-photoshop" />
+                        <label for="tools-photoshop">Photoshop</label>
+                        <br/>
+                        <input type="checkbox" id="tools-bootstrap" />
+                        <label for="tools-bootstrap">Bootstrap</label>
+                        <br/>
+                        <input type="checkbox" id="tools-flutter" />
+                        <label for="tools-flutter">Flutter</label>
+                        <br/>
+                        <input type="checkbox" id="tools-illustrator" />
+                        <label for="tools-illustrator">Illustrator</label>
+                        <br/>
+                        <input type="checkbox" id="tools-sass" />
+                        <label for="tools-sass">Sass</label>
+                        <br/>
+                        <input type="checkbox" id="tools-webflow" />
+                        <label for="tools-webflow">Webflow</label>
+                        <br/>
+                        <input type="checkbox" id="tools-github" />
+                        <label for="tools-github">Github</label>
+                    </fieldset>
+                </div>
+            </div>
+            <br /><br /><br />
+            <h2>Introduction:</h2>
+            <textarea rows="8" data-id="intro" data-type="text"></textarea>
+            <br /><br /><br />
+            <h2>Solution:</h2>
+            <textarea rows="8" data-id="solution" data-type="text"></textarea>
+            <br /><br /><br />
+            <h2>Outcome:</h2>
+            <textarea rows="8" data-id="outcome" data-type="text"></textarea>
+            <br /><br /><br />
+            <div class="input-flex">
+                <div>
+                    <h2>Testimonial:</h2>
+                    <fieldset data-id="testimonials" data-type="checkbox">
+                        <input type="checkbox" id="laurence" />
+                        <label for="laurence">Laurence</label>
+                        <br/>
+                        <input type="checkbox" id="alison" />
+                        <label for="alison">Alison</label>
+                        <br/>
+                        <input type="checkbox" id="gio" />
+                        <label for="gio">Gio</label>
+                        <br/>
+                        <input type="checkbox" id="nick" />
+                        <label for="nick">Nick</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <h2>Featured case studies:</h2>
+                    <fieldset data-id="case-studies" data-type="checkbox">
+                        <input type="checkbox" id="brewbabu" />
+                        <label for="brewbabu">Brewbabu</label>
+                        <br/>
+                        <input type="checkbox" id="cyclescheme" />
+                        <label for="cyclescheme">Cyclescheme</label>
+                        <br/>
+                        <input type="checkbox" id="techscheme" />
+                        <label for="techscheme">Techscheme</label>
+                    </fieldset>
+                </div>
+            </div>
+            <br /><br />
+            <button class="button" type="submit">Generate</button>
+        </form>
+      </div>
+    </section>
+    <section class="section">
+        <div class="section__inner">
+            <h2>Results:</h2>
+            <br /><br />
+            <div class="codeblock">
+                <code id="output"></code>
+                <input id="output-val" hidden value="&lt;code style='background:rgba(0,0,0,0.7);color:limegreen;padding:20px;display:block;'&gt;{$voucher|@debug_print_var}&lt;/code&gt;" disabled />
+                <span class="copy-btn">Copy</span>
+            </div>
+        </div>
+    </section>
+    <footer>
+      <section class="section">
+        <div class="section__inner">
+          <div class="socials">
+              <a target="_blank" href="https://codepen.io/connorlaw" rel="noopener noreferrer">
+                  <img height="32" width="32" alt="Codepen logo" class="social" src="images/logo_codepen.svg" alt="Codepen logo">
+              </a>
+              <a target="_blank" href="https://uk.linkedin.com/in/connor-law-77b176159" rel="noopener noreferrer">
+                  <img height="32" width="32" alt="Linkedin logo" class="social" src="images/logo_linkedin.svg" alt="Linkedin logo">
+              </a>
+          </div>
+          <p>&copy; 2023 &middot; Connor Law</p>
+        </div>
+      </section>
+    </footer>
+    <script type="text/javascript" src="js/case-study-generator.js"></script>
+  </body>
+</html>

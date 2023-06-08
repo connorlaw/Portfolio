@@ -1,0 +1,25 @@
+{
+  "name": "moss-and-co",
+  "version": "1.0.0",
+  "description": "description",
+  "license": "UNLICENSED",
+  "author": "Connor Law",
+  "scripts": {
+    "build": "yarn sass-prod && yarn js-prod",
+    "sass-dev": "sass --watch --update --style=expanded ./scss/style.scss ./style.css",
+    "sass-prod": "sass --no-source-map --style=compressed ./scss/style.scss ./style.css",
+    "js-dev": "webpack --mode=development --watch",
+    "js-prod": "webpack --mode=production"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel-loader": "^9.1.2",
+    "html-minimizer-webpack-plugin": "^4.3.0",
+    "sass": "^1.60.0",
+    "terser-webpack-plugin": "^5.3.7",
+    "webpack": "^5.78.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {}
+}
