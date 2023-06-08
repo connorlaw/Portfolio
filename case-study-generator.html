@@ -71,6 +71,21 @@
     <section class="section">
       <div class="section__inner">
         <h1 class="section__inner--title">Case study generator</h1>
+        <h2>Prefill fields:</h2>
+        <div class="input-flex">
+          <div>
+            <select style="width: 100%" data-id="pre-fill">
+              <option value="" disabled selected hidden>Select...</option>
+              <option value="cyclescheme">Cyclescheme</option>
+              <option value="techscheme">Techscheme</option>
+              <option value="brewbabu">Brewbabu</option>
+              <option value="myeyesite">MyEyeSite</option>
+              <option value="bicycle-association">Bicycle Association</option>
+              <option value="naytiive">Naytiive</option>
+            </select>
+          </div>
+        </div>
+        <br/><br/><br/>
         <form id="js--case-study-generate">
             <div class="input-flex">
                 <div>
@@ -79,7 +94,15 @@
                 </div>
                 <div>
                     <h2>Image slug:</h2>
-                    <input type="text" data-id="image" data-type="text" />
+                    <div class="input-flex">
+                      <input type="text" data-id="image" data-type="text" placeholder="Excluding ../images/case-studies/" />
+                      <select data-id="image-extension">
+                        <option value=".png" selected>.png</option>
+                        <option value=".jpg">.jpg</option>
+                        <option value=".jpeg">.jpeg</option>
+                        <option value=".webp">.webp</option>
+                      </select>
+                    </div>
                 </div>
             </div>
             <br /><br /><br />
@@ -94,94 +117,140 @@
                 </div>
             </div>
             <br /><br /><br />
-            <div class="input-flex">
-                <div>
-                    <h2>Details:</h2>
-                    <input type="text" data-id="details" data-type="text" />
-                </div>
-            </div>
+            <h2>Details:</h2>
+            <textarea rows="2" data-id="details" data-type="text"></textarea>
             <br /><br /><br />
             <div class="input-flex">
-                <div>
-                    <h2>Skills:</h2>
-                    <fieldset data-id="skills" data-type="checkbox">
-                        <input type="checkbox" id="skills-ui-ux" />
-                        <label for="skills-ui-ux">UI/UX</label>
-                        <br/>
-                        <input type="checkbox" id="skills-html" />
-                        <label for="skills-html">HTML</label>
-                        <br/>
-                        <input type="checkbox" id="skills-css" />
-                        <label for="skills-css">CSS</label>
-                        <br/>
-                        <input type="checkbox" id="skills-javascript" />
-                        <label for="skills-javascript">JavaScript</label>
-                        <br/>
-                        <input type="checkbox" id="skills-angular" />
-                        <label for="skills-angular">Angular</label>
-                        <br/>
-                        <input type="checkbox" id="skills-squarespace" />
-                        <label for="skills-squarespace">Squarespace</label>
-                        <br/>
-                        <input type="checkbox" id="skills-wordpress" />
-                        <label for="skills-wordpress">Wordpress</label>
-                        <br/>
-                        <input type="checkbox" id="skills-e-commerce" />
-                        <label for="skills-e-commerce">E-commerce</label>
-                    </fieldset>
-                </div>
-                <div>
-                    <h2>Tools:</h2>
-                    <fieldset data-id="tools" data-type="checkbox">
-                        <input type="checkbox" id="tools-xd" />
-                        <label for="tools-xd">Adobe XD</label>
-                        <br/>
-                        <input type="checkbox" id="tools-angular" />
-                        <label for="tools-angular">Angular</label>
-                        <br/>
-                        <input type="checkbox" id="tools-html" />
-                        <label for="tools-html">HTML</label>
-                        <br/>
-                        <input type="checkbox" id="tools-css" />
-                        <label for="tools-css">CSS</label>
-                        <br/>
-                        <input type="checkbox" id="tools-js" />
-                        <label for="tools-js">JavaScript</label>
-                        <br/>
-                        <input type="checkbox" id="tools-squarespace" />
-                        <label for="tools-squarespace">Squarespace</label>
-                        <br/>
-                        <input type="checkbox" id="tools-wordpress" />
-                        <label for="tools-wordpress">Wordpress</label>
-                        <br/>
-                        <input type="checkbox" id="tools-notion" />
-                        <label for="tools-notion">Notion</label>
-                        <br/>
-                        <input type="checkbox" id="tools-react" />
-                        <label for="tools-react">React</label>
-                        <br/>
-                        <input type="checkbox" id="tools-photoshop" />
-                        <label for="tools-photoshop">Photoshop</label>
-                        <br/>
-                        <input type="checkbox" id="tools-bootstrap" />
-                        <label for="tools-bootstrap">Bootstrap</label>
-                        <br/>
-                        <input type="checkbox" id="tools-flutter" />
-                        <label for="tools-flutter">Flutter</label>
-                        <br/>
-                        <input type="checkbox" id="tools-illustrator" />
-                        <label for="tools-illustrator">Illustrator</label>
-                        <br/>
-                        <input type="checkbox" id="tools-sass" />
-                        <label for="tools-sass">Sass</label>
-                        <br/>
-                        <input type="checkbox" id="tools-webflow" />
-                        <label for="tools-webflow">Webflow</label>
-                        <br/>
-                        <input type="checkbox" id="tools-github" />
-                        <label for="tools-github">Github</label>
-                    </fieldset>
-                </div>
+              <div>
+                <h2>Skills:</h2>
+                <fieldset data-id="skills" data-type="checkbox">
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-UI/UX" />
+                    UI/UX
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-HTML" />
+                    HTML
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-CSS" />
+                    CSS
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-JavaScript" />
+                    JavaScript
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-Angular" />
+                    Angular
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-Squarespace" />
+                    Squarespace
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-Wordpress" />
+                    Wordpress
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-E-commerce" />
+                    E-commerce
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-PHP" />
+                    PHP
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-Mobile" />
+                    Mobile
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-TypeScript" />
+                    TypeScript
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-Adobe-XD" />
+                    Adobe XD
+                  </label>
+                </fieldset>
+              </div>
+              <div>
+                <h2>Tools:</h2>
+                <fieldset data-id="tools" data-type="checkbox">
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Adobe-XD" />
+                    Adobe XD
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Angular" />
+                    Angular
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-HTML" />
+                    HTML
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-CSS" />
+                    CSS
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-JavaScript" />
+                    JavaScript
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Squarespace" />
+                    Squarespace
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Wordpress" />
+                    Wordpress
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Notion" />
+                    Notion
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-React" />
+                    React
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Photoshop" />
+                    Photoshop
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Bootstrap" />
+                    Bootstrap
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Flutter" />
+                    Flutter
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Illustrator" />
+                    Illustrator
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Sass" />
+                    Sass
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Webflow" />
+                    Webflow
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Github" />
+                    Github
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Figma" />
+                    Figma
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-PHP" />
+                    PHP
+                  </label>
+                </fieldset>
+              </div>
             </div>
             <br /><br /><br />
             <h2>Introduction:</h2>
@@ -194,49 +263,79 @@
             <textarea rows="8" data-id="outcome" data-type="text"></textarea>
             <br /><br /><br />
             <div class="input-flex">
-                <div>
-                    <h2>Testimonial:</h2>
-                    <fieldset data-id="testimonials" data-type="checkbox">
-                        <input type="checkbox" id="laurence" />
-                        <label for="laurence">Laurence</label>
-                        <br/>
-                        <input type="checkbox" id="alison" />
-                        <label for="alison">Alison</label>
-                        <br/>
-                        <input type="checkbox" id="gio" />
-                        <label for="gio">Gio</label>
-                        <br/>
-                        <input type="checkbox" id="nick" />
-                        <label for="nick">Nick</label>
-                    </fieldset>
-                </div>
-                <div>
-                    <h2>Featured case studies:</h2>
-                    <fieldset data-id="case-studies" data-type="checkbox">
-                        <input type="checkbox" id="brewbabu" />
-                        <label for="brewbabu">Brewbabu</label>
-                        <br/>
-                        <input type="checkbox" id="cyclescheme" />
-                        <label for="cyclescheme">Cyclescheme</label>
-                        <br/>
-                        <input type="checkbox" id="techscheme" />
-                        <label for="techscheme">Techscheme</label>
-                    </fieldset>
-                </div>
+              <div>
+                <h2>Testimonial:</h2>
+                <fieldset data-id="testimonials" data-type="radio">
+                  <label class="form-control">
+                    <input type="radio" id="laurence" name="testimonial" checked />
+                    Laurence
+                  </label>
+                  <label class="form-control">
+                    <input type="radio" id="alison" name="testimonial" />
+                    Alison
+                  </label>
+                  <label class="form-control">
+                    <input type="radio" id="gio" name="testimonial" />
+                    Gio
+                  </label>
+                  <label class="form-control">
+                    <input type="radio" id="nick" name="testimonial" />
+                    Nick
+                  </label>
+                  <label class="form-control">
+                    <input type="radio" id="sam" name="testimonial" />
+                    Sam
+                  </label>
+                  <label class="form-control">
+                    <input type="radio" id="nathan" name="testimonial" />
+                    Nathan
+                  </label>
+                </fieldset>
+              </div>
+              <div>
+                <h2>Featured case studies:</h2>
+                <fieldset data-id="case-studies" data-type="checkbox">
+                  <label class="form-control">
+                    <input type="checkbox" id="brewbabu" />
+                    Brewbabu
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="cyclescheme" />
+                    Cyclescheme
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="techscheme" />
+                    Techscheme
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="moss-and-co" />
+                    Moss & Co
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="myeyesite" />
+                    MyEyeSite
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="bicycle-association" />
+                    Bicycle Association
+                  </label>
+                </fieldset>
+              </div>
             </div>
             <br /><br />
             <button class="button" type="submit">Generate</button>
         </form>
       </div>
     </section>
+    <hr />
     <section class="section">
         <div class="section__inner">
             <h2>Results:</h2>
-            <br /><br />
+            <br />
             <div class="codeblock">
                 <code id="output"></code>
                 <input id="output-val" hidden value="&lt;code style='background:rgba(0,0,0,0.7);color:limegreen;padding:20px;display:block;'&gt;{$voucher|@debug_print_var}&lt;/code&gt;" disabled />
-                <span class="button copy-btn">Copy</span>
+                <span class="button copy-btn confetti-button">Copy</span>
             </div>
         </div>
     </section>
@@ -255,6 +354,27 @@
         </div>
       </section>
     </footer>
-    <script type="text/javascript" src="js/case-study-generator.js"></script>
+    <div id="cookie-banner" class="cookie-banner callout">
+      <div class="callout--inner">
+        <h3>Hey! Are you cool with cookies?</h3>
+        <div>I'm using cookies to track how many people are visiting my site. That's all, I promise.</div>
+        <div class="right-aligned">
+          <a
+            class="button button--secondary"
+            data-cookie-consent="false"
+            href="#"
+            style="margin-right: 4px;">
+            I'd rather you didn't
+          </a>
+          <a
+            class="button"
+            data-cookie-consent="true"
+            href="#">
+            Go for it!
+          </a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

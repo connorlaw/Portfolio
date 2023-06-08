@@ -15,8 +15,12 @@
     display: flex;
     justify-content: space-between;
 
-    div {
+    div:not(.input-flex) {
       width: 49%;
+    }
+
+    div.input-flex input {
+      margin: 0 8px 0 0;
     }
   }
 
@@ -29,10 +33,11 @@
     border-radius: 4px;
     overflow: scroll;
     margin-bottom: 20px;
+    color: var(--text) !important;
   }
 }
 
-input[type="text"], textarea {
+input[type="text"], textarea, select {
   padding: 12px;
   border: 1px solid #ececec;
   width: 100%;
@@ -40,9 +45,10 @@ input[type="text"], textarea {
   box-sizing: border-box;
   font-family: 'Rubik', 'sans-serif';
   font-size: 16px;
+  appearance: none;
 
   &::placeholder {
-    color: #c5c5c5;
+    color: #b4b4b4;
   }
 
   &:focus, &:focus-within, &:focus-visible {
@@ -55,4 +61,78 @@ input[type="text"], textarea {
     padding: 12px 12px 12px 40px;
     background: #fff url('images/icons/icon_search.svg') no-repeat 13px;
   }
+}
+
+select {
+  width: 100px;
+  padding-right: 30px;
+  background: #fff url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+  background-position: calc(100% - 0.75rem) center !important;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+
+  &--disabled {
+    color: var(--form-control-disabled);
+    cursor: not-allowed;
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 1.75px solid #c6c6c6;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    margin-top: 2px;
+
+    &::before {
+      content: '';
+      transform: scale(0);
+      box-shadow: inset 1em 1em var(--form-control-color);
+      background-color: #FFFFFF;
+    }
+
+    &:checked {
+      background-color: var(--green);
+      border-color: var(--green);
+      &::before {
+        transform: scale(1);
+      }
+    }
+
+    &:disabled {
+      --form-control-color: var(--form-control-disabled);
+      color: var(--form-control-disabled);
+      cursor: not-allowed;
+    }
+  }
+
+  input[type="radio"] {
+    border-radius: 100px;
+    &::before {
+      clip-path: circle(50% at 50% 50%);
+      width: 0.65em;
+      height: 0.65em;
+    }
+  }
+
+  input[type="checkbox"] {
+    border-radius: 0.15em;
+    &::before {
+      clip-path: polygon(3.23% 54.73%, 21.95% 34.75%, 40.37% 52.02%, 80.35% 9.36%, 99.07% 26.91%, 40.37% 89.54%);
+      width: 0.75em;
+      height: 0.75em;
+    }
+  }
+}
+
+.form-control + .form-control {
+  margin-top: 2px;
 }

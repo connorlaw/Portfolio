@@ -4,6 +4,7 @@ import Tooltips from './modules/tooltips.js';
 import Cookies from './modules/cookies.js';
 import LogoScroller from './modules/logo-scroller.js';
 import CaseStudies from './modules/case-studies.js';
+import CaseStudyGenerator from './modules/case-study-generator.js';
 
 let mobNavOpen = false;
 
@@ -61,5 +62,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
   if (document.getElementById('search')) {
     const caseStudies = new CaseStudies();
     caseStudies.init();
+  }
+
+  if (document.getElementById('js--case-study-generate')) {
+    const caseStudyGenerator = new CaseStudyGenerator();
+    caseStudyGenerator.init();
   }
 });
