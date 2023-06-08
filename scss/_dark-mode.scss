@@ -1,0 +1,84 @@
+/** --------------------------------------------------------------------------------
+ * DARK MODE
+ -------------------------------------------------------------------------------- */
+
+ body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+
+  a, footer {
+    color: var(--text-dark);
+  }
+  
+  .nav {
+    background-color: var(--bg-dark);
+    border-bottom-color: #28312C;
+
+    &__links--btn {
+      background-color: var(--dark-mode);
+      background-image: url('images/icon_dark_mode.svg');
+      background-size: 40%;
+
+      &:hover {
+        background-color: var(--dark-mode-darker);
+      }
+    }
+    
+    &__mob {
+      background-color: var(--bg-dark);
+
+      &-open::after {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      &-btn span, &-close span {
+        background-color: white;
+      }
+
+      &-item {
+        color: #fff;
+      }
+    }
+  }
+  
+  .section--green {
+    background-color: #191D1B;
+  }
+  
+  .callout {
+    color: var(--text);
+  }
+  
+  footer {
+    background-color: #191D1B;
+  }
+  
+  .case-study-tile {
+    background-color: #232524;
+    border-color: #232524;
+  }
+  
+  .case-study--tag {
+    background-color: var(--green);
+    color: #fff;
+  }
+  
+  .case-study--info {
+    background-color: #232524;
+
+    @media (max-width: 799px) {
+      &-cover::before {
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 25%, rgba(0,0,0,1) 100%);
+      }
+    }
+  }
+
+  .cookie-banner .callout--inner {
+    background-color: var(--green-fade);
+  }
+
+  .button--secondary {
+    color: var(--green);
+    background-color: transparent;
+  }
+}

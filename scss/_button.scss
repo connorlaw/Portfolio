@@ -1,0 +1,29 @@
+/** --------------------------------------------------------------------------------
+ * BUTTON
+ -------------------------------------------------------------------------------- */
+
+.button {
+  background-color: var(--green);
+  color: #fff;
+  padding: 14px 40px;
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+.button:hover {
+  background-color: var(--green-darker);
+}
+
+.button--secondary {
+  background-color: #FFFFFF;
+  color: var(--green);
+}
+
+.button--secondary:hover {
+  background-color: var(--green-fade);
+}

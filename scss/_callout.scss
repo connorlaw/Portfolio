@@ -1,0 +1,76 @@
+/** --------------------------------------------------------------------------------
+ * CALLOUT
+ -------------------------------------------------------------------------------- */
+
+ .callout {
+  position: relative;
+  transform: translateY(150px);
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform-origin: bottom;
+
+  &:hover .callout--inner {
+    transform: translateZ(12px);
+  }
+
+  &--inner {
+    padding: 36px;
+    background-color: var(--purple);
+    border-radius: 20px;
+    box-shadow: 0px 3px 6px -4px rgba(0,0,0,0.2);
+    position: relative;
+
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @media (max-width: 599px) {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      div {
+        max-width: 60%;
+        margin-right: 20px;
+
+        @media (max-width: 599px) {
+          max-width: none;
+          margin-right: 0;
+          margin-bottom: 32px;
+        }
+      }
+    }
+
+    @media (max-width: 599px) {
+      br {
+        display: none;
+      }
+    }
+   }
+
+   &::before {
+    content: '';
+    background-color: var(--purple-darker);
+    width: 95%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: 50px;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 50px;
+   }
+
+   @media (max-width: 499px) {
+    &:not(.testimonial) {
+      transform: translateY(80px);
+    }
+  }
+
+
+  @media (prefers-reduced-motion) {
+    transform: none !important;
+  }
+ }

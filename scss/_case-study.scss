@@ -1,0 +1,260 @@
+/** --------------------------------------------------------------------------------
+  * CASE STUDIES
+  -------------------------------------------------------------------------------- */
+  .case-study {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 100px;
+
+    &--hero {
+      width: 100%;
+    }
+
+    &--small {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    &--main {
+      h2 {
+        margin-bottom: 12px;
+        font-weight: 500;
+      }
+
+      p {
+        margin-bottom: 16px;
+      }
+    }
+
+    &--info {
+      width: 264px;
+      min-width: 264px;
+      margin-left: 32px;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0px 3px 6px -4px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 24px;
+
+      @media (max-width: 799px) {
+        margin-left: 0;
+          width: 100%;
+          margin-bottom: 72px;
+          position: relative;
+          transition: 0.2s;
+          height: auto;
+     
+        &-cover {
+          height: 80px;
+          overflow: hidden;
+        }
+     
+        &-cover::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,1) 100%);
+          top: 0;
+          left: 0;
+          z-index: 1;
+          cursor: pointer;
+        }
+     
+        &-cover::after {
+          position: absolute;
+          left: 50%;
+          bottom: 16px;
+          z-index: 2;
+          border-style: solid;
+          border-width: 0.15em 0.15em 0 0;
+          content: '';
+          display: inline-block;
+          height: 0.5em;
+          transform: rotate(135deg);
+          vertical-align: top;
+          width: 0.5em;
+          border-color: var(--green);
+        }
+      }
+    }
+
+    &-tiles {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-tile {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0px 3px 6px -4px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #fff;
+      height: 100%;
+      box-sizing: border-box;
+
+      img {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 196px;
+        border-radius: 12px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      &--title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      &-wrap {
+        width: calc(33.333% - 12px);
+        margin-bottom: 16px;
+        position: relative;
+        transition: 0.2s;
+
+        &--coming-soon {
+          &::before {
+            content: '';
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            width: 100%;
+            left: 0;
+            right: 0;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            display: block;
+            top: 0;
+            z-index: 99;
+          }
+
+          &::after {
+            content: 'Coming soon';
+            background-color: var(--green-fade);
+            border-radius: 5px;
+            border: 1.5px solid var(--green);
+            color: var(--green);
+            padding: 4px 8px;
+            font-size: 16px;
+            position: absolute;
+            margin: 0 auto;
+            display: block;
+            top: 50%;
+            z-index: 100;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          a {
+            cursor: default;
+          }
+        }
+
+        &:not(.case-study-tile-wrap--coming-soon) {
+          &::before {
+            content: '';
+            background-color: var(--green);
+            width: 85%;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            height: 50px;
+            position: absolute;
+            bottom: 0px;
+            border-radius: 50px;
+            display: block;
+            transition: 0.2s;
+          }
+
+          &:hover {
+            transform: translateY(-4px);
+
+            &:before {
+              bottom: -8px;
+            }
+
+            .case-study-tile {
+              border: 1px solid var(--green);
+            }
+          }
+        }
+
+        @media (min-width: 965px) {
+          &:not(:nth-of-type(3n)) {
+            margin-right: 16px;
+          }
+        }
+
+        @media (max-width: 964px) {
+          width: calc(50% - 16px);
+       
+          &:not(:nth-of-type(2n)) {
+            margin-right: 16px;
+          }
+        }
+
+        @media (min-width: 700px) {
+          min-width: 300px;
+        }
+       
+        @media (max-width: 699px) {
+          width: calc(50% - 16px);
+        }
+
+        @media (max-width: 499px) {
+          width: 100%;
+          margin-right: 0 !important;
+        }
+      }
+    }
+
+    &--tags {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+   
+    &--tag {
+      margin-bottom: 4px;
+      margin-right: 8px;
+      background-color: var(--green-fade);
+      color: var(--green);
+      border: 1.5px solid var(--green);
+      border-radius: 4px;
+      font-size: 12px;
+      padding: 3px 6px;
+    }
+   
+    &--tools {
+      display: flex;
+      flex-wrap: wrap;
+
+      img:not(:last-of-type) {
+        margin-bottom: 8px;
+        margin-right: 8px;
+      }
+    }
+
+    @media (max-width: 799px) {
+      flex-wrap: wrap-reverse;
+    }
+
+    @media (max-width: 499px) {
+      margin-top: 44px;
+    }
+  }

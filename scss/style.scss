@@ -1,0 +1,89 @@
+/** --------------------------------------------------------------------------------
+ * GENERAL
+ -------------------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
+  --text: #031926;
+  --bg: #F9FAFB;
+  --green: #209E61;
+  --green-fade: #E4F2EB;
+  --green-darker: #1C774B;
+  --purple: #DCD9F7;
+  --purple-darker: #ACA2EE;
+  --light-mode: #EBBC5E;
+  --light-mode-darker: #DFB259;
+  --dark-mode: #02373D;
+  --dark-mode-darker: #011e2b;
+  --bg-dark: #111513;
+  --text-dark: #FFFFFF;
+}
+
+html,
+body {
+  top: 0px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', 'sans-serif';
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+a {
+  cursor: pointer;
+}
+
+a.button {
+  text-decoration: none;
+}
+
+a.link {
+  color: var(--green);
+}
+
+h1 {
+  font-size: 1.17em;
+}
+
+footer {
+  background-color: var(--text);
+  color: #fff;
+  padding: 250px 0 10px;
+  font-size: 12px;
+
+  @media (max-width: 499px) {
+    padding-top: 250px;
+    padding-bottom: 200px;
+  }
+}
+
+.left-aligned {
+  text-align: left;
+}
+
+.right-aligned {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 499px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+@import '_button.scss';
+@import '_nav.scss';
+@import '_section.scss';
+@import '_hero.scss';
+@import '_services.scss';
+@import '_callout.scss';
+@import '_scroller.scss';
+@import '_case-study.scss';
+@import '_testimonial.scss';
+@import '_tooltip.scss';
+@import '_socials.scss';
+@import '_cookies.scss';
+@import '_dark-mode.scss';

@@ -1,0 +1,25 @@
+/** --------------------------------------------------------------------------------
+ * LOGO SCROLLER
+ -------------------------------------------------------------------------------- */
+
+ #logo-scroller {
+  display: flex;
+  margin-top: 100px;
+
+  img {
+    margin-right: 30px;
+  }
+}
+
+.logo-scroller--wrap {
+  position: relative;
+  right: calc((100vw - 950px) / 2);
+  width: 100vw;
+  overflow: hidden;
+  transition: 0.4s;
+  transition-timing-function: ease-out;
+
+  @media (max-width: 981px) {
+    left: -16px;
+  }
+}
