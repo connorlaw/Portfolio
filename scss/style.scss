@@ -68,6 +68,13 @@ footer {
   justify-content: flex-end;
 }
 
+.visibly-hidden {
+  display: none;
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
 @media (max-width: 499px) {
   .desktop-only {
     display: none;
@@ -86,4 +93,5 @@ footer {
 @import '_tooltip.scss';
 @import '_socials.scss';
 @import '_cookies.scss';
+@import '_form.scss';
 @import '_dark-mode.scss';

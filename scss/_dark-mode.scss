@@ -16,7 +16,7 @@
 
     &__links--btn {
       background-color: var(--dark-mode);
-      background-image: url('images/icon_dark_mode.svg');
+      background-image: url('images/icons/icon_dark_mode.svg');
       background-size: 40%;
 
       &:hover {
@@ -80,5 +80,17 @@
   .button--secondary {
     color: var(--green);
     background-color: transparent;
+  }
+
+  input[type="text"], textarea {
+    border: 1px solid #454545;
+    color: #fff;
+    &::placeholder {
+      color: #c5c5c5;
+    }
+  
+    &.search {
+      background: #232524 url('images/icons/icon_search.svg') no-repeat 13px;
+    }
   }
 }

@@ -6,20 +6,20 @@
       <meta name="author" content="Connor Law">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="I'm a UK-based web designer and developer who loves making stuff on the web. I'm passionate about building beautiful user interfaces and helping businesses provide their users a seamless web experience. And dogs, of course.">
-      <link rel="apple-touch-icon" href="images/logo.svg" />
+      <link rel="apple-touch-icon" href="images/logos/logo.svg" />
       <link rel="stylesheet" href="style.css">
-      <link rel="icon" href="images/logo.svg">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      <link rel="icon" href="images/logos/logo.svg">
+      <link rel="preconnect" href="https://foncase-studies/ts.googleapis.com">
+      <link rel="preconnect" href="https://foncase-studies/ts.gstatic.com" crossorigin>
+      <link href="https://foncase-studies/ts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link href="https://foncase-studies/ts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
   </head>
 
-  <body>
+  <body class="form">
     <nav class="nav">
       <div class="nav__inner">
-        <img alt="Connor Law's Logo" src="images/logo.svg" />
+        <img alt="Connor Law's Logo" src="images/logos/logo.svg" />
         <div class="nav__links">
           <ul>
             <li onclick="window.scrollTo({top: document.getElementById('about').offsetTop,left: 0,behavior: 'smooth'});">
@@ -28,8 +28,10 @@
             <li onclick="window.scrollTo({top: document.getElementById('services').offsetTop,left: 0,behavior: 'smooth'});">
               Services
             </li>
-            <li onclick="window.scrollTo({top: document.getElementById('case-studies').offsetTop,left: 0,behavior: 'smooth'});">
-              Case studies
+            <li>
+              <a href="/case-studies">
+                Case studies
+              </a>
             </li>
             <li onclick="window.scrollTo({top: document.getElementById('contact').offsetTop,left: 0,behavior: 'smooth'});">
               Contact
@@ -55,9 +57,7 @@
             <li class="nav__mob-item" onclick="window.scrollTo({top: document.getElementById('services').offsetTop,left: 0,behavior: 'smooth'});">
               Services
             </li>
-            <li class="nav__mob-item" onclick="window.scrollTo({top: document.getElementById('case-studies').offsetTop,left: 0,behavior: 'smooth'});">
-              Case studies
-            </li>
+            <li class="nav__mob-item" ><a href="/case-studies">Case studies</a></li>
             <li class="nav__mob-item" onclick="window.scrollTo({top: document.getElementById('contact').offsetTop,left: 0,behavior: 'smooth'});">
               Contact
             </li>
@@ -236,7 +236,7 @@
             <div class="codeblock">
                 <code id="output"></code>
                 <input id="output-val" hidden value="&lt;code style='background:rgba(0,0,0,0.7);color:limegreen;padding:20px;display:block;'&gt;{$voucher|@debug_print_var}&lt;/code&gt;" disabled />
-                <span class="copy-btn">Copy</span>
+                <span class="button copy-btn">Copy</span>
             </div>
         </div>
     </section>
@@ -245,10 +245,10 @@
         <div class="section__inner">
           <div class="socials">
               <a target="_blank" href="https://codepen.io/connorlaw" rel="noopener noreferrer">
-                  <img height="32" width="32" alt="Codepen logo" class="social" src="images/logo_codepen.svg" alt="Codepen logo">
+                  <img height="32" width="32" alt="Codepen logo" class="social" src="images/logos/logo_codepen.svg" alt="Codepen logo">
               </a>
               <a target="_blank" href="https://uk.linkedin.com/in/connor-law-77b176159" rel="noopener noreferrer">
-                  <img height="32" width="32" alt="Linkedin logo" class="social" src="images/logo_linkedin.svg" alt="Linkedin logo">
+                  <img height="32" width="32" alt="Linkedin logo" class="social" src="images/logos/logo_linkedin.svg" alt="Linkedin logo">
               </a>
           </div>
           <p>&copy; 2023 &middot; Connor Law</p>
