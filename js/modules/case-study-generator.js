@@ -4,7 +4,7 @@ class CaseStudyGenerator {
       'techscheme': {
         'meta_title': 'Techscheme',
         'image': 'ts-mockup',
-        'image_extension': '.png',
+        'image_extension': '.webp',
         'title_1': 'Full refreshed website for',
         'title_2': 'the UK\'s leading tech scheme',
         'details': 'End-to-end redesign & modernisation for <a class="link" href="https://techscheme.co.uk" target="_blank">Techscheme</a>.',
@@ -14,7 +14,7 @@ class CaseStudyGenerator {
         'intro': `As lead designer and developer of the project, my goal was to redesign and modernise the existing <a class="link" href="https://techscheme.co.uk" target="_blank">Techscheme</a> website using client-supplied wireframes, as well as create all pages using raw HTML, CSS, and JavaScript for a fully functioning, interactive website. It was crucial to create a design and final product that was not only visually appealing but also user-friendly, intuitive, and optimised for different devices.`,
         'solution': `One of the key features of the project was the creation of high-fidelity interactive designs using a collaborative process with the client, which resulted in beautiful new designs incorporating a soft 'rebrand' - typography, iconography, imagery refresh - as well as a smoother, more intuitive user experience. Interactive designs were created and shared via Adobe XD, which were shared with the client to allow us to gather feedback and make necessary revisions until the design was perfect.\n\nOnce the designs were finalised, I began the process of translating them into a fully functioning, hand-coded responsive website using HTML, CSS, and JavaScript. This involved creating all pages from scratch, including adding all the necessary functionalities such as search bars, contact forms, and interactive features. The website had to be fully responsive and tested on various devices to ensure smooth functionality.`,
         'outcome': `Overall, the project was a success, and the client was thrilled with the final product. By utilizing my skills and working closely with the client, I was able to deliver a modern, user-friendly website that met all of their needs and exceeded their expectations.`,
-        'case-studies': ['cyclescheme', 'myeyesite', 'brewbabu']
+        'case-studies': ['cyclescheme', 'myeyesite', 'loft-digital']
       },
       'cyclescheme': {
         'meta_title': 'Cyclescheme',
@@ -44,7 +44,7 @@ class CaseStudyGenerator {
         'intro': `Brewbabu is a UK-based small business that specialises in selling hand-crafted teas and coffee blends. The company wanted a new website to showcase their products and make it easier for their customers to purchase online, as well as to tie-in with a wider online strategy aimed at spreading their reach to more potential customers. As a freelance web designer, I was hired to design, develop, and manage the project.`,
         'solution': `The first step was to create a design for the website that would meet Brewbabu's needs. I started by creating a wireframe to map out the layout and functionality of the site. Once the wireframe was approved, I moved on to the visual design phase, creating mockups of the site's main pages in Illustrator. I worked closely with the Brewbabu team to ensure that the design met their needs and that it was visually appealing to their target audience.\n\nOnce the design was finalised, I began building the site using <a href="https://www.squarespace.com/" class="link" target="_blank">Squarespace</a>. Squarespace is a CMS that provides an easy-to-use platform for building and hosting websites. I created the site's pages and integrated the e-commerce section of the site, allowing customers to easily browse and purchase produccase-studies/ts. As part of setting up the e-commerce products, I even met with the team and assisted with the photography to ensure products were displayed in the most visually appealing and web-accessible way possible.\n\nOne of the challenges of the development phase was ensuring that the site was optimised for mobile devices. As more and more people browse the internet on their phones and tablets, it's important that websites are mobile-friendly. I made sure that the site was responsive and that it looked great on any device.\n\nAfter the site was built and launched, I provided training for the Brewbabu team so that they could manage the site themselves. I walked them through the Squarespace CMS and showed them how to update the site's content, add new products, and process orders. I also provided ongoing support to ensure that the site continued to run smoothly.`,
         'outcome': `Overall, the project was a success. The new website has improved Brewbabu's online presence and has made it easier for their customers to purchase their produccase-studies/ts. The use of Squarespace as a CMS allowed for an efficient development process, and the training provided ensured that the Brewbabu team was able to manage the site themselves.`,
-        'case-studies': ['myeyesite', 'cyclescheme', 'techscheme']
+        'case-studies': ['myeyesite', 'cyclescheme', 'loft-digital']
       },
       'myeyesite': {
         'meta_title': 'MyEyeSite',
@@ -59,7 +59,7 @@ class CaseStudyGenerator {
         'intro': `As a designer and developer on the <a class="link" href="https://www.myeyesite.health" target="_blank">MyEyeSite</a> project, I was part of a research and development collaboration with <a class="link" href="https://www.moorfields.nhs.uk/" target="_blank">Moorfields Eye Hospital</a>, <a class="link" href="https://www.ucl.ac.uk/" target="_blank">UCL</a> and my colleagues at <a class="link" href="https://loftdigital.com" target="_blank">Loft Digital</a> aimed at accelerating rare disease research and improving healthcare.\n\nOur challenge was to find a new approach that could empower patients to collect and share their specialist rare disease data, which is essential for scientists to develop precision genetic therapies for people with rare diseases. The challenge was that this data was difficult to collect as it had been generated in different clinical and community settings over the course of a patient's lifetime and was not linked. In addition, there was no system in place for rare disease doctors to see a full copy of a patient's clinical biography ahead of an appointment.\n\nMyEyeSite was developed to address these problems by providing a platform for patients to collect, link, and share their specialist rare disease data in a secure, systematic, and structured way.`,
         'solution': `Our team engaged patients, doctors, and researchers as collaborators to design and develop the MyEyeSite application. We carried out extensive user research and collaborative design sprints, held public patient days to garner wider input, and worked with the RNIB to ensure accessibility. We also spoke at many events and engaged with pharmaceutical companies to explore commercial interest.\n\nThe MyEyeSite application was designed to consist of a platform with interfaces (web or mobile) for patients to scan and manage their specialist medical and genetic data on a timeline, and to share this data with doctors, research studies, family, and friends in a secure, systematic, and structured way.\n\nWe also developed an interface for doctors to review data shared with them in this way. The application is still in the process of being tested by its different groups of target users, and once finalised, it will go into production development.`,
         'outcome': `The MyEyeSite project has received several awards and recognition, including an <a class="link" href="https://www.ucl.ac.uk/ioo/news/2021/jun/ioo-day-2021-lecture-and-awards" target="_blank">IoO Public and Patient Involvement & Engagement Award in 2021</a>, an Innovate UK funding award winner in 2020, and an HDRUK funding award winner in 2019. We also published a paper in the Journal of Medical Internet Research (JMIR) and presented at the ARVO 2021 conference. Short films about MyEyeSite were made by NIHR Moorfields BRC, and there were podcasts and films to introduce and explain the application.\n\nThe MyEyeSite application is available at <a class="link" href="https://www.myeyesite.health" target="_blank">www.myeyesite.health</a>, and it is expected to revolutionise the way patients with rare diseases share their data with doctors and researchers to accelerate their work. I am proud to have been part of a project that could potentially change the lives of millions of people globally, and I am excited to see its impact in the coming years.`,
-        'case-studies': ['techscheme', 'brewbabu', 'bicycle-association']
+        'case-studies': ['techscheme', 'loft-digital', 'bicycle-association']
       },
       'bicycle-association': {
         'meta_title': 'Bicycle Association',
@@ -74,7 +74,7 @@ class CaseStudyGenerator {
         'intro': `For a number of years, I have worked alongside the team at <a class="link" href="https://loftdigital.com" target="_blank">Loft Digital</a> to improve, maintain and enhance the <a class="link" href="https://www.bicycleassociation.org.uk/" target="_blank">Bicycle Association</a> website. As it is built on Wordpress a knowledge of PHP, plugin & CMS development was essential to the maintenance and improvement of the site, as well as a keen eye for design.`,
         'solution': `I worked on a number of key challenges that were faced by the Bicycle Association website over the last few years. One such example was providing users with a clear, intuitive dashboard that would allow them to access and manage their accounts & user benefits easily. To address this challenge, I worked closely with the team to redesign the user dashboard, incorporating new features and a more modern, user-friendly design.\n\nIn addition to the dashboard redesign, I was also responsible for designing and developing a number of reusable blocks for a new data dashboard page. This involved creating custom PHP code to integrate the website with various data sources, as well as designing and implementing a range of data visualization tools to help users make sense of the information presented.\n\nBeyond these specific tasks, I also played a general role in developing new pages, fixing bugs, and responding quickly to requests from the Bicycle Association team. Throughout this process, I relied on my extensive knowledge of PHP, plugin & Wordpress development, as well as my keen eye for design and attention to detail.`,
         'outcome': `Overall, my work on the Bicycle Association website was focused on providing a better user experience, improving website functionality, and helping the organisation achieve its goals. Thanks to the close collaboration between myself, the Loft Digital team, and the Bicycle Association, we were able to develop a solution that met and exceeded expectations, resulting in a website that was better equipped to serve the needs of its users and stakeholders.`,
-        'case-studies': ['cyclescheme', 'techscheme', 'brewbabu']
+        'case-studies': ['brewbabu', 'techscheme', 'loft-digital']
       },
       'naytiive': {
         'meta_title': 'Naytiive',
@@ -89,7 +89,52 @@ class CaseStudyGenerator {
         'intro': `Naytiive is a singer/songwriter who needed a website to showcase his music, provide information about upcoming gigs, and sell merchandise. As a freelance web designer, I was hired to design and develop the site.`,
         'solution': `I started by meeting with Naytiive to discuss his vision for the site and his target audience. Using Adobe XD, I created wireframes and mockups to map out the layout and functionality of the site. Naytiive provided feedback on the designs, and we made revisions until we settled on one that we were both happy with.\n\nOnce the design was finalized, I began building the site using Squarespace. Squarespace allowed me to quickly set up the site and provided Naytiive with a CMS to handle updates in the future. I integrated features such as a music player, a gig calendar, and a blog to keep fans up-to-date on Naytiive's activities.\n\nOne of the challenges of the development phase was ensuring that the site was optimised for mobile devices. As more and more people browse the internet on their phones and tablets, it's important that websites are mobile-friendly. I made sure that the site was responsive and that it looked great on any device.\n\nAfter the site was built and launched, I provided training for Naytiive so that he could manage the site himself. I walked him through the Squarespace CMS and showed him how to update the site's content, add new merchandise, and manage his gig calendar. I also provided ongoing support to ensure that the site continued to run smoothly.`,
         'outcome': `The project was a success, and Naytiive now has a professional website to showcase his music and sell merchandise. The use of Adobe XD allowed for an efficient design process, and Squarespace allowed for a quick setup of the site and provided Naytiive with a CMS to handle future updates. The site is mobile-friendly and optimized for a great user experience on any device. The addition of e-commerce functionality in the near future will further enhance the site's capabilities.`,
+        'case-studies': ['techscheme', 'brewbabu', 'loft-digital']
+      },
+      'moss-and-co': {
+        'meta_title': 'Moss & Co',
+        'image': 'mc-mockup',
+        'image_extension': '.webp',
+        'title_1': 'Leading frontend development',
+        'title_2': 'for a growing UK estate agent',
+        'details': 'TODO',
+        'skills': ['HTML', 'Bootstrap', 'Sass', 'JavaScript'],
+        'tools': ['CSS', 'Bootstrap', 'PHP', 'Notion', 'JavaScript', 'Sass', 'HTML'],
+        'testimonial': 'nick',
+        'intro': `TODO`,
+        'solution': `TODO`,
+        'outcome': `TODO`,
+        'case-studies': ['techscheme', 'loft-digital', 'bicycle-association']
+      },
+      'beccas-home': {
+        'meta_title': 'Becca\'s Home',
+        'image': 'bh-mockup',
+        'image_extension': '.webp',
+        'title_1': 'A brand new interface',
+        'title_2': 'for a top US furniture brand',
+        'details': 'TODO',
+        'skills': ['Wordpress', 'JavaScript', 'HTML'],
+        'tools': ['CSS', 'Wordpress', 'Figma', 'Notion', 'JavaScript', 'HTML'],
+        'testimonial': 'sam',
+        'intro': `TODO`,
+        'solution': `TODO`,
+        'outcome': `TODO`,
         'case-studies': ['techscheme', 'brewbabu', 'bicycle-association']
+      },
+      'loft-digital': {
+        'meta_title': 'Loft Digital',
+        'image': 'loft-mockup',
+        'image_extension': '.png',
+        'title_1': 'Bespoke Wordpress site',
+        'title_2': 'for a digital consultancy',
+        'details': 'Working within a team to refine and enhance the company website using custom Wordpress blocks: <a href="https://loftdigital.com" class="link">https://loftdigital.com</a>.',
+        'skills': ['Wordpress', 'Sass', 'HTML'],
+        'tools': ['CSS', 'Wordpress', 'Adobe-XD', 'JavaScript', 'HTML', 'Sass', 'PHP', 'Github'],
+        'testimonial': 'sam',
+        'intro': `Over the years that I worked at <a class="link" href="https://loftdigital.com" target="_blank">Loft Digital</a> we evolved our company website a number of times as our services, focuses and targets changed. The final iteration that I worked on was, in my opinion, the best of the best! Working alongside our Frontend Lead Sam Scarles, we were tasked with designing and developing a new interface that would continue to use the same Wordpress CMS system that we had before. A new theme was needed...`,
+        'solution': `To address this challenge, I worked closely with Sam to scope out and redesign the required pages and to deliver a more modern, user-friendly design.\n\nOnce the designs were finalised, we were also responsible for developing a number of custom, reusable blocks - as well as custom post types - to use across the site. This allowed us to ensure consistency across the website as well as put together many new pages at speed, as all blocks - once developed - were configured to be editable within the CMS.\n\nOnce the site was built and live, it was also my responsibility to develop new pages or blocks wherever needed, fix bugs, and enhance the site. Throughout this process, I relied on my extensive knowledge of PHP, plugin & Wordpress development, as well as my keen eye for design and attention to detail.`,
+        'outcome': `I'm very happy with the way the site turned out - as I said in the introduction, of all our iterations we put together this is my favourite and best work. Thanks to the close collaboration between myself and Sam, we were able to develop a modular site that was adaptable, easy to use, and easy to maintain.`,
+        'case-studies': ['cyclescheme', 'techscheme', 'myeyesite']
       }
     }
     this.testimonials = {
