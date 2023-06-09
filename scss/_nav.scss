@@ -72,7 +72,7 @@
     ul {
       flex-direction: column;
       justify-content: space-between;
-      height: 100%;
+      height: 100vh;
       padding: 200px 0;
       box-sizing: border-box;
       width: 90%;
@@ -80,6 +80,11 @@
       li {
         margin: 0 !important;
         font-size: 28px;
+
+        a {
+          color: var(--green) !important;
+          text-decoration: none !important;
+        }
       }
     }
 
