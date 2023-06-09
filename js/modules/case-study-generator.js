@@ -115,18 +115,18 @@ class CaseStudyGenerator {
       },
       'beccas-home': {
         'meta_title': 'Becca\'s Home',
-        'meta_description': 'TODO',
+        'meta_description': 'This case study shares how Connor developed a number of public facing Gutenberg site pages for Becca\'s Home, an established US-based furniture brand. You\'ll be able to learn how Connor used his extensive, in-depth knowledge of the Wordpress platform to deliver the required public pages, as well as going above-and-beyond the job description to use his design skills to mockup a number of pages & components.',
         'image': 'bh-mockup',
         'image_extension': '.webp',
         'title_1': 'A brand new interface',
         'title_2': 'for a top US furniture brand',
-        'details': 'TODO',
+        'details': 'Development of Wordpress Gutenberg pages for top US-based furniture brand Becca\'s Home: <a href="https://beccashome.com/" class="link">https://beccashome.com</a>.',
         'skills': ['Wordpress', 'JavaScript', 'HTML'],
         'tools': ['CSS', 'Wordpress', 'Figma', 'Notion', 'JavaScript', 'HTML'],
         'testimonial': 'sam',
-        'intro': `TODO`,
-        'solution': `TODO`,
-        'outcome': `TODO`,
+        'intro': `Having worked with a designer on a fresh interface for a number of public-facing pages, the team at <a href="https://beccashome.com/" class="link">Becca's Home</a> turned their attention to finding a Wordpress developer who could implement the designs at speed. Luckily for me, they read my proposal on <a class="link" href="https://www.upwork.com/freelancers/connorlaw">Upwork</a> and decided to go ahead with hiring me for the job!`,
+        'solution': `Using my extensive knowledge and comfortability of Wordpress, I was able to hit the ground running and build high-quality pages using Gutenberg blocks, keeping everything within the CMS. This was important, as the client needed the ability to change anything on the page - content, images, buttons, etc - without needing any programming knowledge.\n\nOn a handful of occasions, I was asked to go above-and-beyond to help the team with some mockups when their designer was not available. With plenty of experience as a designer, I was able to design the necessary components and pages within Figma, ensuring pages were well thought-out and with responsiveness/best practises in mind, much to the client's satisfaction.`,
+        'outcome': `The project was a great success! The client was very happy with the work produced, as well as my flexibility to assist the team by utilising my skills as a designer whenever needed. It was a pleasure to work with the team at Becca's Home!`,
         'case-studies': ['techscheme', 'brewbabu', 'bicycle-association']
       },
       'loft-digital': {
@@ -418,6 +418,9 @@ class CaseStudyGenerator {
   }
   
   generate() {
+    const copyBtn = document.querySelector('.copy-btn');
+    copyBtn.classList.remove('disabled');
+    copyBtn.removeAttribute('disabled');
     let html = `<!doctype HTML>
     <html lang="en">
         <head>
