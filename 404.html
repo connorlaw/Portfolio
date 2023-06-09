@@ -1,0 +1,139 @@
+<!doctype HTML>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Page Not Found</title>
+      <meta name="author" content="Connor Law">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="apple-touch-icon" href="images/logos/logo.svg" />
+      <link rel="stylesheet" href="style.css">
+      <link rel="icon" href="images/logos/logo.svg">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <meta name="robots" content="noindex,nofollow">
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="nav__inner">
+        <img alt="Connor Law's Logo" src="images/logos/logo.svg" />
+        <div class="nav__links">
+          <ul>
+            <li onclick="window.scrollTo({top: document.getElementById('about').offsetTop,left: 0,behavior: 'smooth'});">
+              About
+            </li>
+            <li onclick="window.scrollTo({top: document.getElementById('services').offsetTop,left: 0,behavior: 'smooth'});">
+              Services
+            </li>
+            <li>
+              <a href="/case-studies">
+                Case studies
+              </a>
+            </li>
+            <li onclick="window.scrollTo({top: document.getElementById('contact').offsetTop,left: 0,behavior: 'smooth'});">
+              Contact
+            </li>
+            <li>
+              <div class="nav__links--btn"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__mob-btn">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav__mob">
+          <div class="nav__mob-close">
+            <span></span>
+            <span></span>
+          </div>
+          <ul>
+            <li class="nav__mob-item" onclick="window.scrollTo({top: document.getElementById('about').offsetTop,left: 0,behavior: 'smooth'});">
+              About
+            </li>
+            <li class="nav__mob-item" onclick="window.scrollTo({top: document.getElementById('services').offsetTop,left: 0,behavior: 'smooth'});">
+              Services
+            </li>
+            <li class="nav__mob-item" ><a href="/case-studies">Case studies</a></li>
+            <li class="nav__mob-item" onclick="window.scrollTo({top: document.getElementById('contact').offsetTop,left: 0,behavior: 'smooth'});">
+              Contact
+            </li>
+            <li>
+              <div class="nav__links--btn"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="section section--green section--center">
+      <div class="section__inner">
+        <br/>
+        <h1 class="section__inner--title section__inner--title-large">
+          404
+        </h1>
+        <h2>Page not found!</h2>
+        <br/><br/>
+        <p>
+          That page is either missing, removed, or never existed!<br/>
+          Try going back <a href="/" class="link">home</a> to find what you're looking for.
+        </p>
+        <div id="contact" class="callout left-aligned">
+          <div class="callout--inner">
+            <h1 class="section__inner--title">
+                But while you're here...
+            </h1>
+            <div class="callout--inner-content">
+              <div>
+                Why not reach out? I'm always happy to chat, learn about what you
+                need and find out if I can help. I'm just one click away - right
+                <a
+                class="link"
+                href="mailto:connorlaw96@hotmail.com?subject=Website%20enquiry">
+                here</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <footer>
+      <section class="section">
+        <div class="section__inner">
+          <div class="socials">
+              <a target="_blank" href="https://www.upwork.com/freelancers/connorlaw" rel="noopener noreferrer">
+                  <img height="32" width="32" alt="Upwork logo" class="social" src="images/logos/logo_upwork.svg">
+              </a>
+              <a target="_blank" href="https://uk.linkedin.com/in/connor-law-77b176159" rel="noopener noreferrer">
+                  <img height="32" width="32" alt="Linkedin logo" class="social" src="images/logos/logo_linkedin.svg">
+              </a>
+          </div>
+          <p>&copy; 2023 &middot; Connor Law</p>
+        </div>
+      </section>
+    </footer>
+    <div id="cookie-banner" class="cookie-banner callout">
+      <div class="callout--inner">
+        <h3>Hey! Are you cool with cookies?</h3>
+        <div>I'm using cookies to track how many people are visiting my site. That's all, I promise.</div>
+        <div class="right-aligned">
+          <a
+            class="button button--secondary"
+            data-cookie-consent="false"
+            href="#"
+            style="margin-right: 4px;">
+            I'd rather you didn't
+          </a>
+          <a
+            class="button"
+            data-cookie-consent="true"
+            href="#">
+            Go for it!
+          </a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

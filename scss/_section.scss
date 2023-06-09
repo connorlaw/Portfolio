@@ -92,11 +92,21 @@
       font-size: 42px;
       margin-bottom: 34px;
       font-weight: 500;
-    }
 
-    @media (max-width: 499px) {
-      .section__inner--title {
+      @media (max-width: 499px) {
         font-size: 32px;
+      }
+
+      &-large {
+        font-size: 124px;
+        margin-bottom: 12px;
+        line-height: 104px;
+
+        @media (min-width: 499px) {
+          font-size: 184px;
+          margin-bottom: 12px;
+          line-height: 164px;
+        }
       }
     }
   }
