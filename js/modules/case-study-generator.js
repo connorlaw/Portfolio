@@ -199,6 +199,9 @@ class CaseStudyGenerator {
       `,
       'myeyesite': `
         <div class="case-study-tile-wrap"> <a href="/case-studies/myeyesite" class="case-study-tile"> <img alt="Case study mockup" src="../images/case-studies/mes.jpg"/> <span class="case-study-tile--title"> MyEyeSite </span> <p> A web app for empowering patients with rare eye diseases. </p><div class="case-study--tags"> <div class="case-study--tag"> Angular </div><div class="case-study--tag"> Mobile </div><div class="case-study--tag"> Typescript </div></div></a> </div>
+      `,
+      'loft-digital': `
+        <div class="case-study-tile-wrap"> <a href="/case-studies/loft-digital" class="case-study-tile"> <img alt="Case study mockup" src="images/case-studies/loft.jpg" /><span class="case-study-tile--title">Loft Digital</span><p>Bespoke Wordpress website for a digital consultancy.</p><div class="case-study--tags"><div class="case-study--tag">Wordpress</div><div class="case-study--tag">Sass</div><div class="case-study--tag">HTML</div></div><div class="visibly-hidden">Wordpress, Github, HTML, SASS, CSS, JS, JavaScript, Illustrator, Adobe XD, PHP, Webpack</div></a> </div>
       `
     }
     this.metaTitleInput = document.querySelector('[data-id="meta-title"]');
