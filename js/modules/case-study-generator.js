@@ -147,18 +147,18 @@ class CaseStudyGenerator {
       },
       'cd-specialist-insurance': {
         'meta_title': 'C&D Specialist Insurance',
-        'meta_description': 'TODO',
+        'meta_description': 'A case study by Connor Law, the designer and developer behind the new website for specialist insurance brokers C&D Specialist Insurance. Read on to learn about the development decisions and skills involved that resulted in high-quality Figma designs and a strong Wix website at speed.',
         'image': 'cd-mockup',
         'image_extension': '.webp',
-        'title_1': 'Full design & development journey',
+        'title_1': 'Full design & development',
         'title_2': 'for a specialist insurance broker',
-        'details': 'TODO',
+        'details': 'Bespoke Figma designs and user-friendly Wix website for <a href="https://www.offshorelifeinsurances.com" class="link">C&D Specialist Insurance</a>.',
         'skills': ['Figma', 'Wix', 'UI/UX'],
         'tools': ['CSS', 'Wix', 'JavaScript', 'HTML', 'Figma', 'Notion'],
         'testimonial': 'nick',
-        'intro': `TODO`,
-        'solution': `TODO`,
-        'outcome': `TODO`,
+        'intro': `C&D Specialist Insurance is a leading provider of offshore life insurance, offering comprehensive coverage for individuals and families.\n\nThe team recognised the need to update their website to enhance user experience, increase the feeling of professionalism, and align their online presence with their industry-leading services.\n\nAs a freelance designer and developer, I was hired to revamp their website and transform it into a modern, user-friendly platform. This case study outlines the solution implemented and the outcomes achieved through our collaborative efforts.`,
+        'solution': `I collaborated with C&D Specialist Insurance to revamp their website and meet their objectives of modernising the design, improving user experience, and creating a more professional look.\n\nThrough collaborative discussion and design, we settled on a new design which featured intuitive navigation, improved typography, and visually appealing elements. Special attention was given to ensure a responsive layout for a seamless user experience across devices.\n\nThe redesigned website was implemented on the Wix platform, integrating the new design into their content management system.`,
+        'outcome': `The collaboration between C&D Specialist Insurance and myself resulted in a successful website modernisation project.\n\nThe revamped website now offers an enhanced user experience, a professional and modern look, and easy content management capabilities.\n\nBy meeting the client's objectives and improving the overall online presence, the redesigned website positions C&D Specialist Insurance as a leading player in the life insurance industry.`,
         'case-studies': ['moss-and-co', 'brewbabu', 'loft-digital']
       }
     }
