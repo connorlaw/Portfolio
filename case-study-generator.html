@@ -68,7 +68,7 @@
         </div>
       </div>
     </nav>
-    <section class="section">
+    <section class="section section--green">
       <div class="section__inner">
         <h1 class="section__inner--title">Case study generator</h1>
         <h2>Prefill fields:</h2>
@@ -79,6 +79,7 @@
               <option value="beccas-home">Becca's Home</option>
               <option value="bicycle-association">Bicycle Association</option>
               <option value="brewbabu">Brewbabu</option>
+              <option value="cd-specialist-insurance">C&D Specialist Insurance</option>
               <option value="cyclescheme">Cyclescheme</option>
               <option value="loft-digital">Loft Digital</option>
               <option value="moss-and-co">Moss & Co</option>
@@ -88,7 +89,10 @@
             </select>
           </div>
         </div>
-        <br/><br/><br/>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__inner">
         <form id="js--case-study-generate">
             <div class="input-flex">
                 <div>
@@ -108,6 +112,9 @@
                     </div>
                 </div>
             </div>
+            <br /><br /><br />
+            <h2>Meta description:</h2>
+            <textarea rows="2" data-id="meta-description" data-type="text"></textarea>
             <br /><br /><br />
             <div class="input-flex">
                 <div>
@@ -182,6 +189,14 @@
                   <label class="form-control">
                     <input type="checkbox" id="skills-Bootstrap" />
                     Bootstrap
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-Figma" />
+                    Figma
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="skills-Wix" />
+                    Wix
                   </label>
                 </fieldset>
               </div>
@@ -264,6 +279,10 @@
                     <input type="checkbox" id="tools-Webpack" />
                     Webpack
                   </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="tools-Wix" />
+                    Wix
+                  </label>
                 </fieldset>
               </div>
             </div>
@@ -321,6 +340,10 @@
                   <label class="form-control">
                     <input type="checkbox" id="brewbabu" />
                     Brewbabu
+                  </label>
+                  <label class="form-control">
+                    <input type="checkbox" id="cd-specialist-insurance" />
+                    C&D Specialist Insurance
                   </label>
                   <label class="form-control">
                     <input type="checkbox" id="cyclescheme" />

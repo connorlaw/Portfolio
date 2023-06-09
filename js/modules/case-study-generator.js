@@ -3,6 +3,7 @@ class CaseStudyGenerator {
     this.preFillOptions = {
       'techscheme': {
         'meta_title': 'Techscheme',
+        'meta_description': 'Read this case study by Connor Law, the main designer and developer behind the refreshed website for Techscheme. Learn about the collaborative process and skills involved in creating high-fidelity mockups and hand-coding the entire site using HTML, CSS, and JavaScript. Discover how the new design is visually appealing, user-friendly, intuitive, and optimised for different devices.',
         'image': 'ts-mockup',
         'image_extension': '.webp',
         'title_1': 'Full refreshed website for',
@@ -14,10 +15,11 @@ class CaseStudyGenerator {
         'intro': `As lead designer and developer of the project, my goal was to redesign and modernise the existing <a class="link" href="https://techscheme.co.uk" target="_blank">Techscheme</a> website using client-supplied wireframes, as well as create all pages using raw HTML, CSS, and JavaScript for a fully functioning, interactive website. It was crucial to create a design and final product that was not only visually appealing but also user-friendly, intuitive, and optimised for different devices.`,
         'solution': `One of the key features of the project was the creation of high-fidelity interactive designs using a collaborative process with the client, which resulted in beautiful new designs incorporating a soft 'rebrand' - typography, iconography, imagery refresh - as well as a smoother, more intuitive user experience. Interactive designs were created and shared via Adobe XD, which were shared with the client to allow us to gather feedback and make necessary revisions until the design was perfect.\n\nOnce the designs were finalised, I began the process of translating them into a fully functioning, hand-coded responsive website using HTML, CSS, and JavaScript. This involved creating all pages from scratch, including adding all the necessary functionalities such as search bars, contact forms, and interactive features. The website had to be fully responsive and tested on various devices to ensure smooth functionality.`,
         'outcome': `Overall, the project was a success, and the client was thrilled with the final product. By utilizing my skills and working closely with the client, I was able to deliver a modern, user-friendly website that met all of their needs and exceeded their expectations.`,
-        'case-studies': ['cyclescheme', 'myeyesite', 'loft-digital']
+        'case-studies': ['cyclescheme', 'moss-and-co', 'loft-digital']
       },
       'cyclescheme': {
         'meta_title': 'Cyclescheme',
+        'meta_description': 'Read on to learn how Connor contributed to development of the Cyclescheme platform, the UK\s leading cycle-to-work scheme provider, for over 3 years. This case study breaks down his involvement, responsibilities and expertise that resulted in consistent high-quality results.',
         'image': 'cs-mockup',
         'image_extension': '.png',
         'title_1': 'Platform development for the',
@@ -33,6 +35,7 @@ class CaseStudyGenerator {
       },
       'brewbabu': {
         'meta_title': 'Brewbabu',
+        'meta_description': 'Read this case study to learn how Connor Law was hired to design and develop a brand new website for boutique tea shop Brewbabu. With deep knowledge in UX, Connor worked with the owner of the business to define requirements, plan the site architecture and deliver an informative, user-friendly e-commerce website.',
         'image': 'brew-mockup',
         'image_extension': '.png',
         'title_1': 'Design & development',
@@ -44,10 +47,11 @@ class CaseStudyGenerator {
         'intro': `Brewbabu is a UK-based small business that specialises in selling hand-crafted teas and coffee blends. The company wanted a new website to showcase their products and make it easier for their customers to purchase online, as well as to tie-in with a wider online strategy aimed at spreading their reach to more potential customers. As a freelance web designer, I was hired to design, develop, and manage the project.`,
         'solution': `The first step was to create a design for the website that would meet Brewbabu's needs. I started by creating a wireframe to map out the layout and functionality of the site. Once the wireframe was approved, I moved on to the visual design phase, creating mockups of the site's main pages in Illustrator. I worked closely with the Brewbabu team to ensure that the design met their needs and that it was visually appealing to their target audience.\n\nOnce the design was finalised, I began building the site using <a href="https://www.squarespace.com/" class="link" target="_blank">Squarespace</a>. Squarespace is a CMS that provides an easy-to-use platform for building and hosting websites. I created the site's pages and integrated the e-commerce section of the site, allowing customers to easily browse and purchase produccase-studies/ts. As part of setting up the e-commerce products, I even met with the team and assisted with the photography to ensure products were displayed in the most visually appealing and web-accessible way possible.\n\nOne of the challenges of the development phase was ensuring that the site was optimised for mobile devices. As more and more people browse the internet on their phones and tablets, it's important that websites are mobile-friendly. I made sure that the site was responsive and that it looked great on any device.\n\nAfter the site was built and launched, I provided training for the Brewbabu team so that they could manage the site themselves. I walked them through the Squarespace CMS and showed them how to update the site's content, add new products, and process orders. I also provided ongoing support to ensure that the site continued to run smoothly.`,
         'outcome': `Overall, the project was a success. The new website has improved Brewbabu's online presence and has made it easier for their customers to purchase their produccase-studies/ts. The use of Squarespace as a CMS allowed for an efficient development process, and the training provided ensured that the Brewbabu team was able to manage the site themselves.`,
-        'case-studies': ['myeyesite', 'cyclescheme', 'loft-digital']
+        'case-studies': ['myeyesite', 'moss-and-co', 'loft-digital']
       },
       'myeyesite': {
         'meta_title': 'MyEyeSite',
+        'meta_description': 'This case study serves to breakdown the MyEyeSite project and Connor\'s involvement, from scoping and design of new features to expert Angular development. The resulting web app has won many awards and continues to be a unique product in the world of rare disease.',
         'image': 'mes-mockup',
         'image_extension': '.png',
         'title_1': 'Web app built to empower',
@@ -57,12 +61,13 @@ class CaseStudyGenerator {
         'tools': ['Sass', 'HTML', 'Angular', 'Illustrator', 'CSS', 'Adobe-XD', 'Github', 'Webpack', 'JavaScript'],
         'testimonial': 'nick',
         'intro': `As a designer and developer on the <a class="link" href="https://www.myeyesite.health" target="_blank">MyEyeSite</a> project, I was part of a research and development collaboration with <a class="link" href="https://www.moorfields.nhs.uk/" target="_blank">Moorfields Eye Hospital</a>, <a class="link" href="https://www.ucl.ac.uk/" target="_blank">UCL</a> and my colleagues at <a class="link" href="https://loftdigital.com" target="_blank">Loft Digital</a> aimed at accelerating rare disease research and improving healthcare.\n\nOur challenge was to find a new approach that could empower patients to collect and share their specialist rare disease data, which is essential for scientists to develop precision genetic therapies for people with rare diseases. The challenge was that this data was difficult to collect as it had been generated in different clinical and community settings over the course of a patient's lifetime and was not linked. In addition, there was no system in place for rare disease doctors to see a full copy of a patient's clinical biography ahead of an appointment.\n\nMyEyeSite was developed to address these problems by providing a platform for patients to collect, link, and share their specialist rare disease data in a secure, systematic, and structured way.`,
-        'solution': `Our team engaged patients, doctors, and researchers as collaborators to design and develop the MyEyeSite application. We carried out extensive user research and collaborative design sprints, held public patient days to garner wider input, and worked with the RNIB to ensure accessibility. We also spoke at many events and engaged with pharmaceutical companies to explore commercial interest.\n\nThe MyEyeSite application was designed to consist of a platform with interfaces (web or mobile) for patients to scan and manage their specialist medical and genetic data on a timeline, and to share this data with doctors, research studies, family, and friends in a secure, systematic, and structured way.\n\nWe also developed an interface for doctors to review data shared with them in this way. The application is still in the process of being tested by its different groups of target users, and once finalised, it will go into production development.`,
+        'solution': `Our team engaged patients, doctors, and researchers as collaborators to design and develop the MyEyeSite application. They carried out extensive user research and collaborative design sprints, held public patient days to garner wider input, and worked with the RNIB to ensure accessibility. They also spoke at many events and engaged with pharmaceutical companies to explore commercial interest.\n\nThe MyEyeSite application was designed to consist of a platform with interfaces (web or mobile) for patients to scan and manage their specialist medical and genetic data on a timeline, and to share this data with doctors, research studies, family, and friends in a secure, systematic, and structured way. We also developed an interface for doctors to review data shared with them in this way.`,
         'outcome': `The MyEyeSite project has received several awards and recognition, including an <a class="link" href="https://www.ucl.ac.uk/ioo/news/2021/jun/ioo-day-2021-lecture-and-awards" target="_blank">IoO Public and Patient Involvement & Engagement Award in 2021</a>, an Innovate UK funding award winner in 2020, and an HDRUK funding award winner in 2019. We also published a paper in the Journal of Medical Internet Research (JMIR) and presented at the ARVO 2021 conference. Short films about MyEyeSite were made by NIHR Moorfields BRC, and there were podcasts and films to introduce and explain the application.\n\nThe MyEyeSite application is available at <a class="link" href="https://www.myeyesite.health" target="_blank">www.myeyesite.health</a>, and it is expected to revolutionise the way patients with rare diseases share their data with doctors and researchers to accelerate their work. I am proud to have been part of a project that could potentially change the lives of millions of people globally, and I am excited to see its impact in the coming years.`,
         'case-studies': ['techscheme', 'loft-digital', 'bicycle-association']
       },
       'bicycle-association': {
         'meta_title': 'Bicycle Association',
+        'meta_description': 'Within this case study, you\'ll learn how Connor Law worked as part of a team to continuously enhance and maintain the Bicycle Association website over the course of 3.5 years. You will read about how Connor\s extensive knowledge and experience was utilised to scope, define, design and build new features to a consistent high standard, making him a "favourite among clients".',
         'image': 'ba-mockup',
         'image_extension': '.png',
         'title_1': 'Continuous design and development',
@@ -78,6 +83,7 @@ class CaseStudyGenerator {
       },
       'naytiive': {
         'meta_title': 'Naytiive',
+        'meta_description': 'Learn how Connor Law designed and built a brand new Squarespace website for Naytiive, a singer/songwriter, in this case study. Hear the challenge, solutions and outcome are developed through expert knowledge of platforms and technologies to deliver a high-quality product to enhance the brand.',
         'image': 'naytiive-mockup',
         'image_extension': '.png',
         'title_1': 'A brand new website for',
@@ -89,25 +95,27 @@ class CaseStudyGenerator {
         'intro': `Naytiive is a singer/songwriter who needed a website to showcase his music, provide information about upcoming gigs, and sell merchandise. As a freelance web designer, I was hired to design and develop the site.`,
         'solution': `I started by meeting with Naytiive to discuss his vision for the site and his target audience. Using Adobe XD, I created wireframes and mockups to map out the layout and functionality of the site. Naytiive provided feedback on the designs, and we made revisions until we settled on one that we were both happy with.\n\nOnce the design was finalized, I began building the site using Squarespace. Squarespace allowed me to quickly set up the site and provided Naytiive with a CMS to handle updates in the future. I integrated features such as a music player, a gig calendar, and a blog to keep fans up-to-date on Naytiive's activities.\n\nOne of the challenges of the development phase was ensuring that the site was optimised for mobile devices. As more and more people browse the internet on their phones and tablets, it's important that websites are mobile-friendly. I made sure that the site was responsive and that it looked great on any device.\n\nAfter the site was built and launched, I provided training for Naytiive so that he could manage the site himself. I walked him through the Squarespace CMS and showed him how to update the site's content, add new merchandise, and manage his gig calendar. I also provided ongoing support to ensure that the site continued to run smoothly.`,
         'outcome': `The project was a success, and Naytiive now has a professional website to showcase his music and sell merchandise. The use of Adobe XD allowed for an efficient design process, and Squarespace allowed for a quick setup of the site and provided Naytiive with a CMS to handle future updates. The site is mobile-friendly and optimized for a great user experience on any device. The addition of e-commerce functionality in the near future will further enhance the site's capabilities.`,
-        'case-studies': ['techscheme', 'brewbabu', 'loft-digital']
+        'case-studies': ['moss-and-co', 'brewbabu', 'techscheme']
       },
       'moss-and-co': {
         'meta_title': 'Moss & Co',
+        'meta_description': 'A case study by Connor Law, the main designer and developer behind the new client platform for Moss & Co. Read on to learn about the development decisions and skills involved in order to deliver a high-quality frontend interface at speed.',
         'image': 'mc-mockup',
         'image_extension': '.webp',
         'title_1': 'Leading frontend development',
         'title_2': 'for a growing UK estate agent',
-        'details': 'TODO',
+        'details': 'Fast frontend delivery using Bootstrap for Moss & Co\'s newly designed real estate client portal.',
         'skills': ['HTML', 'Bootstrap', 'Sass', 'JavaScript'],
         'tools': ['CSS', 'Bootstrap', 'PHP', 'Notion', 'JavaScript', 'Sass', 'HTML'],
         'testimonial': 'nick',
-        'intro': `TODO`,
-        'solution': `TODO`,
-        'outcome': `TODO`,
+        'intro': `With a fresh design in hand, Moss & Co hired me to handle development of the frontend of their client portal. Looking to get the project completed as soon as possible, they leaned on my expertise to advise and deliver the best possible frontend interface.`,
+        'solution': `Due to the emphasis on pace of delivery, I initially investigated the options that would allow me to fulfil this desire, eventually opting to utilise the Bootstrap library in order to put together a consistent and high-quality interface at speed.\n\nWith the designs to hand, I was able to build the frontend pages and components - including modals, toasts, accordions, etc - while incorporating dummy PHP data that would later be filled in by the backend developer.`,
+        'outcome': `I'm very happy with the quality of work provided, taking immense care to deliver consistent, responsive and brand-aligned templates for the project. Built to be extendable and easy to pick up by any developer, I believe the platform is future-proofed, and miles ahead of where it was before.`,
         'case-studies': ['techscheme', 'loft-digital', 'bicycle-association']
       },
       'beccas-home': {
         'meta_title': 'Becca\'s Home',
+        'meta_description': 'TODO',
         'image': 'bh-mockup',
         'image_extension': '.webp',
         'title_1': 'A brand new interface',
@@ -123,6 +131,7 @@ class CaseStudyGenerator {
       },
       'loft-digital': {
         'meta_title': 'Loft Digital',
+        'meta_description': 'In this case study by Connor Law, I\'ll dissect how myself and Sam Scarles designed and developed a brand new website for Loft Digital. You\'ll learn a little about how I used my expertise in HTML, CSS, Wordpress and PHP to build custom, reuseable Gutenberg blocks to allow us to rapidly expand the site and its\' contents without extra development cost to the Managing Director.',
         'image': 'loft-mockup',
         'image_extension': '.png',
         'title_1': 'Bespoke Wordpress site',
@@ -135,6 +144,22 @@ class CaseStudyGenerator {
         'solution': `To address this challenge, I worked closely with Sam to scope out and redesign the required pages and to deliver a more modern, user-friendly design.\n\nOnce the designs were finalised, we were also responsible for developing a number of custom, reusable blocks - as well as custom post types - to use across the site. This allowed us to ensure consistency across the website as well as put together many new pages at speed, as all blocks - once developed - were configured to be editable within the CMS.\n\nOnce the site was built and live, it was also my responsibility to develop new pages or blocks wherever needed, fix bugs, and enhance the site. Throughout this process, I relied on my extensive knowledge of PHP, plugin & Wordpress development, as well as my keen eye for design and attention to detail.`,
         'outcome': `I'm very happy with the way the site turned out - as I said in the introduction, of all our iterations we put together this is my favourite and best work. Thanks to the close collaboration between myself and Sam, we were able to develop a modular site that was adaptable, easy to use, and easy to maintain.`,
         'case-studies': ['cyclescheme', 'techscheme', 'myeyesite']
+      },
+      'cd-specialist-insurance': {
+        'meta_title': 'C&D Specialist Insurance',
+        'meta_description': 'TODO',
+        'image': 'cd-mockup',
+        'image_extension': '.webp',
+        'title_1': 'Full design & development journey',
+        'title_2': 'for a specialist insurance broker',
+        'details': 'TODO',
+        'skills': ['Figma', 'Wix', 'UI/UX'],
+        'tools': ['CSS', 'Wix', 'JavaScript', 'HTML', 'Figma', 'Notion'],
+        'testimonial': 'nick',
+        'intro': `TODO`,
+        'solution': `TODO`,
+        'outcome': `TODO`,
+        'case-studies': ['moss-and-co', 'brewbabu', 'loft-digital']
       }
     }
     this.testimonials = {
@@ -202,9 +227,19 @@ class CaseStudyGenerator {
       `,
       'loft-digital': `
         <div class="case-study-tile-wrap"> <a href="/case-studies/loft-digital" class="case-study-tile"> <img alt="Case study mockup" src="../images/case-studies/loft.jpg" /><span class="case-study-tile--title">Loft Digital</span><p>Bespoke Wordpress website for a digital consultancy.</p><div class="case-study--tags"><div class="case-study--tag">Wordpress</div><div class="case-study--tag">Sass</div><div class="case-study--tag">HTML</div></div></a> </div>
+      `,
+      'naytiive': `
+        <div class="case-study-tile-wrap"><a class="case-study-tile"><img alt="Case study mockup" src="../images/case-studies/naytiive.webp" /><span class="case-study-tile--title">Naytiive</span><p>Brand new website for singer/songwriter Naytiive</p><div class="case-study--tags"><div class="case-study--tag">UI/UX</div><div class="case-study--tag">Adobe XD</div><div class="case-study--tag">Squarespace</div></div></a></div>
+      `,
+      'beccas-home': `
+        <div class="case-study-tile-wrap"><a class="case-study-tile"><img alt="Case study mockup" src="../images/case-studies/bh.png" /><span class="case-study-tile--title">Becca's Home</span><p>Implementing a whole new interface for a top US furniture brand.</p><div class="case-study--tags"><div class="case-study--tag">Wordpress</div><div class="case-study--tag">JavaScript</div><div class="case-study--tag">HTML</div></div></a></div>
+      `,
+      'cd-specialist-insurance': `
+        <div class="case-study-tile-wrap"> <a class="case-study-tile"> <img alt="Case study mockup" src="../images/case-studies/cd.webp"/> <span class="case-study-tile--title"> C&D Specialist Insurance </span> <p> Full design & development journey to enhance a specialist insurance site. </p><div class="case-study--tags"> <div class="case-study--tag"> Figma </div><div class="case-study--tag"> Wix </div><div class="case-study--tag"> CSS </div><div class="case-study--tag"> HTML </div></div></a> </div>
       `
     }
     this.metaTitleInput = document.querySelector('[data-id="meta-title"]');
+    this.metaDescInput = document.querySelector('[data-id="meta-description"]');
     this.imageInput = document.querySelector('[data-id="image"]');
     this.imageExtensionInput = document.querySelector('[data-id="image-extension"]');
     this.title1Input = document.querySelector('[data-id="title-first"]');
@@ -271,6 +306,7 @@ class CaseStudyGenerator {
     document.querySelectorAll('input[type=checkbox]').forEach(el => el.checked = false);
     const val = this.preFillOptions[select.value];
     this.metaTitleInput.value = val['meta_title'];
+    this.metaDescInput.value = val['meta_description'];
     this.imageInput.value = val['image'];
     this.imageExtensionInput.value = val['image_extension'];
     this.title1Input.value = val['title_1'];
@@ -389,7 +425,7 @@ class CaseStudyGenerator {
           <title>Connor Law - Case Study - ${this.metaTitleInput.value}</title>
           <meta name="author" content="Connor Law">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <meta name="description" content="Read this case study by Connor Law, the main designer and developer behind the refreshed website of a leading tech company. Learn about the collaborative process and skills involved in creating high-fidelity mockups and hand-coding the entire site using HTML, CSS, and JavaScript. Discover how the new design is visually appealing, user-friendly, intuitive, and optimised for different devices.">
+          <meta name="description" content="${this.metaDescInput.value}">
           <link rel="apple-touch-icon" href="../images/logos/logo.svg" />
           <link rel="stylesheet" href="../style.css">
           <link rel="icon" href="../images/logos/logo.svg">
