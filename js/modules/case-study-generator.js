@@ -101,7 +101,7 @@ class CaseStudyGenerator {
         'meta_title': 'Moss & Co',
         'meta_description': 'A case study by Connor Law, the main designer and developer behind the new client platform for Moss & Co. Read on to learn about the development decisions and skills involved in order to deliver a high-quality frontend interface at speed.',
         'image': 'mc-mockup',
-        'image_extension': '.webp',
+        'image_extension': '.png',
         'title_1': 'Leading frontend development',
         'title_2': 'for a growing UK estate agent',
         'details': 'Fast frontend delivery using Bootstrap for Moss & Co\'s newly designed real estate client portal.',
