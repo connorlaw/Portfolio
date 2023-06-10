@@ -17,6 +17,10 @@
 
     div:not(.input-flex) {
       width: 49%;
+
+      @media (max-width: 699px) {
+        width: 100%;
+      }
     }
 
     div.input-flex input {
