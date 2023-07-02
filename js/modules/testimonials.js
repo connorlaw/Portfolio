@@ -19,33 +19,35 @@ class Testimonials {
       });
     });
 
-    testimonial.addEventListener('touchstart', function(event) {
-      posX = event.touches[0].pageX;
-      posY = window.scrollY;
-    });
+    if (testimonials.length > 1) {
+      testimonial.addEventListener('touchstart', function(event) {
+        posX = event.touches[0].pageX;
+        posY = window.scrollY;
+      });
 
-    testimonial.addEventListener('touchend', function(event) {
-      let active = Array.from(btns).find(x => x.classList.contains('active'));
-      let currentIndex = Array.from(btns).indexOf(active);
+      testimonial.addEventListener('touchend', function(event) {
+        let active = Array.from(btns).find(x => x.classList.contains('active'));
+        let currentIndex = Array.from(btns).indexOf(active);
 
-      if (
-        posX < event.changedTouches[0].pageX &&
-        Math.abs(posX - event.changedTouches[0].pageX) > 80 &&
-        Math.abs(posY - window.scrollY) < 80
-      ) {
-        currentIndex == 0 ? currentIndex = 2 : currentIndex--;
-      } else if (
-        posX > event.changedTouches[0].pageX &&
-        Math.abs(posX - event.changedTouches[0].pageX) > 80 &&
-        Math.abs(posY - window.scrollY) < 80
-      ) {
-        currentIndex == 2 ? currentIndex = 0 : currentIndex++;
-      }
+        if (
+          posX < event.changedTouches[0].pageX &&
+          Math.abs(posX - event.changedTouches[0].pageX) > 80 &&
+          Math.abs(posY - window.scrollY) < 80
+        ) {
+          currentIndex == 0 ? currentIndex = 2 : currentIndex--;
+        } else if (
+          posX > event.changedTouches[0].pageX &&
+          Math.abs(posX - event.changedTouches[0].pageX) > 80 &&
+          Math.abs(posY - window.scrollY) < 80
+        ) {
+          currentIndex == 2 ? currentIndex = 0 : currentIndex++;
+        }
 
-      self.slide(btns[currentIndex], btns);
-      clearInterval(interval);
-      interval = setInterval(this.repeatSlide, 5000, btns);
-    });
+        self.slide(btns[currentIndex], btns);
+        clearInterval(interval);
+        interval = setInterval(this.repeatSlide, 5000, btns);
+      });
+    }
 
     interval = setInterval(this.repeatSlide, 5000, btns);
   }
