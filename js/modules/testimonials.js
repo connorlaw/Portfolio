@@ -45,7 +45,7 @@ class Testimonials {
 
         self.slide(btns[currentIndex], btns);
         clearInterval(interval);
-        interval = setInterval(this.repeatSlide, 5000, btns);
+        interval = setInterval(self.repeatSlide, 5000, btns);
       });
     }
 
