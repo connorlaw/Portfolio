@@ -25,6 +25,13 @@ class CaseStudies {
       
       this.emptySearch.style.display = this.countTiles.length < 1 ? 'block' : 'none';
     });
+
+    this.searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        e.target.blur()
+      }
+    });
   }
 }
 
