@@ -5,6 +5,7 @@ class CaseStudies {
     this.countTiles = [...this.tiles];
     this.searchTerm;
     this.emptySearch = document.getElementById('no-results');
+    this.resultsMessage = document.getElementById('results-message');
   }
 
   init() {
@@ -23,6 +24,8 @@ class CaseStudies {
         }
       }
       
+      this.resultsMessage.style.display = this.searchInput.value && this.countTiles.length > 0 ? 'block' : 'none';
+      this.resultsMessage.innerHTML = this.countTiles.length == 1 ? `${this.countTiles.length} result` : `${this.countTiles.length} results`;
       this.emptySearch.style.display = this.countTiles.length < 1 ? 'block' : 'none';
     });
 
