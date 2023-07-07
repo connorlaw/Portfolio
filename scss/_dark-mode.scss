@@ -15,12 +15,12 @@
     border-bottom-color: #28312C;
 
     &__links--btn {
-      background-color: var(--dark-mode);
-      background-image: url('images/icons/icon_dark_mode.svg');
-      background-size: 40%;
-
+      background-color: var(--light-mode);
+      background-image: url('images/icons/icon_light_mode.svg');
+      background-size: 60%;
+      
       &:hover {
-        background-color: var(--dark-mode-darker);
+        background-color: var(--light-mode-darker);
       }
     }
     

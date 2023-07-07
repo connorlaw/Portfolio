@@ -41,16 +41,16 @@
       height: 34px;
       width: 34px;
       border-radius: 8px;
-      background-color: var(--light-mode);
-      background-image: url('images/icons/icon_light_mode.svg');
       background-repeat: no-repeat;
-      background-size: 60%;
       background-position: center;
       cursor: pointer;
       transition: 0.3s;
+      background-color: var(--dark-mode);
+      background-image: url('images/icons/icon_dark_mode.svg');
+      background-size: 40%;
 
       &:hover {
-        background-color: var(--light-mode-darker);
+        background-color: var(--dark-mode-darker);
       }
     }
 
