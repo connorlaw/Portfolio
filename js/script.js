@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
   });
 
-  if (localStorage.getItem('theme') == 'dark' || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  if (localStorage.getItem('theme') == 'dark' || (localStorage.getItem('theme') != 'light' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.body.classList.add('dark-mode');
   } else {
     document.body.classList.remove('dark-mode');
