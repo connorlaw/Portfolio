@@ -75,6 +75,30 @@ input[type="text"], textarea, select {
   }
 }
 
+.search--wrapper {
+  position: relative;
+
+  .search--clear {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    right: 12px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    background-color: var(--green-fade);
+    border: 1px solid var(--green);
+    border-radius: 20px;
+    cursor: pointer;
+    display: none;
+    color: var(--green);
+    background-image: url('images/icons/icon_cross.svg');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
 select {
   width: 100px;
   padding-right: 30px;

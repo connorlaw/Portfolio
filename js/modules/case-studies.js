@@ -6,11 +6,29 @@ class CaseStudies {
     this.searchTerm;
     this.emptySearch = document.getElementById('no-results');
     this.resultsMessage = document.getElementById('results-message');
+    this.searchClear = document.getElementsByClassName('search--clear')[0];
   }
 
   init() {
     this.searchInput.addEventListener('keyup', () => {
-      this.searchTerm = this.searchInput.value.toUpperCase();
+      this.search();
+    });
+
+    this.searchClear.addEventListener('click', () => {
+      this.searchInput.value = '';
+      this.search();
+    });
+
+    this.searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        e.target.blur()
+      }
+    });
+  }
+
+  search() {
+    this.searchTerm = this.searchInput.value.toUpperCase();
 
       for (let i = 0; i < this.tiles.length; i++) {
         const tile = this.tiles[i].getElementsByTagName('a')[0];
@@ -27,14 +45,8 @@ class CaseStudies {
       this.resultsMessage.style.display = this.searchInput.value && this.countTiles.length > 0 ? 'block' : 'none';
       this.resultsMessage.innerHTML = this.countTiles.length == 1 ? `${this.countTiles.length} result` : `${this.countTiles.length} results`;
       this.emptySearch.style.display = this.countTiles.length < 1 ? 'block' : 'none';
-    });
 
-    this.searchInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        e.target.blur()
-      }
-    });
+      this.searchClear.style.display = this.searchInput.value ? 'block' : 'none' ;
   }
 }
 
