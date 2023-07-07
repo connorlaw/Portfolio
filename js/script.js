@@ -15,12 +15,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const themeBtns = document.querySelectorAll('.nav__links--btn');
   themeBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
     });
   });
 
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.body.classList.toggle('dark-mode');
+  if (localStorage.getItem('theme') == 'dark' || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
   }
 
   const mobNavBtn = document.getElementsByClassName('nav__mob-btn')[0];
