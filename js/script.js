@@ -19,6 +19,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
   });
 
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.toggle('dark-mode');
+  }
+
   const mobNavBtn = document.getElementsByClassName('nav__mob-btn')[0];
   const mobNav = document.getElementsByClassName('nav__mob')[0];
   mobNavBtn.addEventListener('click', () => {
