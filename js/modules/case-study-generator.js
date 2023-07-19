@@ -616,7 +616,7 @@ class CaseStudyGenerator {
         </footer>
         <div id="cookie-banner" class="cookie-banner callout">
           <div class="callout--inner">
-            <h3>Hey! Are you cool with cookies?</h3>
+            <p class="h3">Hey! Are you cool with cookies?</p>
             <div>I'm using cookies to track how many people are visiting my site. That's all, I promise.</div>
             <div class="right-aligned">
               <a
