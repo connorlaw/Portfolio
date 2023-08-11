@@ -12,7 +12,7 @@ class LogoScroller {
         scrollPos = logoScroller.getBoundingClientRect().y - windowHeight;
         logoScroller.style.transform = `translateX(${scrollPos}px)`
       }
-    });
+    }, {passive: true});
   }
 }
 
