@@ -91,7 +91,19 @@
           <input class="search" inputmode="search" type="text" id="search" placeholder="Search case studies..." />
           <span class="search--clear"></span>
         </div>
-        <small id="results-message" class="left-aligned" style="display:none;margin-top:16px;"></small>
+        <div class="section__inner--flex" style="margin-top:16px;">
+          <div class="case-study-tiles-view-toggle">
+            <label>
+              <input type="radio" name="view" value="grid" checked>
+              <img src="images/icons/icon_grid.svg" alt="Grid view" class="tooltip" data-tooltip="Grid view">
+            </label>
+            <label>
+              <input type="radio" name="view" value="list">
+              <img src="images/icons/icon_list.svg" alt="List view" class="tooltip" data-tooltip="List view">
+            </label>
+          </div>
+          <small id="results-message" class="left-aligned" style="display:none;"></small>
+        </div>
         <br/><br/>
         <div id="results" class="case-study-tiles left-aligned">
           <div class="case-study-tile-wrap">
@@ -424,6 +436,31 @@
           </div>
           <div class="case-study-tile-wrap case-study-tile-wrap--coming-soon">
             <a class="case-study-tile">
+              <img alt="Case study mockup" src="images/case-studies/trovecredit.jpeg" />
+              <span class="case-study-tile--title">
+                TroveCredit
+              </span>
+              <p>
+                Building a slick Wordpress sign-up flow for a US credit builder business.
+              </p>
+              <div class="case-study--tags">
+                <div class="case-study--tag">
+                  PHP
+                </div>
+                <div class="case-study--tag">
+                  Wordpress
+                </div>
+                <div class="case-study--tag">
+                  CMS
+                </div>
+              </div>
+              <div class="visibly-hidden">
+                CSS, Notion, HTML, Design
+              </div>
+            </a>
+          </div>
+          <!-- <div class="case-study-tile-wrap case-study-tile-wrap--coming-soon">
+            <a class="case-study-tile">
               <img alt="Case study mockup" src="images/case-studies/naytiive.webp" />
               <span class="case-study-tile--title">
                 Naytiive
@@ -446,7 +483,7 @@
                 CSS, JS, Notion, Figma, Notion, Photoshop, HTML, JavaScript, Design
               </div>
             </a>
-          </div>
+          </div> -->
         </div>
         <div id="no-results">
           It seems I don't have any case studies matching that search term... yet!
