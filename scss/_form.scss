@@ -75,6 +75,34 @@ input[type="text"], textarea, select {
   }
 }
 
+
+[type=radio][name=view] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin-right: 4px;
+
+  & + img {
+    cursor: pointer;
+    border: 1px solid #ececec;
+    padding: 12px;
+    border-radius: 4px;
+    transition: 0.2s;
+    height: 20px;
+    width: 20px;
+
+    &:hover {
+      border-color: var(--green);
+    }
+  }
+
+  &:checked + img {
+    border-color: var(--green);
+    background-color: var(--green-fade);
+  }
+}
+
 .search--wrapper {
   position: relative;
 

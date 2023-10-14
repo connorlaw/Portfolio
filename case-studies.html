@@ -91,9 +91,71 @@
           <input class="search" inputmode="search" type="text" id="search" placeholder="Search case studies..." />
           <span class="search--clear"></span>
         </div>
-        <small id="results-message" class="left-aligned" style="display:none;margin-top:16px;"></small>
+        <div class="section__inner--flex" style="margin-top:16px;">
+          <div class="case-study-tiles-view-toggle">
+            <label>
+              <input type="radio" name="view" value="grid" checked>
+              <img src="images/icons/icon_grid.svg" alt="Grid view" class="tooltip" data-tooltip="Grid view">
+            </label>
+            <label>
+              <input type="radio" name="view" value="list">
+              <img src="images/icons/icon_list.svg" alt="List view" class="tooltip" data-tooltip="List view">
+            </label>
+          </div>
+          <small id="results-message" class="left-aligned" style="display:none;"></small>
+        </div>
         <br/><br/>
         <div id="results" class="case-study-tiles left-aligned">
+          <div class="case-study-tile-wrap">
+            <a class="case-study-tile" href="/case-studies/fantom-factory">
+              <img alt="Case study mockup" src="images/case-studies/fantom-factory.jpeg" />
+              <span class="case-study-tile--title">
+                Fantom Factory
+              </span>
+              <p>
+                Regular designer for an award winning e-learning platform.
+              </p>
+              <div class="case-study--tags">
+                <div class="case-study--tag">
+                  UI/UX
+                </div>
+                <div class="case-study--tag">
+                  Figma
+                </div>
+                <div class="case-study--tag">
+                  CSS
+                </div>
+              </div>
+              <div class="visibly-hidden">
+                JS, Notion, HTML, Design
+              </div>
+            </a>
+          </div>
+          <div class="case-study-tile-wrap">
+            <a class="case-study-tile" href="/case-studies/beccas-home">
+              <img alt="Case study mockup" src="images/case-studies/bh.png" />
+              <span class="case-study-tile--title">
+                Becca's Home
+              </span>
+              <p>
+                Implementing a new interface for a top US furniture brand.
+              </p>
+              <div class="case-study--tags">
+                <div class="case-study--tag">
+                  Wordpress
+                </div>
+                <div class="case-study--tag">
+                  JavaScript
+                </div>
+                <div class="case-study--tag">
+                  HTML
+                </div>
+              </div>
+              <div class="visibly-hidden">
+                CSS, JS, Notion, Figma, Design
+              </div>
+            </a>
+          </div>
           <div class="case-study-tile-wrap">
             <a class="case-study-tile" href="/case-studies/cd-specialist-insurance">
               <img alt="Case study mockup" src="images/case-studies/cd.jpg" />
@@ -141,6 +203,31 @@
               </div>
               <div class="visibly-hidden">
                 HTML, Github, SASS, JS, Notion, PHP, Figma, Webpack, CSS
+              </div>
+            </a>
+          </div>
+          <div class="case-study-tile-wrap">
+            <a href="/case-studies/enviro-guard-national" class="case-study-tile">
+              <img alt="Case study mockup" src="images/case-studies/enviroguard.jpeg" />
+              <span class="case-study-tile--title">
+                Enviro Guard National
+              </span>
+              <p>
+                Custom Wordpress site for a national asbestos management team.
+              </p>
+              <div class="case-study--tags">
+                <div class="case-study--tag">
+                  PHP
+                </div>
+                <div class="case-study--tag">
+                  Wordpress
+                </div>
+                <div class="case-study--tag">
+                  Theming
+                </div>
+              </div>
+              <div class="visibly-hidden">
+                CMS, CSS, JS, Notion, HTML, Design, Bootstrap, SASS, SEO
               </div>
             </a>
           </div>
@@ -299,56 +386,6 @@
           </div>
           <div class="case-study-tile-wrap case-study-tile-wrap--coming-soon">
             <a class="case-study-tile">
-              <img alt="Case study mockup" src="images/case-studies/enviroguard.jpeg" />
-              <span class="case-study-tile--title">
-                EnviroGuard National
-              </span>
-              <p>
-                Custom Wordpress site for a national asbestos management team.
-              </p>
-              <div class="case-study--tags">
-                <div class="case-study--tag">
-                  PHP
-                </div>
-                <div class="case-study--tag">
-                  Wordpress
-                </div>
-                <div class="case-study--tag">
-                  Theming
-                </div>
-              </div>
-              <div class="visibly-hidden">
-                CMS, CSS, JS, Notion, HTML, Design, Webpack, SASS, FTP
-              </div>
-            </a>
-          </div>
-          <div class="case-study-tile-wrap case-study-tile-wrap--coming-soon">
-            <a class="case-study-tile">
-              <img alt="Case study mockup" src="images/case-studies/fantom-factory.jpeg" />
-              <span class="case-study-tile--title">
-                Fantom Factory
-              </span>
-              <p>
-                Regular designer for an award winning e-learning platform.
-              </p>
-              <div class="case-study--tags">
-                <div class="case-study--tag">
-                  UI/UX
-                </div>
-                <div class="case-study--tag">
-                  Figma
-                </div>
-                <div class="case-study--tag">
-                  CSS
-                </div>
-              </div>
-              <div class="visibly-hidden">
-                JS, Notion, HTML, Design
-              </div>
-            </a>
-          </div>
-          <div class="case-study-tile-wrap case-study-tile-wrap--coming-soon">
-            <a class="case-study-tile">
               <img alt="Case study mockup" src="images/case-studies/bmsg.jpg" />
               <span class="case-study-tile--title">
                 BMSG Wealth
@@ -374,30 +411,55 @@
           </div>
           <div class="case-study-tile-wrap case-study-tile-wrap--coming-soon">
             <a class="case-study-tile">
-              <img alt="Case study mockup" src="images/case-studies/bh.png" />
+              <img alt="Case study mockup" src="images/case-studies/clinibee.jpg" />
               <span class="case-study-tile--title">
-                Becca's Home
+                Clinibee
               </span>
               <p>
-                Implementing a new interface for a top US furniture brand.
+                Bespoke Webflow site for a UK-based clinical practise platform builder.
               </p>
               <div class="case-study--tags">
                 <div class="case-study--tag">
-                  Wordpress
+                  Webflow
                 </div>
                 <div class="case-study--tag">
                   JavaScript
                 </div>
                 <div class="case-study--tag">
-                  HTML
+                  CMS
                 </div>
               </div>
               <div class="visibly-hidden">
-                CSS, JS, Notion, Figma, Design
+                CSS, JS, HTML
               </div>
             </a>
           </div>
           <div class="case-study-tile-wrap case-study-tile-wrap--coming-soon">
+            <a class="case-study-tile">
+              <img alt="Case study mockup" src="images/case-studies/trovecredit.jpeg" />
+              <span class="case-study-tile--title">
+                TroveCredit
+              </span>
+              <p>
+                Building a slick Wordpress sign-up flow for a US credit builder business.
+              </p>
+              <div class="case-study--tags">
+                <div class="case-study--tag">
+                  PHP
+                </div>
+                <div class="case-study--tag">
+                  Wordpress
+                </div>
+                <div class="case-study--tag">
+                  CMS
+                </div>
+              </div>
+              <div class="visibly-hidden">
+                CSS, Notion, HTML, Design
+              </div>
+            </a>
+          </div>
+          <!-- <div class="case-study-tile-wrap case-study-tile-wrap--coming-soon">
             <a class="case-study-tile">
               <img alt="Case study mockup" src="images/case-studies/naytiive.webp" />
               <span class="case-study-tile--title">
@@ -421,7 +483,7 @@
                 CSS, JS, Notion, Figma, Notion, Photoshop, HTML, JavaScript, Design
               </div>
             </a>
-          </div>
+          </div> -->
         </div>
         <div id="no-results">
           It seems I don't have any case studies matching that search term... yet!

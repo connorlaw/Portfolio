@@ -1,10 +1,11 @@
-import Testimonials from './modules/testimonials.js';
-import Callout from './modules/callout.js';
-import Tooltips from './modules/tooltips.js';
-import Cookies from './modules/cookies.js';
-import LogoScroller from './modules/logo-scroller.js';
-import CaseStudies from './modules/case-studies.js';
-import CaseStudyGenerator from './modules/case-study-generator.js';
+import Testimonials from './modules/_testimonials.js';
+import Callout from './modules/_callout.js';
+import Tooltips from './modules/_tooltips.js';
+import Cookies from './modules/_cookies.js';
+import LogoScroller from './modules/_logo-scroller.js';
+import CaseStudies from './modules/_case-studies.js';
+import CaseStudyGenerator from './modules/_case-study-generator.js';
+import CaseStudyShuffle from './modules/_case-study-shuffle.js';
 
 let mobNavOpen = false;
 
@@ -74,5 +75,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
   if (document.getElementById('js--case-study-generate')) {
     const caseStudyGenerator = new CaseStudyGenerator();
     caseStudyGenerator.init();
+  }
+
+  if (document.getElementById('case-study-shuffle')) {
+    const caseStudyShuffle = new CaseStudyShuffle();
+    caseStudyShuffle.init();
   }
 });

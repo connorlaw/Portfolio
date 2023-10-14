@@ -7,6 +7,7 @@ class CaseStudies {
     this.emptySearch = document.getElementById('no-results');
     this.resultsMessage = document.getElementById('results-message');
     this.searchClear = document.getElementsByClassName('search--clear')[0];
+    this.viewToggle = document.querySelectorAll('[name="view"]');
   }
 
   init() {
@@ -25,6 +26,14 @@ class CaseStudies {
         e.target.blur()
       }
     });
+
+    if (this.viewToggle.length > 0) {
+      this.viewToggle.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+          document.getElementById('results').classList.toggle('case-study-tiles-list', e.target.value === 'list');
+        });
+      });
+    }
   }
 
   search() {

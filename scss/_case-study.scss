@@ -94,6 +94,30 @@
       @media (min-width: 899px) {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
+
+      &-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 0px;
+
+        .case-study-tile {
+          display: block;
+          img {
+            float: left;
+            max-width: 170px;
+            height: 100px;
+            margin-right: 32px;
+          }
+        }
+      }
+
+      &-view-toggle {
+        @media (max-width: 600px) {
+          display: none;
+          visibility: hidden;
+          overflow: hidden;
+          height: 1px;
+        }
+      }
     }
 
     &-tile {
@@ -129,6 +153,7 @@
 
       p {
         margin: 0;
+        color: #3e3e3e;
       }
 
       &-wrap {
