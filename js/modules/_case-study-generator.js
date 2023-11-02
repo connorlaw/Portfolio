@@ -169,20 +169,22 @@ class CaseStudyGenerator {
     return html;
   }
   
-  buildFeaturedCaseStudies() {
-    let html = [];
-    let checkboxes = this.caseStudiesInput.elements;
-    Array.from(checkboxes).forEach(elem => {
-      if (elem.checked) {
-        html.push(`
-          ${this.caseStudyTiles[elem.id]}
-        `);
-      }
-    });
+  // Replaced by randomised case studies on page load
+
+  // buildFeaturedCaseStudies() {
+  //   let html = [];
+  //   let checkboxes = this.caseStudiesInput.elements;
+  //   Array.from(checkboxes).forEach(elem => {
+  //     if (elem.checked) {
+  //       html.push(`
+  //         ${this.caseStudyTiles[elem.id]}
+  //       `);
+  //     }
+  //   });
   
-    const shuffledArray = html.sort((a, b) => 0.5 - Math.random());
-    return shuffledArray.join('');
-  }
+  //   const shuffledArray = html.sort((a, b) => 0.5 - Math.random());
+  //   return shuffledArray.join('');
+  // }
   
   generate() {
     const copyBtn = document.querySelector('.copy-btn');
@@ -204,7 +206,7 @@ class CaseStudyGenerator {
           <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
       </head>
     
-      <body>
+      <body id="case-study-shuffle">
         <nav class="nav">
           <div class="nav__inner">
             <a href="/"><img alt="Connor Law's logo" src="../images/logos/logo.svg" /></a>
@@ -339,7 +341,7 @@ class CaseStudyGenerator {
             <p class="section__inner--subtitle">Case studies</p>
             <h1 class="section__inner--title">More of my latest work</h1>
             <div class="case-study-tiles">
-              ${this.buildFeaturedCaseStudies()}
+              <!-- Filled via JS -->
             </div>
             <br/>
             <a class="button" href="/case-studies">

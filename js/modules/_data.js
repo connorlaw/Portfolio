@@ -25,7 +25,7 @@ export const preFillOptions = {
     'details': 'Development of a bespoke Webflow site for Clinibee, a clinical practise platform provider. Check out the site here: <a href="https://clinibee.com/" class="link">https://clinibee.com</a>.',
     'skills': ['Webflow', 'JavaScript', 'CMS'],
     'tools': ['Webflow', 'JavaScript', 'HTML', 'Notion', 'CSS', 'Figma'],
-    'testimonial': 'giacomo',
+    'testimonial': 'alex',
     'intro': `<a href="https://clinibee.com" target="_blank" rel="noopener noreferrer" class="link">Clinibee</a>, a renowned platform builder for clinical practices, sought to elevate their online presence by transitioning from Squarespace to Webflow. In their quest to achieve this transformation, Clinibee reached out to utilise my expertise to collaborate closely with their web designer to achieve a seamless migration, while also delivering custom web development solutions.`,
     'solution': `I was entrusted with the task of facilitating Clinibee's transition to Webflow while preserving their unique identity and user experience. I embarked on this project with enthusiasm, bringing my extensive knowledge of web development and the Webflow platform to the forefront.\n\nThe initial step involved setting up Webflow's Content Management System (CMS) to provide Clinibee with unparalleled control over their website's content. This allowed for easy updates and modifications, empowering Clinibee to manage their platform without requiring in-depth technical knowledge.\n\nOnce this had been set up, the next step involved translating Clinibee's final designs into a fully functional website. This involved bespoke web development work, ensuring that all design elements and features were implemented flawlessly. Every detail was meticulously reviewed to guarantee the highest level of precision and quality.\n\nThroughout the project, I maintained a fluid and open line of communication with Clinibee's team, promptly addressing any queries or concerns via Notion for fast collaboration. I was dedicated to delivering a result that matched their vision while adhering to best practices in web development.`,
     'outcome': `The successful execution of this project was marked by a seamless migration from Squarespace to Webflow, providing Clinibee with a fresh and dynamic online presence. The newly established CMS allowed Clinibee's team to manage their content with ease, promoting their independence and flexibility.\n\nThe bespoke web development work ensured that Clinibee's website not only met but exceeded their expectations. The end result was a visually appealing, functional, and highly responsive website that showcased Clinibee's commitment to excellence in the clinical practice industry.\n\nClinibee was left thoroughly impressed with my dedication, expertise, and the quality of our work, even going above and beyond the initial scope of the project to guarantee the client's satisfaction. I'm proud to have been a part of Clinibee's journey towards online success.`,
@@ -258,6 +258,12 @@ export const testimonials = {
     'title': 'Commercial Account Executive, Becca\'s Home',
     'content': `Connor is a pleasure to work with. Self motivated, creative, and works hard to finish the task at hand.
       Very easy to work with and high quality work. Definitely recommend.`
+  },
+  'alex': {
+    'image': '../images/testimonials/alex.jpeg',
+    'name': 'Alex Kenney',
+    'title': 'Founder at Clinibee & UBQO',
+    'content': `Thank you for working so seamlessly with our team on the development of our new website. On time, on budget and flexible when the requirements changed slightly. We will continue to work with Connor in the future.`
   }
 };
 
@@ -295,9 +301,9 @@ export const caseStudyTiles = {
   'enviro-guard-national': `
     <div class="case-study-tile-wrap"> <a href="/case-studies/enviro-guard-national" class="case-study-tile"><img alt="Case study mockup" src="../images/case-studies/enviroguard.jpeg" /><span class="case-study-tile--title">Enviro Guard National</span><p>Custom Wordpress site for a national asbestos management team.</p><div class="case-study--tags"><div class="case-study--tag">PHP</div><div class="case-study--tag">Wordpress</div><div class="case-study--tag">Theming</div></div><div class="visibly-hidden">CMS, CSS, JS, Notion, HTML, Design, Bootstrap, SASS, SEO</div></a></div>
   `,
-  // 'clinibee': `
-  //   <div class="case-study-tile-wrap"> <a href="/case-studies/clinibee" class="case-study-tile"><img alt="Case study mockup" src="../images/case-studies/clinibee.jpg" /><span class="case-study-tile--title">Clinibee</span><p>Bespoke Webflow site for a UK-based clinical practise platform builder.</p><div class="case-study--tags"><div class="case-study--tag">Webflow</div><div class="case-study--tag">JavaScript</div><div class="case-study--tag">CMS</div></div><div class="visibly-hidden">CSS, JS, HTML</div></a></div>
-  // `,
+  'clinibee': `
+    <div class="case-study-tile-wrap"> <a href="/case-studies/clinibee" class="case-study-tile"><img alt="Case study mockup" src="../images/case-studies/clinibee.jpg" /><span class="case-study-tile--title">Clinibee</span><p>Bespoke Webflow site for a UK-based clinical practise platform builder.</p><div class="case-study--tags"><div class="case-study--tag">Webflow</div><div class="case-study--tag">JavaScript</div><div class="case-study--tag">CMS</div></div><div class="visibly-hidden">CSS, JS, HTML</div></a></div>
+  `,
   'fantom-factory': `
     <div class="case-study-tile-wrap"> <a href="/case-studies/fantom-factory" class="case-study-tile"><img alt="Case study mockup" src="../images/case-studies/fantom-factory.jpeg" /><span class="case-study-tile--title">Fantom Factory</span><p>Regular designer for an award winning e-learning platform.</p><div class="case-study--tags"><div class="case-study--tag">UI/UX</div><div class="case-study--tag">Figma</div><div class="case-study--tag">CSS</div></div><div class="visibly-hidden">JS, Notion, HTML, Design</div></a></div>
   `
