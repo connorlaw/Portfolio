@@ -83,7 +83,7 @@ input[type="text"], textarea, select {
   height: 0;
   margin-right: 4px;
 
-  & + img {
+  & + svg {
     cursor: pointer;
     border: 1px solid #ececec;
     padding: 12px;
@@ -97,9 +97,10 @@ input[type="text"], textarea, select {
     }
   }
 
-  &:checked + img {
+  &:checked + svg {
     border-color: var(--green);
     background-color: var(--green-fade);
+    fill: #000000;
   }
 }
 
