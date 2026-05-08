@@ -1,0 +1,191 @@
+<!doctype HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Meter | Connor Law</title>
+    <meta name="author" content="Connor Law">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="UK-based freelance web designer and developer.">
+    <link rel="apple-touch-icon" href="/images/logos/logo.svg" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/images/logos/logo.svg">
+		<link rel="preload" href="/fonts/rubik.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="/fonts/rubik-italic.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="/fonts/courier-prime.woff2" as="font" crossorigin="anonymous" />
+  </head>
+
+  <body id="">
+    <nav class="nav">
+  <div class="nav__inner">
+    <a href="/"><img alt="Connor Law's logo" src="/images/logos/logo.svg" /></a>
+    <div class="nav__links">
+      <ul>
+        <li>
+          <a class="nav__mob-item" href="/#about">About</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#services">Services</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/case-studies">Case studies</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/til">TIL</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#contact">Contact</a>
+        </li>
+        <li>
+          <div class="nav__links--btn"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="nav__mob-btn">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav__mob">
+      <div class="nav__mob-close">
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li>
+          <a class="nav__mob-item" href="/#about">About</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#services">Services</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/case-studies">Case studies</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/til">TIL</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#contact">Contact</a>
+        </li>
+        <li>
+          <div class="nav__links--btn"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    
+<section class="section">
+  <div class="section__inner">
+    <p class="section__inner--subtitle section--center">
+      Today I Learned
+    </p>
+    <h1 class="section__inner--title section--center">HTML Meter</h1>
+
+    <div class="case-study">
+      <div class="case-study--main til-post">
+
+        <div class="til-post--meta">
+          <time datetime="2025-12-09">8 December 2025</time>
+          
+						•
+            <div class="case-study--tags">
+              
+                
+                  <div class="case-study--tag">HTML</div>
+                
+              
+            </div>
+          
+        </div>
+
+        <p>While creating some awesome new data visualisations for <a href="/case-studies/fantom-factory" class="link">Fantom Factory</a>, I came across a native solution for something I hadn't realised was a thing: HTML's <code>&lt;meter&gt;</code> element. You learn something new everyday, right?!</p>
+<blockquote>
+<p><label for="fuel">Fuel level:</label>
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="32">
+at 32/100
+</meter></p>
+</blockquote>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fuel<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Hunger level:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meter</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fuel<span class="token punctuation">"</span></span> <span class="token attr-name">min</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">max</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span> <span class="token attr-name">low</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>33<span class="token punctuation">"</span></span> <span class="token attr-name">high</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>66<span class="token punctuation">"</span></span> <span class="token attr-name">optimum</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>80<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>32<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  at 32/100
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>meter</span><span class="token punctuation">></span></span></code></pre>
+<h2>Browser support</h2>
+<p>Baseline 2017 - all modern browsers support it.</p>
+<hr>
+<p>Official docs: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter" target="_blank" rel="noopener noreferrer" class="link">MDN Meter Element</a></p>
+
+      </div>
+    </div>
+
+    <br/>
+    <a class="button" href="/til">Back to TIL</a>
+
+    <div id="contact" class="callout left-aligned">
+  <div class="callout--inner">
+    <h1 class="section__inner--title">
+      Let's grow your business,<br/> together
+    </h1>
+    <div class="callout--inner-content">
+      <div>
+        Whether you're after a new design, fresh development or just have a
+        great business idea you want to get the ball rolling on, I'm here to help.
+        I'm just a click away. Let's get started, today.
+      </div>
+      <a class="button" href="mailto:connorlaw96@hotmail.com?subject=Website%20enquiry">
+        Get started
+      </a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+    <footer>
+  <section class="section">
+    <div class="section__inner">
+			<div>
+				<div class="icons">
+					<a target="_blank" href="https://www.upwork.com/freelancers/connorlaw" rel="noopener noreferrer">
+						<img height="32" width="32" alt="Upwork logo" class="social" src="/images/logos/logo_upwork.svg">
+					</a>
+					<a target="_blank" href="https://uk.linkedin.com/in/connor-law-77b176159" rel="noopener noreferrer">
+						<img height="32" width="32" alt="Linkedin logo" class="social" src="/images/logos/logo_linkedin.svg">
+					</a>
+				</div>
+				<p>&copy; 2026 &middot; Connor Law</p>
+			</div>
+			<div>
+				<div class="icons icons-single">
+					<a target="_blank" href="https://notbyai.fyi" rel="noopener noreferrer">
+						<img height="48" width="150" alt="Developed by a Human: Not by Ai" class="social" src="/images/logos/notbyai.svg">
+					</a>
+				</div>
+				<p>Proudly hand-coded with &#9825;</p>
+			</div>
+    </div>
+  </section>
+</footer>
+
+
+    <div id="cookie-banner" class="cookie-banner callout">
+      <div class="callout--inner">
+        <p class="h3">Hey! Are you cool with cookies?</p>
+        <div>I'm using cookies to track how many people are visiting my site. That's all, I promise.</div>
+        <div class="right-aligned">
+          <a class="button button--secondary" data-cookie-consent="false" href="#" style="margin-right: 4px;">
+            I'd rather you didn't
+          </a>
+          <a class="button" data-cookie-consent="true" href="#">
+            Go for it!
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/script.js"></script>
+  </body>
+</html>

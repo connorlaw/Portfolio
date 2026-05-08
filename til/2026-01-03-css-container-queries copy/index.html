@@ -1,0 +1,227 @@
+<!doctype HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Container Queries | Connor Law</title>
+    <meta name="author" content="Connor Law">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="UK-based freelance web designer and developer.">
+    <link rel="apple-touch-icon" href="/images/logos/logo.svg" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/images/logos/logo.svg">
+		<link rel="preload" href="/fonts/rubik.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="/fonts/rubik-italic.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="/fonts/courier-prime.woff2" as="font" crossorigin="anonymous" />
+  </head>
+
+  <body id="">
+    <nav class="nav">
+  <div class="nav__inner">
+    <a href="/"><img alt="Connor Law's logo" src="/images/logos/logo.svg" /></a>
+    <div class="nav__links">
+      <ul>
+        <li>
+          <a class="nav__mob-item" href="/#about">About</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#services">Services</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/case-studies">Case studies</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/til">TIL</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#contact">Contact</a>
+        </li>
+        <li>
+          <div class="nav__links--btn"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="nav__mob-btn">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav__mob">
+      <div class="nav__mob-close">
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li>
+          <a class="nav__mob-item" href="/#about">About</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#services">Services</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/case-studies">Case studies</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/til">TIL</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#contact">Contact</a>
+        </li>
+        <li>
+          <div class="nav__links--btn"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    
+<section class="section">
+  <div class="section__inner">
+    <p class="section__inner--subtitle section--center">
+      Today I Learned
+    </p>
+    <h1 class="section__inner--title section--center">CSS Container Queries</h1>
+
+    <div class="case-study">
+      <div class="case-study--main til-post">
+
+        <div class="til-post--meta">
+          <time datetime="2026-01-03">2 January 2026</time>
+          
+						•
+            <div class="case-study--tags">
+              
+                
+                  <div class="case-study--tag">CSS</div>
+                
+              
+            </div>
+          
+        </div>
+
+        <p>For a long while, responsive design could solely rely on the <strong>viewport</strong> size - and that was great for the majority of the time.</p>
+<p>However, there are those tiny little edge cases where you might want to style something not based on the <strong>viewport</strong> itself, but rather when a <strong>container</strong> reaches a certain size.</p>
+<h2>Let's look at an example</h2>
+<p>You've got a main content area with a searchbar, sort button and filter button at the top, plus a sidebar running down the side of the page. The content and sidebar are structured using <code>display: flex</code>.</p>
+<p><img src="/images/til/container-queries-1.svg" alt="Container query visual aid"></p>
+<p>With traditional media queries your options are binary: at a certain viewport size you'll need to hide the searchbar and buttons then show small icon buttons for search and for filtering/sorting, like so:</p>
+<pre class="language-css"><code class="language-css"><span class="token comment">/* Shrink the buttons down when viewport reaches 700px or smaller */</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 700px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.searchbar-and-buttons</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.smaller-buttons</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Which results in this layout:</p>
+<p><img src="/images/til/container-queries-2.svg" alt="Container query visual aid"></p>
+<p>Looks alright so far...</p>
+<p>But, we have some other CSS elsewhere that says &quot;when the viewport gets small enough, switch the page content to <code>flex-direction: column</code> so that the sidebar falls underneath the main content area, which should now span the full viewport width.&quot;</p>
+<p>Suddenly, there's loads of space for the searchbar and buttons again!</p>
+<p><img src="/images/til/container-queries-3.svg" alt="Container query visual aid"></p>
+<p>Oh, wait... the small buttons are still there, despite there being plenty of room for the bigger (and more human-friendly) buttons.</p>
+<p>You might think about adding <em>more</em> media queries, but trying to account for all scenarios gets messy pretty quickly.</p>
+<h2>CSS Container Queries to the rescue!</h2>
+<p>We can define the content area as a container and simply base styles off of <em>its</em> size, not the viewports.</p>
+<pre class="language-css"><code class="language-css"><span class="token comment">/* Mark the parent as a container */</span>
+
+<span class="token selector">.content-area</span> <span class="token punctuation">{</span>
+  <span class="token property">container-type</span><span class="token punctuation">:</span> inline-size<span class="token punctuation">;</span>
+  <span class="token property">container-name</span><span class="token punctuation">:</span> content<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* Then query against it */</span>
+
+<span class="token atrule"><span class="token rule">@container</span> content <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 400px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.searchbar-and-buttons</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.smaller-buttons</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Now the searchbar and buttons adapt based on the width of <code>.content-area</code>, not the viewport.</p>
+<p><img src="/images/til/container-queries-4.svg" alt="Container query visual aid"></p>
+<h2>Browser support</h2>
+<p>Baseline 2023 - all modern browsers support it.</p>
+<hr>
+<p>I based my examples off of the brilliant interactive guide here: <a href="https://ishadeed.com/article/css-container-query-guide/#using-css-container-queries" target="_blank" rel="noopener noreferrer" class="link">An Interactive Guide to CSS Container Queries</a></p>
+<p>Official docs: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_queries" target="_blank" rel="noopener noreferrer" class="link">MDN Container Queries</a></p>
+
+      </div>
+    </div>
+
+    <br/>
+    <a class="button" href="/til">Back to TIL</a>
+
+    <div id="contact" class="callout left-aligned">
+  <div class="callout--inner">
+    <h1 class="section__inner--title">
+      Let's grow your business,<br/> together
+    </h1>
+    <div class="callout--inner-content">
+      <div>
+        Whether you're after a new design, fresh development or just have a
+        great business idea you want to get the ball rolling on, I'm here to help.
+        I'm just a click away. Let's get started, today.
+      </div>
+      <a class="button" href="mailto:connorlaw96@hotmail.com?subject=Website%20enquiry">
+        Get started
+      </a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+    <footer>
+  <section class="section">
+    <div class="section__inner">
+			<div>
+				<div class="icons">
+					<a target="_blank" href="https://www.upwork.com/freelancers/connorlaw" rel="noopener noreferrer">
+						<img height="32" width="32" alt="Upwork logo" class="social" src="/images/logos/logo_upwork.svg">
+					</a>
+					<a target="_blank" href="https://uk.linkedin.com/in/connor-law-77b176159" rel="noopener noreferrer">
+						<img height="32" width="32" alt="Linkedin logo" class="social" src="/images/logos/logo_linkedin.svg">
+					</a>
+				</div>
+				<p>&copy; 2026 &middot; Connor Law</p>
+			</div>
+			<div>
+				<div class="icons icons-single">
+					<a target="_blank" href="https://notbyai.fyi" rel="noopener noreferrer">
+						<img height="48" width="150" alt="Developed by a Human: Not by Ai" class="social" src="/images/logos/notbyai.svg">
+					</a>
+				</div>
+				<p>Proudly hand-coded with &#9825;</p>
+			</div>
+    </div>
+  </section>
+</footer>
+
+
+    <div id="cookie-banner" class="cookie-banner callout">
+      <div class="callout--inner">
+        <p class="h3">Hey! Are you cool with cookies?</p>
+        <div>I'm using cookies to track how many people are visiting my site. That's all, I promise.</div>
+        <div class="right-aligned">
+          <a class="button button--secondary" data-cookie-consent="false" href="#" style="margin-right: 4px;">
+            I'd rather you didn't
+          </a>
+          <a class="button" data-cookie-consent="true" href="#">
+            Go for it!
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/script.js"></script>
+  </body>
+</html>
