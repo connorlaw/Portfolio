@@ -1,17 +1,20 @@
 <!doctype HTML>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
     <title>Case Studies | Connor Law</title>
     <meta name="author" content="Connor Law">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Explore my UK-based web design and development case studies, where I showcase my passion for creating stunning user interfaces and delivering seamless web experiences.">
-    <link rel="apple-touch-icon" href="/images/logos/logo.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120.png">
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="/images/logos/logo.svg">
 		<link rel="preload" href="/fonts/rubik.woff2" as="font" crossorigin="anonymous" />
 		<link rel="preload" href="/fonts/rubik-italic.woff2" as="font" crossorigin="anonymous" />
 		<link rel="preload" href="/fonts/courier-prime.woff2" as="font" crossorigin="anonymous" />
+		
   </head>
 
   <body id="">
@@ -27,7 +30,13 @@
           <a class="nav__mob-item" href="/#services">Services</a>
         </li>
         <li>
+          <a class="nav__mob-item" href="/#how-it-works">How it works</a>
+        </li>
+        <li>
           <a class="nav__mob-item" href="/case-studies">Case studies</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#tech-stack">Tech</a>
         </li>
         <li>
           <a class="nav__mob-item" href="/til">TIL</a>
@@ -57,7 +66,13 @@
           <a class="nav__mob-item" href="/#services">Services</a>
         </li>
         <li>
+          <a class="nav__mob-item" href="/#how-it-works">How it works</a>
+        </li>
+        <li>
           <a class="nav__mob-item" href="/case-studies">Case studies</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#tech-stack">Tech</a>
         </li>
         <li>
           <a class="nav__mob-item" href="/til">TIL</a>
@@ -75,327 +90,328 @@
 
 
     
-<section class="section section--center">
-  <div class="section__inner">
-    <p class="section__inner--subtitle">Case studies</p>
-    <h1 class="section__inner--title">Check out my<br />latest projects</h1>
-    <br/>
+<main>
+	<section class="section section--center">
+		<div class="section__inner">
+			<p class="section__inner--subtitle">Case studies</p>
+			<h1 class="section__inner--title">Check out my<br />latest projects</h1>
+			<br/>
 
-    <div class="search--wrapper">
-      <input class="search" inputmode="search" type="text" id="search" placeholder="Search case studies..." />
-      <span class="search--clear"></span>
-    </div>
+			<div class="search--wrapper">
+				<input class="search" inputmode="search" type="text" id="search" placeholder="Search case studies..." />
+				<span class="search--clear"></span>
+			</div>
 
-    <div class="section__inner--flex" style="margin-top:16px;">
-      <div class="case-study-tiles-view-toggle">
-        <label>
-          <input type="radio" name="view" value="grid" checked>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x2" viewBox="0 0 16 16">
-            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v8a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5v-8zM1.5 3a.5.5 0 0 0-.5.5V7h4V3H1.5zM5 8H1v3.5a.5.5 0 0 0 .5.5H5V8zm1 0v4h4V8H6zm4-1V3H6v4h4zm1 1v4h3.5a.5.5 0 0 0 .5-.5V8h-4zm0-1h4V3.5a.5.5 0 0 0-.5-.5H11v4z"/>
-          </svg>
-        </label>
-        <label>
-          <input type="radio" name="view" value="list">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
-            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
-            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
-          </svg>
-        </label>
-      </div>
-      <small id="results-message" class="left-aligned" style="display:none;"></small>
-    </div>
+			<div class="section__inner--flex" style="margin-top:16px;">
+				<div class="case-study-tiles-view-toggle">
+					<label>
+						<input type="radio" name="view" value="grid" checked>
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x2" viewBox="0 0 16 16">
+							<path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v8a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5v-8zM1.5 3a.5.5 0 0 0-.5.5V7h4V3H1.5zM5 8H1v3.5a.5.5 0 0 0 .5.5H5V8zm1 0v4h4V8H6zm4-1V3H6v4h4zm1 1v4h3.5a.5.5 0 0 0 .5-.5V8h-4zm0-1h4V3.5a.5.5 0 0 0-.5-.5H11v4z"/>
+						</svg>
+					</label>
+					<label>
+						<input type="radio" name="view" value="list">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+							<path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+							<path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+						</svg>
+					</label>
+				</div>
+				<small id="results-message" class="left-aligned" style="display:none;"></small>
+			</div>
 
-    <br/><br/>
+			<br/><br/>
 
-    <div id="results" class="case-study-tiles left-aligned">
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/laws-of-travel/">
-            <img alt="Case study mockup" src="/images/case-studies/laws-of-travel.webp" />
-            <span class="case-study-tile--title">Laws of Travel</span>
-            <p>Custom design & Wordpress theme development for travel blog start-up.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">UI/UX</div>
-              
-                <div class="case-study--tag">Wordpress</div>
-              
-                <div class="case-study--tag">Sass</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">CSS, SCSS, JS, Notion, Figma, Design</div>
-            
-          </a>
-        </div>
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/clinibee/">
-            <img alt="Case study mockup" src="/images/case-studies/clinibee.jpg" />
-            <span class="case-study-tile--title">Clinibee</span>
-            <p>Bespoke Webflow site for a UK-based clinical practise platform builder.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">JavaScript</div>
-              
-                <div class="case-study--tag">CMS</div>
-              
-                <div class="case-study--tag">Webflow</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">Webflow, CMS, JavaScript, Figma, Notion, CSS, HTML</div>
-            
-          </a>
-        </div>
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/fantom-factory/">
-            <img alt="Case study mockup" src="/images/case-studies/fantom-factory.jpeg" />
-            <span class="case-study-tile--title">Fantom Factory</span>
-            <p>Regular designer for an award winning e-learning platform.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">UI/UX</div>
-              
-                <div class="case-study--tag">CSS</div>
-              
-                <div class="case-study--tag">Figma</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">JS, Notion, HTML, Design, Figma, CSS, UI/UX</div>
-            
-          </a>
-        </div>
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/beccas-home/">
-            <img alt="Case study mockup" src="/images/case-studies/bh.png" />
-            <span class="case-study-tile--title">Becca&#39;s Home</span>
-            <p>Implementing a new interface for a top US furniture brand.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">JavaScript</div>
-              
-                <div class="case-study--tag">Wordpress</div>
-              
-                <div class="case-study--tag">HTML</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">Wordpress, Gutenberg, JavaScript, HTML, CSS, Figma, Notion</div>
-            
-          </a>
-        </div>
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/cd-specialist-insurance/">
-            <img alt="Case study mockup" src="/images/case-studies/cd.jpg" />
-            <span class="case-study-tile--title">C&amp;D Specialist Insurance</span>
-            <p>Full design & development journey to enhance a specialist insurance site.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">Wix</div>
-              
-                <div class="case-study--tag">UI/UX</div>
-              
-                <div class="case-study--tag">Figma</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">Wix, Figma, UI/UX, CSS, JavaScript, HTML, Notion, Design</div>
-            
-          </a>
-        </div>
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/moss-and-co/">
-            <img alt="Case study mockup" src="/images/case-studies/mc.webp" />
-            <span class="case-study-tile--title">Moss &amp; Co</span>
-            <p>Leading frontend development for a growing UK estate agent.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">HTML</div>
-              
-                <div class="case-study--tag">JavaScript</div>
-              
-                <div class="case-study--tag">Sass</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">Bootstrap, HTML, JavaScript, Sass, CSS, PHP, Notion, Frontend</div>
-            
-          </a>
-        </div>
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/techscheme/">
-            <img alt="Case study mockup" src="/images/case-studies/ts.webp" />
-            <span class="case-study-tile--title">Techscheme</span>
-            <p>Redesign & modernisation of the UK's leading tech scheme provider.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">JavaScript</div>
-              
-                <div class="case-study--tag">CSS</div>
-              
-                <div class="case-study--tag">HTML</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">UI/UX, HTML, CSS, JavaScript, Sass, Webpack, Adobe XD, Notion</div>
-            
-          </a>
-        </div>
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/loft-digital/">
-            <img alt="Case study mockup" src="/images/case-studies/loft.jpg" />
-            <span class="case-study-tile--title">Loft Digital</span>
-            <p>Bespoke Wordpress website for a digital consultancy.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">Sass</div>
-              
-                <div class="case-study--tag">Wordpress</div>
-              
-                <div class="case-study--tag">HTML</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">Wordpress, PHP, Sass, HTML, CSS, JavaScript, Adobe XD, Github</div>
-            
-          </a>
-        </div>
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/bicycle-association/">
-            <img alt="Case study mockup" src="/images/case-studies/ba.jpg" />
-            <span class="case-study-tile--title">Bicycle Association</span>
-            <p>Continuous design and development for the leading UK cycling body.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">PHP</div>
-              
-                <div class="case-study--tag">Wordpress</div>
-              
-                <div class="case-study--tag">UI/UX</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">Wordpress, PHP, UI/UX, CSS, JavaScript, Sass, Webpack, Adobe XD, Illustrator, Github</div>
-            
-          </a>
-        </div>
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/brewbabu/">
-            <img alt="Case study mockup" src="/images/case-studies/brew.png" />
-            <span class="case-study-tile--title">Brewbabu</span>
-            <p>Brand new website featuring full e-commerce and CMS functionality.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">E-commerce</div>
-              
-                <div class="case-study--tag">Squarespace</div>
-              
-                <div class="case-study--tag">UI/UX</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">Squarespace, E-commerce, UI/UX, Illustrator, CSS, JavaScript, HTML</div>
-            
-          </a>
-        </div>
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/cyclescheme/">
-            <img alt="Case study mockup" src="/images/case-studies/cs.jpg" />
-            <span class="case-study-tile--title">Cyclescheme</span>
-            <p>Platform development for the UK's largest cycle-to-work provider.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">CSS</div>
-              
-                <div class="case-study--tag">JavaScript</div>
-              
-                <div class="case-study--tag">UI/UX</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">Angular, CSS, JavaScript, UI/UX, PHP, Sass, Webpack, Adobe XD, Illustrator, Photoshop</div>
-            
-          </a>
-        </div>
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/enviro-guard-national/">
-            <img alt="Case study mockup" src="/images/case-studies/enviroguard.jpeg" />
-            <span class="case-study-tile--title">Enviro Guard National</span>
-            <p>Custom Wordpress site for a national asbestos management team.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">Wordpress</div>
-              
-                <div class="case-study--tag">PHP</div>
-              
-                <div class="case-study--tag">Theming</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">Wordpress, PHP, Theming, Sass, Bootstrap, CSS, JavaScript, HTML, Notion</div>
-            
-          </a>
-        </div>
-      
-        <div class="case-study-tile-wrap">
-          <a class="case-study-tile" href="/case-studies/myeyesite/">
-            <img alt="Case study mockup" src="/images/case-studies/mes.jpg" />
-            <span class="case-study-tile--title">MyEyeSite</span>
-            <p>A web app for empowering patients with rare eye diseases.</p>
-            <div class="case-study--tags">
-              
-                <div class="case-study--tag">UI/UX</div>
-              
-                <div class="case-study--tag">Angular</div>
-              
-                <div class="case-study--tag">Mobile</div>
-              
-            </div>
-            
-              <div class="visibly-hidden">Angular, TypeScript, UI/UX, Mobile, Sass, Webpack, Adobe XD, Github</div>
-            
-          </a>
-        </div>
-      
-    </div>
+			<div id="results" class="case-study-tiles left-aligned">
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/laws-of-travel/">
+							<img alt="Case study mockup" src="/images/case-studies/laws-of-travel.webp" />
+							<span class="case-study-tile--title">Laws of Travel</span>
+							<p>Custom design & Wordpress theme development for travel blog start-up.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">UI/UX</div>
+								
+									<div class="case-study--tag">Wordpress</div>
+								
+									<div class="case-study--tag">Sass</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">CSS, SCSS, JS, Notion, Figma, Design</div>
+							
+						</a>
+					</div>
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/clinibee/">
+							<img alt="Case study mockup" src="/images/case-studies/clinibee.jpg" />
+							<span class="case-study-tile--title">Clinibee</span>
+							<p>Bespoke Webflow site for a UK-based clinical practise platform builder.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">JavaScript</div>
+								
+									<div class="case-study--tag">CMS</div>
+								
+									<div class="case-study--tag">Webflow</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">Webflow, CMS, JavaScript, Figma, Notion, CSS, HTML</div>
+							
+						</a>
+					</div>
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/fantom-factory/">
+							<img alt="Case study mockup" src="/images/case-studies/fantom-factory.jpeg" />
+							<span class="case-study-tile--title">Fantom Factory</span>
+							<p>Regular designer for an award winning e-learning platform.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">UI/UX</div>
+								
+									<div class="case-study--tag">CSS</div>
+								
+									<div class="case-study--tag">Figma</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">JS, Notion, HTML, Design, Figma, CSS, UI/UX</div>
+							
+						</a>
+					</div>
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/beccas-home/">
+							<img alt="Case study mockup" src="/images/case-studies/bh.png" />
+							<span class="case-study-tile--title">Becca&#39;s Home</span>
+							<p>Implementing a new interface for a top US furniture brand.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">JavaScript</div>
+								
+									<div class="case-study--tag">Wordpress</div>
+								
+									<div class="case-study--tag">HTML</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">Wordpress, Gutenberg, JavaScript, HTML, CSS, Figma, Notion</div>
+							
+						</a>
+					</div>
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/cd-specialist-insurance/">
+							<img alt="Case study mockup" src="/images/case-studies/cd.jpg" />
+							<span class="case-study-tile--title">C&amp;D Specialist Insurance</span>
+							<p>Full design & development journey to enhance a specialist insurance site.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">Wix</div>
+								
+									<div class="case-study--tag">UI/UX</div>
+								
+									<div class="case-study--tag">Figma</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">Wix, Figma, UI/UX, CSS, JavaScript, HTML, Notion, Design</div>
+							
+						</a>
+					</div>
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/moss-and-co/">
+							<img alt="Case study mockup" src="/images/case-studies/mc.webp" />
+							<span class="case-study-tile--title">Moss &amp; Co</span>
+							<p>Leading frontend development for a growing UK estate agent.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">HTML</div>
+								
+									<div class="case-study--tag">JavaScript</div>
+								
+									<div class="case-study--tag">Sass</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">Bootstrap, HTML, JavaScript, Sass, CSS, PHP, Notion, Frontend</div>
+							
+						</a>
+					</div>
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/techscheme/">
+							<img alt="Case study mockup" src="/images/case-studies/ts.webp" />
+							<span class="case-study-tile--title">Techscheme</span>
+							<p>Redesign & modernisation of the UK's leading tech scheme provider.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">JavaScript</div>
+								
+									<div class="case-study--tag">CSS</div>
+								
+									<div class="case-study--tag">HTML</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">UI/UX, HTML, CSS, JavaScript, Sass, Webpack, Adobe XD, Notion</div>
+							
+						</a>
+					</div>
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/loft-digital/">
+							<img alt="Case study mockup" src="/images/case-studies/loft.jpg" />
+							<span class="case-study-tile--title">Loft Digital</span>
+							<p>Bespoke Wordpress website for a digital consultancy.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">Sass</div>
+								
+									<div class="case-study--tag">Wordpress</div>
+								
+									<div class="case-study--tag">HTML</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">Wordpress, PHP, Sass, HTML, CSS, JavaScript, Adobe XD, Github</div>
+							
+						</a>
+					</div>
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/bicycle-association/">
+							<img alt="Case study mockup" src="/images/case-studies/ba.jpg" />
+							<span class="case-study-tile--title">Bicycle Association</span>
+							<p>Continuous design and development for the leading UK cycling body.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">PHP</div>
+								
+									<div class="case-study--tag">Wordpress</div>
+								
+									<div class="case-study--tag">UI/UX</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">Wordpress, PHP, UI/UX, CSS, JavaScript, Sass, Webpack, Adobe XD, Illustrator, Github</div>
+							
+						</a>
+					</div>
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/brewbabu/">
+							<img alt="Case study mockup" src="/images/case-studies/brew.png" />
+							<span class="case-study-tile--title">Brewbabu</span>
+							<p>Brand new website featuring full e-commerce and CMS functionality.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">E-commerce</div>
+								
+									<div class="case-study--tag">Squarespace</div>
+								
+									<div class="case-study--tag">UI/UX</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">Squarespace, E-commerce, UI/UX, Illustrator, CSS, JavaScript, HTML</div>
+							
+						</a>
+					</div>
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/cyclescheme/">
+							<img alt="Case study mockup" src="/images/case-studies/cs.jpg" />
+							<span class="case-study-tile--title">Cyclescheme</span>
+							<p>Platform development for the UK's largest cycle-to-work provider.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">CSS</div>
+								
+									<div class="case-study--tag">JavaScript</div>
+								
+									<div class="case-study--tag">UI/UX</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">Angular, CSS, JavaScript, UI/UX, PHP, Sass, Webpack, Adobe XD, Illustrator, Photoshop</div>
+							
+						</a>
+					</div>
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/enviro-guard-national/">
+							<img alt="Case study mockup" src="/images/case-studies/enviroguard.jpeg" />
+							<span class="case-study-tile--title">Enviro Guard National</span>
+							<p>Custom Wordpress site for a national asbestos management team.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">Wordpress</div>
+								
+									<div class="case-study--tag">PHP</div>
+								
+									<div class="case-study--tag">Theming</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">Wordpress, PHP, Theming, Sass, Bootstrap, CSS, JavaScript, HTML, Notion</div>
+							
+						</a>
+					</div>
+				
+					<div class="case-study-tile-wrap">
+						<a class="case-study-tile" href="/case-studies/myeyesite/">
+							<img alt="Case study mockup" src="/images/case-studies/mes.jpg" />
+							<span class="case-study-tile--title">MyEyeSite</span>
+							<p>A web app for empowering patients with rare eye diseases.</p>
+							<div class="case-study--tags">
+								
+									<div class="case-study--tag">UI/UX</div>
+								
+									<div class="case-study--tag">Angular</div>
+								
+									<div class="case-study--tag">Mobile</div>
+								
+							</div>
+							
+								<div class="visibly-hidden">Angular, TypeScript, UI/UX, Mobile, Sass, Webpack, Adobe XD, Github</div>
+							
+						</a>
+					</div>
+				
+			</div>
 
-    <div id="no-results">
-      It seems I don't have any case studies matching that search term... yet!
-    </div>
+			<div id="no-results">
+				It seems I don't have any case studies matching that search term... yet!
+			</div>
 
-    <div id="contact" class="callout left-aligned">
+			<div id="contact" class="callout left-aligned">
   <div class="callout--inner">
     <h1 class="section__inner--title">
       Let's grow your business,<br/> together
     </h1>
     <div class="callout--inner-content">
-      <div>
-        Whether you're after a new design, fresh development or just have a
-        great business idea you want to get the ball rolling on, I'm here to help.
-        I'm just a click away. Let's get started, today.
-      </div>
+      <p>
+        Whether you're after dev work on a brand new site, an updated design, or just have a
+        great business idea you want to get the ball rolling on, <strong>I'm here to help</strong>.
+        Let's collaborate together!
+      </p>
       <a class="button" href="mailto:connorlaw96@hotmail.com?subject=Website%20enquiry">
-        Get started
+        Start a project
       </a>
     </div>
   </div>
 </div>
 
-  </div>
-</section>
-
+		</div>
+	</section>
+</main>
 
     <footer>
   <section class="section">
