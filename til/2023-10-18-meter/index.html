@@ -2,10 +2,10 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>TIL — Today I learned | Connor Law</title>
+    <title>HTML Meter | Connor Law</title>
     <meta name="author" content="Connor Law">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Short posts about techy things I&#39;ve recently learned. Snippets, discoveries, and lightbulb moments from the world of frontend development.">
+    <meta name="description" content="UK-based freelance web designer and developer.">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png">
 		<link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152.png">
 		<link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120.png">
@@ -90,128 +90,54 @@
 
 
     
-<main>
-	<section class="section section--center">
-		<div class="section__inner">
-			<p class="section__inner--subtitle">Today I learned</p>
-			<h1 class="section__inner--title">Check out some dev things <br class="desktop-only" />I learned about recently</h1>
+<section class="section">
+  <div class="section__inner">
+    <p class="section__inner--subtitle section--center">
+      Today I Learned
+    </p>
+    <h1 class="section__inner--title section--center">HTML Meter</h1>
 
-			<br/><br/>
+    <div class="case-study">
+      <div class="case-study--main til-post">
 
-			<div class="search--wrapper">
-				<input class="search" inputmode="search" type="text" id="search" placeholder="Search TIL posts..." />
-				<span class="search--clear"></span>
-			</div>
+        <div class="til-post--meta">
+          <time datetime="2023-10-18">18 October 2023</time>
+          
+						•
+            <div class="case-study--tags">
+              
+                
+                  <div class="case-study--tag">HTML</div>
+                
+              
+            </div>
+          
+        </div>
 
-			<br/><br/>
+        <p>While creating some awesome new data visualisations for <a href="/case-studies/fantom-factory" class="link">Fantom Factory</a>, I came across a native solution for something I hadn't realised was a thing: HTML's <code>&lt;meter&gt;</code> element. You learn something new everyday, right?!</p>
+<blockquote>
+<p><label for="fuel">Fuel level:</label>
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="32">
+at 32/100
+</meter></p>
+</blockquote>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fuel<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Fuel level:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
 
-			
-				<div id="results" class="case-study-tiles left-aligned">
-					
-						<div class="til-list--item case-study-tile-wrap">
-							<a class="case-study-tile" href="/til/2026-05-06-string-raw/">
-								<span class="case-study-tile--title">String.raw()</span>
-								<time class="til-list--date" datetime="2026-05-06">
-									6 May 2026
-								</time>
-								
-									<div class="case-study--tags">
-										
-											
-												<div class="case-study--tag">CSS</div>
-											
-										
-									</div>
-								
-								<div class="visibly-hidden">CSS</div>
-							</a>
-						</div>
-					
-						<div class="til-list--item case-study-tile-wrap">
-							<a class="case-study-tile" href="/til/2026-01-03-css-container-queries/">
-								<span class="case-study-tile--title">CSS Container Queries</span>
-								<time class="til-list--date" datetime="2026-01-03">
-									3 January 2026
-								</time>
-								
-									<div class="case-study--tags">
-										
-											
-												<div class="case-study--tag">CSS</div>
-											
-										
-									</div>
-								
-								<div class="visibly-hidden">CSS</div>
-							</a>
-						</div>
-					
-						<div class="til-list--item case-study-tile-wrap">
-							<a class="case-study-tile" href="/til/2024-04-27-intersection-observer/">
-								<span class="case-study-tile--title">Intersection Observer API</span>
-								<time class="til-list--date" datetime="2024-04-27">
-									27 April 2024
-								</time>
-								
-									<div class="case-study--tags">
-										
-											
-												<div class="case-study--tag">JavaScript</div>
-											
-										
-									</div>
-								
-								<div class="visibly-hidden">JavaScript</div>
-							</a>
-						</div>
-					
-						<div class="til-list--item case-study-tile-wrap">
-							<a class="case-study-tile" href="/til/2023-10-18-meter/">
-								<span class="case-study-tile--title">HTML Meter</span>
-								<time class="til-list--date" datetime="2023-10-18">
-									18 October 2023
-								</time>
-								
-									<div class="case-study--tags">
-										
-											
-												<div class="case-study--tag">HTML</div>
-											
-										
-									</div>
-								
-								<div class="visibly-hidden">HTML</div>
-							</a>
-						</div>
-					
-						<div class="til-list--item case-study-tile-wrap">
-							<a class="case-study-tile" href="/til/2023-09-12-css-clamp/">
-								<span class="case-study-tile--title">CSS clamp()</span>
-								<time class="til-list--date" datetime="2023-09-12">
-									12 September 2023
-								</time>
-								
-									<div class="case-study--tags">
-										
-											
-												<div class="case-study--tag">CSS</div>
-											
-										
-									</div>
-								
-								<div class="visibly-hidden">CSS</div>
-							</a>
-						</div>
-					
-				</div>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meter</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fuel<span class="token punctuation">"</span></span> <span class="token attr-name">min</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">max</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span> <span class="token attr-name">low</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>33<span class="token punctuation">"</span></span> <span class="token attr-name">high</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>66<span class="token punctuation">"</span></span> <span class="token attr-name">optimum</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>80<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>32<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  at 32/100
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>meter</span><span class="token punctuation">></span></span></code></pre>
+<h2>Browser support</h2>
+<p>Baseline 2017 - all modern browsers support it.</p>
+<hr>
+<p>Official docs: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter" target="_blank" rel="noopener noreferrer" class="link">MDN Meter Element</a></p>
 
-				<div id="no-results">
-					No TIL posts match that search term — yet!
-				</div>
+      </div>
+    </div>
 
-			
+    <br/>
+    <a class="button" href="/til">Back to TIL</a>
 
-			<div id="contact" class="callout left-aligned">
+    <div id="contact" class="callout left-aligned">
   <div class="callout--inner">
     <h1 class="section__inner--title">
       Let's grow your business,<br/> together
@@ -229,9 +155,9 @@
   </div>
 </div>
 
-		</div>
-	</section>
-</main>
+  </div>
+</section>
+
 
     <footer>
   <section class="section">
