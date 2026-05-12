@@ -2,10 +2,10 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>TIL — Today I learned | Connor Law</title>
+    <title>CSS clamp() | Connor Law</title>
     <meta name="author" content="Connor Law">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Short posts about techy things I&#39;ve recently learned. Snippets, discoveries, and lightbulb moments from the world of frontend development.">
+    <meta name="description" content="UK-based freelance web designer and developer.">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png">
 		<link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152.png">
 		<link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120.png">
@@ -90,128 +90,75 @@
 
 
     
-<main>
-	<section class="section section--center">
-		<div class="section__inner">
-			<p class="section__inner--subtitle">Today I learned</p>
-			<h1 class="section__inner--title">Check out some dev things <br class="desktop-only" />I learned about recently</h1>
+<section class="section">
+  <div class="section__inner">
+    <p class="section__inner--subtitle section--center">
+      Today I Learned
+    </p>
+    <h1 class="section__inner--title section--center">CSS clamp()</h1>
 
-			<br/><br/>
+    <div class="case-study">
+      <div class="case-study--main til-post">
 
-			<div class="search--wrapper">
-				<input class="search" inputmode="search" type="text" id="search" placeholder="Search TIL posts..." />
-				<span class="search--clear"></span>
-			</div>
+        <div class="til-post--meta">
+          <time datetime="2023-09-12">12 September 2023</time>
+          
+						•
+            <div class="case-study--tags">
+              
+                
+                  <div class="case-study--tag">CSS</div>
+                
+              
+            </div>
+          
+        </div>
 
-			<br/><br/>
+        <p>To put it simply, CSS's <code>clamp()</code> function lets you define THREE values for a single property:</p>
+<ul>
+<li>A minimum value</li>
+<li>A preferred value</li>
+<li>A maximum value</li>
+</ul>
+<p><em>&quot;That's pretty cool Connor, but... when would I even use it?&quot;</em></p>
+<p>There are a lot of use cases where <code>clamp()</code> comes in really handy, but where I use it the most is when handling my flexible typography.</p>
+<p>You might be tempted to use classic media queries to sort out your responsive typography, like so:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">h1</span> <span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-			
-				<div id="results" class="case-study-tiles left-aligned">
-					
-						<div class="til-list--item case-study-tile-wrap">
-							<a class="case-study-tile" href="/til/2026-05-06-string-raw/">
-								<span class="case-study-tile--title">String.raw()</span>
-								<time class="til-list--date" datetime="2026-05-06">
-									6 May 2026
-								</time>
-								
-									<div class="case-study--tags">
-										
-											
-												<div class="case-study--tag">CSS</div>
-											
-										
-									</div>
-								
-								<div class="visibly-hidden">CSS</div>
-							</a>
-						</div>
-					
-						<div class="til-list--item case-study-tile-wrap">
-							<a class="case-study-tile" href="/til/2026-01-03-css-container-queries/">
-								<span class="case-study-tile--title">CSS Container Queries</span>
-								<time class="til-list--date" datetime="2026-01-03">
-									3 January 2026
-								</time>
-								
-									<div class="case-study--tags">
-										
-											
-												<div class="case-study--tag">CSS</div>
-											
-										
-									</div>
-								
-								<div class="visibly-hidden">CSS</div>
-							</a>
-						</div>
-					
-						<div class="til-list--item case-study-tile-wrap">
-							<a class="case-study-tile" href="/til/2025-12-09-meter/">
-								<span class="case-study-tile--title">HTML Meter</span>
-								<time class="til-list--date" datetime="2025-12-09">
-									9 December 2025
-								</time>
-								
-									<div class="case-study--tags">
-										
-											
-												<div class="case-study--tag">HTML</div>
-											
-										
-									</div>
-								
-								<div class="visibly-hidden">HTML</div>
-							</a>
-						</div>
-					
-						<div class="til-list--item case-study-tile-wrap">
-							<a class="case-study-tile" href="/til/2024-04-27-intersection-observer/">
-								<span class="case-study-tile--title">Intersection Observer API</span>
-								<time class="til-list--date" datetime="2024-04-27">
-									27 April 2024
-								</time>
-								
-									<div class="case-study--tags">
-										
-											
-												<div class="case-study--tag">JavaScript</div>
-											
-										
-									</div>
-								
-								<div class="visibly-hidden">JavaScript</div>
-							</a>
-						</div>
-					
-						<div class="til-list--item case-study-tile-wrap">
-							<a class="case-study-tile" href="/til/2023-09-12-css-clamp/">
-								<span class="case-study-tile--title">CSS clamp()</span>
-								<time class="til-list--date" datetime="2023-09-12">
-									12 September 2023
-								</time>
-								
-									<div class="case-study--tags">
-										
-											
-												<div class="case-study--tag">CSS</div>
-											
-										
-									</div>
-								
-								<div class="visibly-hidden">CSS</div>
-							</a>
-						</div>
-					
-				</div>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 400px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">h1</span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-				<div id="no-results">
-					No TIL posts match that search term — yet!
-				</div>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 640px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">h1</span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 64px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>But with <code>clamp()</code>, you could do it all in a one-liner:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">h1</span> <span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token function">clamp</span><span class="token punctuation">(</span>40px<span class="token punctuation">,</span> 10vw<span class="token punctuation">,</span> 64px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Now, under the hood, the CSS is thinking like so:</p>
+<ul>
+<li>If <code>10vw</code> &gt; <code>64px</code>, font size should be <code>64px</code>.</li>
+<li>If <code>10vw</code> &gt; <code>64px</code> AND &lt; <code>40px</code>, font size should equal <code>10vw</code> (e.g. when the viewport is <code>500px</code> wide, the font size will be <code>50px</code>).</li>
+<li>If <code>10vw</code> &lt; <code>40px</code>, font size should be <code>40px</code>.</li>
+</ul>
+<p>Pretty cool, right? It's not useful for font sizes either - I use it for so many different CSS properties (<code>width</code>, <code>height</code>, <code>margin</code>, <code>padding</code>...) that I've lost track. It's a powerful tool to have in your back pocket, that's for sure.</p>
+<hr>
+<p>Official docs: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp" target="_blank" rel="noopener noreferrer" class="link">MDN CSS clamp() Function</a></p>
 
-			
+      </div>
+    </div>
 
-			<div id="contact" class="callout left-aligned">
+    <br/>
+    <a class="button" href="/til">Back to TIL</a>
+
+    <div id="contact" class="callout left-aligned">
   <div class="callout--inner">
     <h1 class="section__inner--title">
       Let's grow your business,<br/> together
@@ -229,9 +176,9 @@
   </div>
 </div>
 
-		</div>
-	</section>
-</main>
+  </div>
+</section>
+
 
     <footer>
   <section class="section">
