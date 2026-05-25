@@ -6,21 +6,21 @@
     <meta name="author" content="Connor Law">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Design-obsessed, developer-brained, and based in the UK. I build handcrafted websites for businesses that care about quality. And yes, I like dogs.">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon-180.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/apple-touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/apple-touch-icon-120.png">
     <link rel="stylesheet" href="/style.css">
-    <link rel="icon" href="/images/logos/logo.svg">
-		<link rel="preload" href="/fonts/rubik.woff2" as="font" crossorigin="anonymous" />
-		<link rel="preload" href="/fonts/rubik-italic.woff2" as="font" crossorigin="anonymous" />
-		<link rel="preload" href="/fonts/courier-prime.woff2" as="font" crossorigin="anonymous" />
+    <link rel="icon" href="/assets/images/logos/logo.svg">
+		<link rel="preload" href="/assets/fonts/rubik.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="/assets/fonts/rubik-italic.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="/assets/fonts/courier-prime.woff2" as="font" crossorigin="anonymous" />
 		
   </head>
 
   <body id="">
     <nav class="nav">
   <div class="nav__inner">
-    <a href="/"><img alt="Connor Law's logo" src="/images/logos/logo.svg" /></a>
+    <a href="/"><img alt="Connor Law's logo" src="/assets/images/logos/logo.svg" /></a>
     <div class="nav__links">
       <ul>
         <li>
@@ -90,26 +90,29 @@
 
 
     
+<!-- Icons from: https://assets/fonts.google.com/icons -->
+
 <main>
 	<section class="hero section">
 		<div class="section__inner">
-				<div class="hero--content">
-						<p class="section__inner--subtitle">Design-obsessed. Developer-brained.</p>
-						<h1 class="section__inner--title">Handcrafted websites from a developer who actually cares about design</h1>
-						<a
-							class="button"
-							href="mailto:connorlaw96@hotmail.com?subject=Website%20enquiry">
-							Let's talk
-						</a>
-				</div>
+			<div class="hero--content">
+				<p class="section__inner--subtitle">Design-obsessed. Developer-brained.</p>
+				<h1 class="section__inner--title">Handcrafted websites from a developer who actually cares about design</h1>
+				<a
+					class="button"
+					href="mailto:connorlaw96@hotmail.com?subject=Website%20enquiry">
+					Let's talk
+				</a>
+			</div>
 		</div>
 	</section>
+
 	<section id="about" class="section section--green">
-		<div class="section__inner section__inner--flex">
-			<div class="section__inner--flex-img">
-				<img alt="Picture of Connor" src="images/selfie.jpg" />
+		<div class="section__inner section__inner--grid">
+			<div class="section__inner--grid-img">
+				<img alt="Picture of Connor" src="assets/images/selfie.jpg" />
 			</div>
-			<div>
+			<div class="section__inner--grid-content">
 				<p class="section__inner--subtitle fade-in">UI/UX Designer & Developer</p>
 				<h2 class="section__inner--title fade-in" style="--delay: 0.2s">&#128075; Hi, I'm Connor.<br />Nice to meet you.</h2>
 				<p>
@@ -126,61 +129,126 @@
 					<a class="link" href="mailto:connorlaw96@hotmail.com?subject=Website%20enquiry">let's work together</a> and build something awesome.
 				</p>
 			</div>
+			<div class="section__inner--grid-subcontent case-study--info case-study--info-cover" onclick="this.classList.remove('case-study--info-cover')">
+				<h3>Recent work history</h3>
+				<hr class="hr-green hr-sm" />
+				
+					<div class="work-history fade-in" style="--delay-index: 0;">
+						<div class="work-history--head">
+							<img alt="Fantom Factory logo" src="/assets/images/logos/fantom.svg" height="32" width="32">
+							<div class="work-history--content">
+								<strong>Fantom Factory</strong>
+								<div class="work-history--sub">
+									<small class="text-lighter">UX Developer</small>
+									<small class="text-lighter">2025 | Present</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="work-history fade-in" style="--delay-index: 1;">
+						<div class="work-history--head">
+							<img alt="Freelance logo" src="/assets/images/logos/cl.svg" height="32" width="32">
+							<div class="work-history--content">
+								<strong>Freelance</strong>
+								<div class="work-history--sub">
+									<small class="text-lighter">Web Dev / Designer</small>
+									<small class="text-lighter">2019 | Present</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="work-history fade-in" style="--delay-index: 2;">
+						<div class="work-history--head">
+							<img alt="Loft Digital logo" src="/assets/images/logos/loft.svg" height="32" width="32">
+							<div class="work-history--content">
+								<strong>Loft Digital</strong>
+								<div class="work-history--sub">
+									<small class="text-lighter">Front-end / UX Developer</small>
+									<small class="text-lighter">2019 | 2023</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="work-history fade-in" style="--delay-index: 3;">
+						<div class="work-history--head">
+							<img alt="Bauer Media logo" src="/assets/images/logos/bauer.svg" height="32" width="32">
+							<div class="work-history--content">
+								<strong>Bauer Media</strong>
+								<div class="work-history--sub">
+									<small class="text-lighter">Advertising Tech Exec</small>
+									<small class="text-lighter">2018 | 2019</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				<br/>
+				<a
+					class="button"
+					href="assets/files/Connor Law - CV 2026.pdf"
+					target="_blank">
+					Download CV (3.4MB)
+				</a>
+			</div>
 		</div>
 	</section>
+
 	<section id="services" class="section section--center">
 		<div class="section__inner">
 			<p class="section__inner--subtitle fade-in">What can you expect?</p>
 			<h2 class="section__inner--title fade-in" style="--delay: 0.2s">Personal touch at a <br />professional speed</h2>
 			<div class="services">
-					<div class="services--item">
+					<div class="services--item fade-in" style="--delay-index: 2">
 							<div class="services--item-header">
-									<img height="40" width="40" alt="Design icon" src="images/icons/icon_design.svg" />
+									<img height="40" width="40" alt="Design icon" src="assets/images/icons/icon_design.svg" />
 									<span>Design & UX</span>
 							</div>
 							<p class="services--item-content">
 									Websites designed to be accessible, intuitive and visually stunning.
 							</p>
 					</div>
-					<div class="services--item">
+					<div class="services--item fade-in" style="--delay-index: 3">
 							<div class="services--item-header">
-									<img height="40" width="40" alt="HTML icon" src="images/icons/icon_custom.svg" />
+									<img height="40" width="40" alt="HTML icon" src="assets/images/icons/icon_custom.svg" />
 									<span>Custom built</span>
 							</div>
 							<p class="services--item-content">
 									Bespoke web presence that matches your brand identity.
 							</p>
 					</div>
-					<div class="services--item">
+					<div class="services--item fade-in" style="--delay-index: 4">
 							<div class="services--item-header">
-									<img height="40" width="40" alt="Optimisation icon" src="images/icons/icon_optimisation.svg" />
+									<img height="40" width="40" alt="Optimisation icon" src="assets/images/icons/icon_optimisation.svg" />
 									<span>Optimisation</span>
 							</div>
 							<p class="services--item-content">
 									Optimised for a fast, seamless experience for your users.
 							</p>
 					</div>
-					<div class="services--item">
+					<div class="services--item fade-in" style="--delay-index: 5">
 							<div class="services--item-header">
-									<img height="40" width="40" alt="Quality icon" src="images/icons/icon_quality.svg" />
+									<img height="40" width="40" alt="Quality icon" src="assets/images/icons/icon_quality.svg" />
 									<span>High quality</span>
 							</div>
 							<p class="services--item-content">
 									Developed to an ultra-high standard you'll be thrilled with.
 							</p>
 					</div>
-					<div class="services--item">
+					<div class="services--item fade-in" style="--delay-index: 6">
 							<div class="services--item-header">
-									<img height="40" width="40" alt="Visibility icon" src="images/icons/icon_visibility.svg" />
+									<img height="40" width="40" alt="Visibility icon" src="assets/images/icons/icon_visibility.svg" />
 									<span>Maximum visibility</span>
 							</div>
 							<p class="services--item-content">
 									Make your business stand out at the top of Google search results.
 							</p>
 					</div>
-					<div class="services--item">
+					<div class="services--item fade-in" style="--delay-index: 7">
 							<div class="services--item-header">
-									<img height="40" width="40" alt="Support icon" src="images/icons/icon_support.svg" />
+									<img height="40" width="40" alt="Support icon" src="assets/images/icons/icon_support.svg" />
 									<span>Continuous support</span>
 							</div>
 							<p class="services--item-content">
@@ -190,50 +258,51 @@
 			</div>
 			<div class="logo-scroller--wrap">
 				<div id="logo-scroller">
-					<img alt="Adobe XD logo" class="tooltip" data-tooltip="Adobe XD" src="images/logos/adobe-xd.svg" height="60" width="60" />
-					<img alt="Figma logo" class="tooltip" data-tooltip="Figma" src="images/logos/figma.svg" height="60" width="60" />
-					<img alt="Angular logo" class="tooltip" data-tooltip="Angular" src="images/logos/angular.svg" height="60" width="60" />
-					<img alt="HTML logo" class="tooltip" data-tooltip="HTML" src="images/logos/html.svg" height="60" width="60" />
-					<img alt="Webpack logo" class="tooltip" data-tooltip="Webpack" src="images/logos/webpack.svg" height="60" width="60" />
-					<img alt="Notion logo" class="tooltip" data-tooltip="Notion" src="images/logos/notion.svg" height="60" width="60" />
-					<img alt="CSS logo" class="tooltip" data-tooltip="CSS" src="images/logos/css.svg" height="60" width="60" />
-					<img alt="React logo" class="tooltip" data-tooltip="React" src="images/logos/react.svg" height="60" width="60" />
-					<img alt="Squarespace logo" class="tooltip" data-tooltip="Squarespace" src="images/logos/squarespace.svg" height="60" width="60" />
-					<img alt="Photoshop logo" class="tooltip" data-tooltip="Photoshop" src="images/logos/photoshop.svg" height="60" width="60" />
-					<img alt="Bootstrap logo" class="tooltip" data-tooltip="Bootstrap" src="images/logos/bootstrap.svg" height="60" width="60" />
-					<img alt="Flutter logo" class="tooltip" data-tooltip="Flutter" src="images/logos/flutter.svg" height="60" width="60" />
-					<img alt="PHP logo" class="tooltip" data-tooltip="PHP" src="images/logos/php.svg" height="60" width="60" />
-					<img alt="JavaScript logo" class="tooltip" data-tooltip="JavaScript" src="images/logos/javascript.svg" height="60" width="60" />
-					<img alt="Wordpress logo" class="tooltip" data-tooltip="Wordpress" src="images/logos/wordpress.svg" height="60" width="60" />
-					<img alt="Wix logo" class="tooltip" data-tooltip="Wix" src="images/logos/wix.svg" height="60" width="60" />
-					<img alt="Illustrator logo" class="tooltip" data-tooltip="Illustrator" src="images/logos/illustrator.svg" height="60" width="60" />
-					<img alt="SASS logo" class="tooltip" data-tooltip="SASS" src="images/logos/sass.svg" height="60" width="60" />
-					<img alt="Webflow logo" class="tooltip" data-tooltip="Webflow" src="images/logos/webflow.svg" height="60" width="60" />
-					<img alt="Github logo" class="tooltip" data-tooltip="Github" src="images/logos/github.svg" height="60" width="60" />
-					<img alt="Adobe XD logo" class="tooltip" data-tooltip="Adobe XD" src="images/logos/adobe-xd.svg" height="60" width="60" />
-					<img alt="Figma logo" class="tooltip" data-tooltip="Figma" src="images/logos/figma.svg" height="60" width="60" />
-					<img alt="Angular logo" class="tooltip" data-tooltip="Angular" src="images/logos/angular.svg" height="60" width="60" />
-					<img alt="HTML logo" class="tooltip" data-tooltip="HTML" src="images/logos/html.svg" height="60" width="60" />
-					<img alt="Webpack logo" class="tooltip" data-tooltip="Webpack" src="images/logos/webpack.svg" height="60" width="60" />
-					<img alt="Notion logo" class="tooltip" data-tooltip="Notion" src="images/logos/notion.svg" height="60" width="60" />
-					<img alt="CSS logo" class="tooltip" data-tooltip="CSS" src="images/logos/css.svg" height="60" width="60" />
-					<img alt="React logo" class="tooltip" data-tooltip="React" src="images/logos/react.svg" height="60" width="60" />
-					<img alt="Squarespace logo" class="tooltip" data-tooltip="Squarespace" src="images/logos/squarespace.svg" height="60" width="60" />
-					<img alt="Photoshop logo" class="tooltip" data-tooltip="Photoshop" src="images/logos/photoshop.svg" height="60" width="60" />
-					<img alt="Bootstrap logo" class="tooltip" data-tooltip="Bootstrap" src="images/logos/bootstrap.svg" height="60" width="60" />
-					<img alt="Flutter logo" class="tooltip" data-tooltip="Flutter" src="images/logos/flutter.svg" height="60" width="60" />
-					<img alt="PHP logo" class="tooltip" data-tooltip="PHP" src="images/logos/php.svg" height="60" width="60" />
-					<img alt="JavaScript logo" class="tooltip" data-tooltip="JavaScript" src="images/logos/javascript.svg" height="60" width="60" />
-					<img alt="Wordpress logo" class="tooltip" data-tooltip="Wordpress" src="images/logos/wordpress.svg" height="60" width="60" />
-					<img alt="Wix logo" class="tooltip" data-tooltip="Wix" src="images/logos/wix.svg" height="60" width="60" />
-					<img alt="Illustrator logo" class="tooltip" data-tooltip="Illustrator" src="images/logos/illustrator.svg" height="60" width="60" />
-					<img alt="SASS logo" class="tooltip" data-tooltip="SASS" src="images/logos/sass.svg" height="60" width="60" />
-					<img alt="Webflow logo" class="tooltip" data-tooltip="Webflow" src="images/logos/webflow.svg" height="60" width="60" />
-					<img alt="Github logo" class="tooltip" data-tooltip="Github" src="images/logos/github.svg" height="60" width="60" />
+					<img alt="Adobe XD logo" class="tooltip" data-tooltip="Adobe XD" src="assets/images/logos/adobe-xd.svg" height="60" width="60" />
+					<img alt="Figma logo" class="tooltip" data-tooltip="Figma" src="assets/images/logos/figma.svg" height="60" width="60" />
+					<img alt="Angular logo" class="tooltip" data-tooltip="Angular" src="assets/images/logos/angular.svg" height="60" width="60" />
+					<img alt="HTML logo" class="tooltip" data-tooltip="HTML" src="assets/images/logos/html.svg" height="60" width="60" />
+					<img alt="Webpack logo" class="tooltip" data-tooltip="Webpack" src="assets/images/logos/webpack.svg" height="60" width="60" />
+					<img alt="Notion logo" class="tooltip" data-tooltip="Notion" src="assets/images/logos/notion.svg" height="60" width="60" />
+					<img alt="CSS logo" class="tooltip" data-tooltip="CSS" src="assets/images/logos/css.svg" height="60" width="60" />
+					<img alt="React logo" class="tooltip" data-tooltip="React" src="assets/images/logos/react.svg" height="60" width="60" />
+					<img alt="Squarespace logo" class="tooltip" data-tooltip="Squarespace" src="assets/images/logos/squarespace.svg" height="60" width="60" />
+					<img alt="Photoshop logo" class="tooltip" data-tooltip="Photoshop" src="assets/images/logos/photoshop.svg" height="60" width="60" />
+					<img alt="Bootstrap logo" class="tooltip" data-tooltip="Bootstrap" src="assets/images/logos/bootstrap.svg" height="60" width="60" />
+					<img alt="Flutter logo" class="tooltip" data-tooltip="Flutter" src="assets/images/logos/flutter.svg" height="60" width="60" />
+					<img alt="PHP logo" class="tooltip" data-tooltip="PHP" src="assets/images/logos/php.svg" height="60" width="60" />
+					<img alt="JavaScript logo" class="tooltip" data-tooltip="JavaScript" src="assets/images/logos/javascript.svg" height="60" width="60" />
+					<img alt="Wordpress logo" class="tooltip" data-tooltip="Wordpress" src="assets/images/logos/wordpress.svg" height="60" width="60" />
+					<img alt="Wix logo" class="tooltip" data-tooltip="Wix" src="assets/images/logos/wix.svg" height="60" width="60" />
+					<img alt="Illustrator logo" class="tooltip" data-tooltip="Illustrator" src="assets/images/logos/illustrator.svg" height="60" width="60" />
+					<img alt="SASS logo" class="tooltip" data-tooltip="SASS" src="assets/images/logos/sass.svg" height="60" width="60" />
+					<img alt="Webflow logo" class="tooltip" data-tooltip="Webflow" src="assets/images/logos/webflow.svg" height="60" width="60" />
+					<img alt="Github logo" class="tooltip" data-tooltip="Github" src="assets/images/logos/github.svg" height="60" width="60" />
+					<img alt="Adobe XD logo" class="tooltip" data-tooltip="Adobe XD" src="assets/images/logos/adobe-xd.svg" height="60" width="60" />
+					<img alt="Figma logo" class="tooltip" data-tooltip="Figma" src="assets/images/logos/figma.svg" height="60" width="60" />
+					<img alt="Angular logo" class="tooltip" data-tooltip="Angular" src="assets/images/logos/angular.svg" height="60" width="60" />
+					<img alt="HTML logo" class="tooltip" data-tooltip="HTML" src="assets/images/logos/html.svg" height="60" width="60" />
+					<img alt="Webpack logo" class="tooltip" data-tooltip="Webpack" src="assets/images/logos/webpack.svg" height="60" width="60" />
+					<img alt="Notion logo" class="tooltip" data-tooltip="Notion" src="assets/images/logos/notion.svg" height="60" width="60" />
+					<img alt="CSS logo" class="tooltip" data-tooltip="CSS" src="assets/images/logos/css.svg" height="60" width="60" />
+					<img alt="React logo" class="tooltip" data-tooltip="React" src="assets/images/logos/react.svg" height="60" width="60" />
+					<img alt="Squarespace logo" class="tooltip" data-tooltip="Squarespace" src="assets/images/logos/squarespace.svg" height="60" width="60" />
+					<img alt="Photoshop logo" class="tooltip" data-tooltip="Photoshop" src="assets/images/logos/photoshop.svg" height="60" width="60" />
+					<img alt="Bootstrap logo" class="tooltip" data-tooltip="Bootstrap" src="assets/images/logos/bootstrap.svg" height="60" width="60" />
+					<img alt="Flutter logo" class="tooltip" data-tooltip="Flutter" src="assets/images/logos/flutter.svg" height="60" width="60" />
+					<img alt="PHP logo" class="tooltip" data-tooltip="PHP" src="assets/images/logos/php.svg" height="60" width="60" />
+					<img alt="JavaScript logo" class="tooltip" data-tooltip="JavaScript" src="assets/images/logos/javascript.svg" height="60" width="60" />
+					<img alt="Wordpress logo" class="tooltip" data-tooltip="Wordpress" src="assets/images/logos/wordpress.svg" height="60" width="60" />
+					<img alt="Wix logo" class="tooltip" data-tooltip="Wix" src="assets/images/logos/wix.svg" height="60" width="60" />
+					<img alt="Illustrator logo" class="tooltip" data-tooltip="Illustrator" src="assets/images/logos/illustrator.svg" height="60" width="60" />
+					<img alt="SASS logo" class="tooltip" data-tooltip="SASS" src="assets/images/logos/sass.svg" height="60" width="60" />
+					<img alt="Webflow logo" class="tooltip" data-tooltip="Webflow" src="assets/images/logos/webflow.svg" height="60" width="60" />
+					<img alt="Github logo" class="tooltip" data-tooltip="Github" src="assets/images/logos/github.svg" height="60" width="60" />
 				</div>
 			</div>
 		</div>
 	</section>
+
 	<section class="section section--center">
 		<div class="section__inner">
 			<div class="testimonial--wrapper">
@@ -244,7 +313,7 @@
 							and team player - and very good with clients and customers too. I can't recommend him highly enough."
 						</p>
 						<div class="testimonial-quoter">
-							<img alt="Nick Nettleton" src="images/testimonials/nick.jpeg" />
+							<img alt="Nick Nettleton" src="assets/images/testimonials/nick.jpeg" />
 							<div>
 								<div>
 									<strong>Nick Nettleton</strong>
@@ -263,7 +332,7 @@
 							being hugely talented and able to exceed expectations on every brief."
 						</p>
 						<div class="testimonial-quoter">
-							<img alt="Laurence Boon" src="images/testimonials/laurence.jpg" />
+							<img alt="Laurence Boon" src="assets/images/testimonials/laurence.jpg" />
 							<div>
 								<div>
 									<strong>Laurence Boon</strong>
@@ -282,7 +351,7 @@
 							with creative and imaginative solutions. I couldn't recommend Connor more!"
 						</p>
 						<div class="testimonial-quoter">
-							<img alt="Giovanni de Flora" src="images/testimonials/gio.jpeg" />
+							<img alt="Giovanni de Flora" src="assets/images/testimonials/gio.jpeg" />
 							<div>
 								<div>
 									<strong>Giovanni de Flora</strong>
@@ -303,6 +372,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section id="how-it-works" class="section section--center section--green">
 		<div class="section__inner">
 			<p class="section__inner--subtitle fade-in">Flexible by design</p>
@@ -349,6 +419,7 @@
 			</a>
 		</div>
 	</section>
+
 	<section id="case-studies" class="section">
 		<div class="section__inner">
 			<p class="section__inner--subtitle fade-in">Case studies</p>
@@ -359,7 +430,7 @@
 					<div class="fade-in" style="--delay-index: 1;">
 						<div class="case-study-tile-wrap">
 							<a class="case-study-tile" href="/case-studies/laws-of-travel/">
-								<img alt="Case study mockup" src="/images/case-studies/laws-of-travel.webp" />
+								<img alt="Case study mockup" src="/assets/images/case-studies/laws-of-travel.webp" />
 								<span class="case-study-tile--title">Laws of Travel</span>
 								<p>Custom design &amp; Wordpress theme development for travel blog start-up.</p>
 								<div class="case-study--tags">
@@ -378,7 +449,7 @@
 					<div class="fade-in" style="--delay-index: 2;">
 						<div class="case-study-tile-wrap">
 							<a class="case-study-tile" href="/case-studies/clinibee/">
-								<img alt="Case study mockup" src="/images/case-studies/clinibee.jpg" />
+								<img alt="Case study mockup" src="/assets/images/case-studies/clinibee.jpg" />
 								<span class="case-study-tile--title">Clinibee</span>
 								<p>Bespoke Webflow site for a UK-based clinical practise platform builder.</p>
 								<div class="case-study--tags">
@@ -397,7 +468,7 @@
 					<div class="fade-in" style="--delay-index: 3;">
 						<div class="case-study-tile-wrap">
 							<a class="case-study-tile" href="/case-studies/fantom-factory/">
-								<img alt="Case study mockup" src="/images/case-studies/fantom-factory.jpeg" />
+								<img alt="Case study mockup" src="/assets/images/case-studies/fantom-factory.jpeg" />
 								<span class="case-study-tile--title">Fantom Factory</span>
 								<p>Regular designer for an award winning e-learning platform.</p>
 								<div class="case-study--tags">
@@ -416,7 +487,7 @@
 					<div class="fade-in" style="--delay-index: 4;">
 						<div class="case-study-tile-wrap">
 							<a class="case-study-tile" href="/case-studies/beccas-home/">
-								<img alt="Case study mockup" src="/images/case-studies/bh.png" />
+								<img alt="Case study mockup" src="/assets/images/case-studies/bh.png" />
 								<span class="case-study-tile--title">Becca&#39;s Home</span>
 								<p>Implementing a new interface for a top US furniture brand.</p>
 								<div class="case-study--tags">
@@ -435,7 +506,7 @@
 					<div class="fade-in" style="--delay-index: 5;">
 						<div class="case-study-tile-wrap">
 							<a class="case-study-tile" href="/case-studies/cd-specialist-insurance/">
-								<img alt="Case study mockup" src="/images/case-studies/cd.jpg" />
+								<img alt="Case study mockup" src="/assets/images/case-studies/cd.jpg" />
 								<span class="case-study-tile--title">C&amp;D Specialist Insurance</span>
 								<p>Full design &amp; development journey to enhance a specialist insurance site.</p>
 								<div class="case-study--tags">
@@ -454,7 +525,7 @@
 					<div class="fade-in" style="--delay-index: 6;">
 						<div class="case-study-tile-wrap">
 							<a class="case-study-tile" href="/case-studies/moss-and-co/">
-								<img alt="Case study mockup" src="/images/case-studies/mc.webp" />
+								<img alt="Case study mockup" src="/assets/images/case-studies/mc.webp" />
 								<span class="case-study-tile--title">Moss &amp; Co</span>
 								<p>Leading frontend development for a growing UK estate agent.</p>
 								<div class="case-study--tags">
@@ -477,23 +548,24 @@
 			</a>
 		</div>
 	</section>
+
 	<section id="tech-stack" class="section section--blue">
 		<div class="section__inner">
 			<p class="section__inner--subtitle fade-in">Tech stack</p>
 			<h2 class="section__inner--title fade-in" style="--delay: 0.2s">Things I use daily</h2>
 			<table>
 				<thead>
-					<tr>
+					<tr class="fade-in" style="--delay-index: 2">
 						<th>Name</th>
 						<th class="desktop-only">Description</th>
 					</tr>
 				</thead>
 				<tbody>
 					
-						<tr>
+						<tr class="fade-in" style="--delay-index: 1;">
 							<td>
 								<div class="cell-flex">
-									<img alt="CSS logo" src="/images/logos/css.svg" height="32" width="32">
+									<img alt="CSS logo" src="/assets/images/logos/css.svg" height="32" width="32">
 									<div>
 										<strong>CSS</strong>
 										<p class="mobile-only text-lighter">Old-school website styling, although more complex than many assume nowadays.</p>
@@ -503,10 +575,10 @@
 							<td class="desktop-only text-lighter">Old-school website styling, although more complex than many assume nowadays.</td>
 						</tr>
 					
-						<tr>
+						<tr class="fade-in" style="--delay-index: 2;">
 							<td>
 								<div class="cell-flex">
-									<img alt="Figma logo" src="/images/logos/figma.svg" height="32" width="32">
+									<img alt="Figma logo" src="/assets/images/logos/figma.svg" height="32" width="32">
 									<div>
 										<strong>Figma</strong>
 										<p class="mobile-only text-lighter">Main visual tool for wireframing/mocking-up websites and apps.</p>
@@ -516,10 +588,10 @@
 							<td class="desktop-only text-lighter">Main visual tool for wireframing/mocking-up websites and apps.</td>
 						</tr>
 					
-						<tr>
+						<tr class="fade-in" style="--delay-index: 3;">
 							<td>
 								<div class="cell-flex">
-									<img alt="HTML logo" src="/images/logos/html.svg" height="32" width="32">
+									<img alt="HTML logo" src="/assets/images/logos/html.svg" height="32" width="32">
 									<div>
 										<strong>HTML</strong>
 										<p class="mobile-only text-lighter">Everyone&#39;s first (and favourite?) frontend language.</p>
@@ -529,10 +601,10 @@
 							<td class="desktop-only text-lighter">Everyone&#39;s first (and favourite?) frontend language.</td>
 						</tr>
 					
-						<tr>
+						<tr class="fade-in" style="--delay-index: 4;">
 							<td>
 								<div class="cell-flex">
-									<img alt="JavaScript logo" src="/images/logos/javascript.svg" height="32" width="32">
+									<img alt="JavaScript logo" src="/assets/images/logos/javascript.svg" height="32" width="32">
 									<div>
 										<strong>JavaScript</strong>
 										<p class="mobile-only text-lighter">The GOAT of web interactivity.</p>
@@ -542,10 +614,10 @@
 							<td class="desktop-only text-lighter">The GOAT of web interactivity.</td>
 						</tr>
 					
-						<tr>
+						<tr class="fade-in" style="--delay-index: 5;">
 							<td>
 								<div class="cell-flex">
-									<img alt="Notion logo" src="/images/logos/notion.svg" height="32" width="32">
+									<img alt="Notion logo" src="/assets/images/logos/notion.svg" height="32" width="32">
 									<div>
 										<strong>Notion</strong>
 										<p class="mobile-only text-lighter">Keeps my life in order; where I track projects, write TODO lists, &amp; much more.</p>
@@ -555,10 +627,10 @@
 							<td class="desktop-only text-lighter">Keeps my life in order; where I track projects, write TODO lists, &amp; much more.</td>
 						</tr>
 					
-						<tr>
+						<tr class="fade-in" style="--delay-index: 6;">
 							<td>
 								<div class="cell-flex">
-									<img alt="PHP logo" src="/images/logos/php.svg" height="32" width="32">
+									<img alt="PHP logo" src="/assets/images/logos/php.svg" height="32" width="32">
 									<div>
 										<strong>PHP</strong>
 										<p class="mobile-only text-lighter">Server-side scripting for websites; especially useful for custom Wordpress themes.</p>
@@ -568,10 +640,10 @@
 							<td class="desktop-only text-lighter">Server-side scripting for websites; especially useful for custom Wordpress themes.</td>
 						</tr>
 					
-						<tr>
+						<tr class="fade-in" style="--delay-index: 7;">
 							<td>
 								<div class="cell-flex">
-									<img alt="React logo" src="/images/logos/react.svg" height="32" width="32">
+									<img alt="React logo" src="/assets/images/logos/react.svg" height="32" width="32">
 									<div>
 										<strong>React</strong>
 										<p class="mobile-only text-lighter">Modern frontend framework for fast, component-based web apps.</p>
@@ -581,10 +653,10 @@
 							<td class="desktop-only text-lighter">Modern frontend framework for fast, component-based web apps.</td>
 						</tr>
 					
-						<tr>
+						<tr class="fade-in" style="--delay-index: 8;">
 							<td>
 								<div class="cell-flex">
-									<img alt="SCSS logo" src="/images/logos/sass.svg" height="32" width="32">
+									<img alt="SCSS logo" src="/assets/images/logos/sass.svg" height="32" width="32">
 									<div>
 										<strong>SCSS</strong>
 										<p class="mobile-only text-lighter">Speeds up my styling development massively with modern functions &amp; syntax.</p>
@@ -594,10 +666,10 @@
 							<td class="desktop-only text-lighter">Speeds up my styling development massively with modern functions &amp; syntax.</td>
 						</tr>
 					
-						<tr>
+						<tr class="fade-in" style="--delay-index: 9;">
 							<td>
 								<div class="cell-flex">
-									<img alt="Slack logo" src="/images/logos/slack.svg" height="32" width="32">
+									<img alt="Slack logo" src="/assets/images/logos/slack.svg" height="32" width="32">
 									<div>
 										<strong>Slack</strong>
 										<p class="mobile-only text-lighter">My preferred communication/collaboration app.</p>
@@ -607,10 +679,10 @@
 							<td class="desktop-only text-lighter">My preferred communication/collaboration app.</td>
 						</tr>
 					
-						<tr>
+						<tr class="fade-in" style="--delay-index: 10;">
 							<td>
 								<div class="cell-flex">
-									<img alt="Spotify logo" src="/images/logos/spotify.svg" height="32" width="32">
+									<img alt="Spotify logo" src="/assets/images/logos/spotify.svg" height="32" width="32">
 									<div>
 										<strong>Spotify</strong>
 										<p class="mobile-only text-lighter">Absolutely essential to my productivity - without it I&#39;d be lost in the dark.</p>
@@ -620,10 +692,10 @@
 							<td class="desktop-only text-lighter">Absolutely essential to my productivity - without it I&#39;d be lost in the dark.</td>
 						</tr>
 					
-						<tr>
+						<tr class="fade-in" style="--delay-index: 11;">
 							<td>
 								<div class="cell-flex">
-									<img alt="VS Code logo" src="/images/logos/vs-code.svg" height="32" width="32">
+									<img alt="VS Code logo" src="/assets/images/logos/vs-code.svg" height="32" width="32">
 									<div>
 										<strong>VS Code</strong>
 										<p class="mobile-only text-lighter">Where I write my code.</p>
@@ -633,10 +705,10 @@
 							<td class="desktop-only text-lighter">Where I write my code.</td>
 						</tr>
 					
-						<tr>
+						<tr class="fade-in" style="--delay-index: 12;">
 							<td>
 								<div class="cell-flex">
-									<img alt="Wordpress logo" src="/images/logos/wordpress.svg" height="32" width="32">
+									<img alt="Wordpress logo" src="/assets/images/logos/wordpress.svg" height="32" width="32">
 									<div>
 										<strong>Wordpress</strong>
 										<p class="mobile-only text-lighter">The biggest and best CMS platform - many of my sites are built on it.</p>
@@ -651,23 +723,24 @@
 			<br><br>
 			<p>More tech I'm well-versed in:</p>
 			<br>
-			<img alt="Adobe XD logo" class="tooltip" data-tooltip="Adobe XD" src="images/logos/adobe-xd.svg" height="32" width="32" />
-			<img alt="Angular logo" class="tooltip" data-tooltip="Angular" src="images/logos/angular.svg" height="32" width="32" />
-			<img alt="Bootstrap logo" class="tooltip" data-tooltip="Bootstrap" src="images/logos/bootstrap.svg" height="32" width="32" />
-			<img alt="Flutter logo" class="tooltip" data-tooltip="Flutter" src="images/logos/flutter.svg" height="32" width="32" />
-			<img alt="Github logo" class="tooltip" data-tooltip="Github" src="images/logos/github.svg" height="32" width="32" />
-			<img alt="Illustrator logo" class="tooltip" data-tooltip="Illustrator" src="images/logos/illustrator.svg" height="32" width="32" />
-			<img alt="Lightroom logo" class="tooltip" data-tooltip="Lightroom" src="images/logos/lightroom.svg" height="32" width="32" />
-			<img alt="Mailchimp logo" class="tooltip" data-tooltip="Mailchimp" src="images/logos/mailchimp.svg" height="32" width="32" />
-			<img alt="Photoshop logo" class="tooltip" data-tooltip="Photoshop" src="images/logos/photoshop.svg" height="32" width="32" />
-			<img alt="Squarespace logo" class="tooltip" data-tooltip="Squarespace" src="images/logos/squarespace.svg" height="32" width="32" />
-			<img alt="Supabase logo" class="tooltip" data-tooltip="Supabase" src="images/logos/supabase.svg" height="32" width="32" />
-			<img alt="Webflow logo" class="tooltip" data-tooltip="Webflow" src="images/logos/webflow.svg" height="32" width="32" />
-			<img alt="Webpack logo" class="tooltip" data-tooltip="Webpack" src="images/logos/webpack.svg" height="32" width="32" />
-			<img alt="Wix logo" class="tooltip" data-tooltip="Wix" src="images/logos/wix.svg" height="32" width="32" />
-			<img alt="WP Local logo" class="tooltip" data-tooltip="WP Local" src="images/logos/wp-local.svg" height="32" width="32" />
+			<img alt="Adobe XD logo" class="tooltip" data-tooltip="Adobe XD" src="assets/images/logos/adobe-xd.svg" height="32" width="32" />
+			<img alt="Angular logo" class="tooltip" data-tooltip="Angular" src="assets/images/logos/angular.svg" height="32" width="32" />
+			<img alt="Bootstrap logo" class="tooltip" data-tooltip="Bootstrap" src="assets/images/logos/bootstrap.svg" height="32" width="32" />
+			<img alt="Flutter logo" class="tooltip" data-tooltip="Flutter" src="assets/images/logos/flutter.svg" height="32" width="32" />
+			<img alt="Github logo" class="tooltip" data-tooltip="Github" src="assets/images/logos/github.svg" height="32" width="32" />
+			<img alt="Illustrator logo" class="tooltip" data-tooltip="Illustrator" src="assets/images/logos/illustrator.svg" height="32" width="32" />
+			<img alt="Lightroom logo" class="tooltip" data-tooltip="Lightroom" src="assets/images/logos/lightroom.svg" height="32" width="32" />
+			<img alt="Mailchimp logo" class="tooltip" data-tooltip="Mailchimp" src="assets/images/logos/mailchimp.svg" height="32" width="32" />
+			<img alt="Photoshop logo" class="tooltip" data-tooltip="Photoshop" src="assets/images/logos/photoshop.svg" height="32" width="32" />
+			<img alt="Squarespace logo" class="tooltip" data-tooltip="Squarespace" src="assets/images/logos/squarespace.svg" height="32" width="32" />
+			<img alt="Supabase logo" class="tooltip" data-tooltip="Supabase" src="assets/images/logos/supabase.svg" height="32" width="32" />
+			<img alt="Webflow logo" class="tooltip" data-tooltip="Webflow" src="assets/images/logos/webflow.svg" height="32" width="32" />
+			<img alt="Webpack logo" class="tooltip" data-tooltip="Webpack" src="assets/images/logos/webpack.svg" height="32" width="32" />
+			<img alt="Wix logo" class="tooltip" data-tooltip="Wix" src="assets/images/logos/wix.svg" height="32" width="32" />
+			<img alt="WP Local logo" class="tooltip" data-tooltip="WP Local" src="assets/images/logos/wp-local.svg" height="32" width="32" />
 		</div>
 	</section>
+
 	<section id="til" class="section">
 		<div class="section__inner">
 			<p class="section__inner--subtitle fade-in">Today I learned</p>
@@ -836,10 +909,10 @@
 			<div>
 				<div class="icons">
 					<a target="_blank" href="https://www.upwork.com/freelancers/connorlaw" rel="noopener noreferrer">
-						<img height="32" width="32" alt="Upwork logo" class="social" src="/images/logos/logo_upwork.svg">
+						<img height="32" width="32" alt="Upwork logo" class="social" src="/assets/images/logos/logo_upwork.svg">
 					</a>
 					<a target="_blank" href="https://uk.linkedin.com/in/connor-law-77b176159" rel="noopener noreferrer">
-						<img height="32" width="32" alt="Linkedin logo" class="social" src="/images/logos/logo_linkedin.svg">
+						<img height="32" width="32" alt="Linkedin logo" class="social" src="/assets/images/logos/logo_linkedin.svg">
 					</a>
 				</div>
 				<p>&copy; 2026 &middot; Connor Law</p>
@@ -847,7 +920,7 @@
 			<div>
 				<div class="icons icons-single">
 					<a target="_blank" href="https://notbyai.fyi" rel="noopener noreferrer">
-						<img height="48" width="150" alt="Developed by a Human: Not by Ai" class="social" src="/images/logos/notbyai.svg">
+						<img height="48" width="150" alt="Developed by a Human: Not by Ai" class="social" src="/assets/images/logos/notbyai.svg">
 					</a>
 				</div>
 				<p>Proudly hand-coded with &#9825;</p>
