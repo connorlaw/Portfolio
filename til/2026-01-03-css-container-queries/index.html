@@ -118,7 +118,7 @@
 <p>However, there are those tiny little edge cases where you might want to style something not based on the <strong>viewport</strong> itself, but rather when a <strong>container</strong> reaches a certain size.</p>
 <h2>Let's look at an example</h2>
 <p>You've got a main content area with a searchbar, sort button and filter button at the top, plus a sidebar running down the side of the page. The content and sidebar are structured using <code>display: flex</code>.</p>
-<p><img src="/images/til/container-queries-1.svg" alt="Container query visual aid"></p>
+<p><img src="/assets/images/til/container-queries-1.svg" alt="Container query visual aid"></p>
 <p>With traditional media queries your options are binary: at a certain viewport size you'll need to hide the searchbar and buttons then show small icon buttons for search and for filtering/sorting, like so:</p>
 <pre class="language-css"><code class="language-css"><span class="token comment">/* Shrink the buttons down when viewport reaches 700px or smaller */</span>
 
@@ -132,11 +132,11 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
 <p>Which results in this layout:</p>
-<p><img src="/images/til/container-queries-2.svg" alt="Container query visual aid"></p>
+<p><img src="/assets/images/til/container-queries-2.svg" alt="Container query visual aid"></p>
 <p>Looks alright so far...</p>
 <p>But, we have some other CSS elsewhere that says &quot;when the viewport gets small enough, switch the page content to <code>flex-direction: column</code> so that the sidebar falls underneath the main content area, which should now span the full viewport width.&quot;</p>
 <p>Suddenly, there's loads of space for the searchbar and buttons again!</p>
-<p><img src="/images/til/container-queries-3.svg" alt="Container query visual aid"></p>
+<p><img src="/assets/images/til/container-queries-3.svg" alt="Container query visual aid"></p>
 <p>Oh, wait... the small buttons are still there, despite there being plenty of room for the bigger (and more human-friendly) buttons.</p>
 <p>You might think about adding <em>more</em> media queries, but trying to account for all scenarios gets messy pretty quickly.</p>
 <h2>CSS Container Queries to the rescue!</h2>
@@ -160,7 +160,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
 <p>Now the searchbar and buttons adapt based on the width of <code>.content-area</code>, not the viewport.</p>
-<p><img src="/images/til/container-queries-4.svg" alt="Container query visual aid"></p>
+<p><img src="/assets/images/til/container-queries-4.svg" alt="Container query visual aid"></p>
 <h2>Browser support</h2>
 <p>Baseline 2023 - all modern browsers support it.</p>
 <hr>
