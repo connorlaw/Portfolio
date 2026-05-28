@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Page Not Found | Connor Law</title>
+    <title>HTML Meter | Connor Law</title>
     <meta name="author" content="Connor Law">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="UK-based freelance web designer and developer.">
@@ -14,7 +14,7 @@
 		<link rel="preload" href="/assets/fonts/rubik.woff2" as="font" crossorigin="anonymous" />
 		<link rel="preload" href="/assets/fonts/rubik-italic.woff2" as="font" crossorigin="anonymous" />
 		<link rel="preload" href="/assets/fonts/courier-prime.woff2" as="font" crossorigin="anonymous" />
-		<meta name="robots" content="noindex,nofollow">
+		
   </head>
 
   <body id="">
@@ -90,36 +90,75 @@
 
 
     
-<main>
-	<section class="section section--green section--center">
-		<div class="section__inner">
-			<br/>
-			<h1 class="section__inner--title section__inner--title-large">
-				404
-			</h1>
-			<h2>Page not found!</h2>
-			<br/><br/>
-			<p>
-				That page is either missing, removed, or never existed!<br/>
-				Try going back <a href="/" class="link">home</a> to find what you're looking for.
-			</p>
-			<div id="contact" class="callout left-aligned">
-				<div class="callout--inner">
-					<h2 class="section__inner--title">
-							But while you're here...
-					</h2>
-					<div class="callout--inner-content">
-						<div>
-							Why not reach out? I'm always happy to chat, learn about what you
-							need and find out if I can help. I'm just one click away - right
-							<a class="link" href="/contact">here</a>.
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-</main>
+<section class="section">
+  <div class="section__inner">
+    <p class="section__inner--subtitle section--center">
+      Today I Learned
+    </p>
+    <h1 class="section__inner--title section--center">HTML Meter</h1>
+
+    <div class="case-study">
+      <div class="case-study--main til-post">
+
+        <div class="til-post--meta">
+          <time datetime="2023-10-18">18 October 2023</time>
+          
+						•
+            <div class="case-study--tags">
+              
+                
+                  <div class="case-study--tag">HTML</div>
+                
+              
+            </div>
+          
+        </div>
+
+        <p>While creating some awesome new data visualisations for <a href="/case-studies/fantom-factory" class="link">Fantom Factory</a>, I came across a native solution for something I hadn't realised was a thing: HTML's <code>&lt;meter&gt;</code> element. You learn something new everyday, right?!</p>
+<blockquote>
+<p><label for="fuel">Fuel level:</label>
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="32">
+at 32/100
+</meter></p>
+</blockquote>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fuel<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Fuel level:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meter</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fuel<span class="token punctuation">"</span></span> <span class="token attr-name">min</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">max</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span> <span class="token attr-name">low</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>33<span class="token punctuation">"</span></span> <span class="token attr-name">high</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>66<span class="token punctuation">"</span></span> <span class="token attr-name">optimum</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>80<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>32<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  at 32/100
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>meter</span><span class="token punctuation">></span></span></code></pre>
+<h2>Browser support</h2>
+<p>Baseline 2017 - all modern browsers support it.</p>
+<hr>
+<p>Official docs: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter" target="_blank" rel="noopener noreferrer" class="link">MDN Meter Element</a></p>
+
+      </div>
+    </div>
+
+    <br/>
+
+		<a class="button" href="/til">Back to TIL</a>
+
+    <div id="contact" class="callout left-aligned">
+  <div class="callout--inner">
+    <h2 class="section__inner--title">
+      Let's grow your business,<br/> together
+    </h2>
+    <div class="callout--inner-content">
+      <p>
+        Whether you're after dev work on a brand new site, an updated design, or just have a
+        great business idea you want to get the ball rolling on, <strong>I'm here to help</strong>.
+        Let's collaborate together!
+      </p>
+      <a class="button" href="/contact">
+        Start a project
+      </a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
 
     <footer>
   <section class="section">
