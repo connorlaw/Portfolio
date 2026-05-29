@@ -196,6 +196,7 @@
 						if (data.success) {
 							status.textContent = '✅ Message sent! I\'ll get back to you soon.';
 							form.reset();
+							window.confetti.burst();
 						} else {
 							status.textContent = '❌ Something went wrong. Please try again.';
 						}
