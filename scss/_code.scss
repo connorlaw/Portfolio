@@ -1,0 +1,95 @@
+$primary-green: #209E61;
+$code-font: 'Courier Prime', monospace;
+$pre-bg-dark: #1c1d1c;
+$code-bg-dark: #222522;
+$code-bg-inline: rgba($primary-green, 0.1);
+$code-border-radius: 0.375rem;
+
+$tokens: (
+	(comment, block-comment): #6a8778,
+	(property, tag, keyword): $primary-green,
+	(string, value, attr-value): #a3be8c,
+	(selector, attr-name, punctuation): #8fbcbb,
+	(function): #d8dee9,
+	(number, boolean): #b48ead,
+	(rule): #5e81ac,
+);
+
+pre,
+code {
+	font-family: $code-font;
+	font-weight: 600;
+	-webkit-font-smoothing: antialiased;
+}
+
+code {
+	background-color: $code-bg-inline;
+	color: darken($primary-green, 10%);
+	border-radius: $code-border-radius;
+	padding: 0.195rem 0.25rem 0.05rem;
+	border: 1px solid rgba($primary-green, 0.2);
+}
+
+pre {
+	background-color: $pre-bg-dark;
+	color: #e5f0e6;
+	padding: 1.25rem 1.25rem 0;
+	border-radius: 1rem;
+	line-height: 1.5;
+	border: 1px solid rgba($primary-green, 0.1);
+	max-width: calc(100vw - 2rem);
+	box-sizing: border-box;
+	overflow-x: scroll;
+
+	code {
+		background: $code-bg-dark;
+		color: inherit;
+		padding: 0.75rem;
+		border: 1px solid rgba($primary-green, 0.2);
+		border-radius: 0.5rem 0.5rem 0 0;
+		border-bottom-width: 0px;
+		display: inline-block;
+    min-width: calc(100% - 1.75rem);
+	}
+}
+
+p code {
+	font-size: 0.9em;
+}
+
+pre[class*="language-"] {
+	position: relative;
+	padding-top: 3rem;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		padding: 0.5rem 0.75rem;
+		border: 1px solid rgba(32, 158, 97, 0.2);
+		border-top-width: 0px;
+		color: #209E61;
+		background: $code-bg-dark;
+		border-radius: 0 0 0.5rem 0.5rem;
+	}
+}
+
+pre.language-js::before      { content: "JavaScript"; }
+pre.language-html::before    { content: "HTML"; }
+pre.language-css::before     { content: "CSS"; }
+pre.language-scss::before    { content: "SCSS"; }
+pre.language-markdown::before { content: "Markdown"; }
+
+.token {
+	@each $selector-list, $color in $tokens {
+		@each $item in $selector-list {
+			&.#{$item} {
+				color: $color;
+
+				@if $item == 'comment' or $item == 'block-comment' {
+					font-style: italic;
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+}

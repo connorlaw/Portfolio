@@ -1,0 +1,158 @@
+/** --------------------------------------------------------------------------------
+ * DARK MODE
+ -------------------------------------------------------------------------------- */
+
+ body.dark-mode {
+	--bg: #111513;
+  --text: #E7F1F8;
+  --text-lighter: #D4DDE3;
+	--purple: #28263A;
+	--red-fade: #2e2929;
+	--green-fade: #191D1B;
+	--blue-fade: #191A1D;
+  --blue-fade-darker: #26272C;
+  
+  .nav {
+    background-color: var(--green-fade);
+    border-bottom-color: #28312C;
+
+    &__links--btn {
+      background-color: var(--light-mode);
+      background-image: url('assets/images/icons/icon_light_mode.svg');
+      background-size: 60%;
+      
+      &:hover {
+        background-color: var(--light-mode-darker);
+      }
+    }
+    
+    &__mob {
+      background-color: var(--green-fade);
+
+      &-open::after {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      &-btn span, &-close span {
+        background-color: white;
+      }
+
+      &-item {
+        color: #fff;
+      }
+    }
+  }
+
+	.hero {
+		--gradientBaseRGB: 0, 0, 0;
+	}
+
+	.callout .callout--inner {
+		border: 1px solid var(--purple-darker);
+	}
+  
+	.testimonial .callout--inner {
+		background-color: #18251f;
+		border-color: var(--green);
+  }
+
+  
+  footer {
+    background-color: var(--green-fade);
+  }
+  
+  .case-study-tile {
+    background-color: #232524;
+    border-color: #232524;
+  }
+  
+  .case-study--tag {
+    background-color: var(--green);
+    color: #fff;
+  }
+  
+  .case-study--info {
+    background-color: #232524;
+
+		@mixin case-study-info-dark($base) {
+			#{$base}-cover::before,
+			&#{$base}-cover::before {
+				background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 25%, rgba(0,0,0,1) 100%);
+			}
+		}
+
+		&:not(.case-study--info-cover-mobile) {
+			@include case-study-info-dark('.case-study--info');
+		}
+
+		&.case-study--info-cover-mobile {
+			@media (max-width: 799px) {
+				@include case-study-info-dark('.case-study--info');
+			}
+		}
+  }
+
+	.case-study:has(.til-post) {
+		margin-top: 4rem;
+
+		img {
+			background-color: #232524;
+			border-radius: 1.25rem;
+		}
+	}
+
+	[type=radio][name=view] { 
+		& + svg {
+			border-color: var(--green-fade);
+			&:hover {
+				border-color: var(--green);
+			}
+		}
+
+		&:checked + svg {
+			border-color: var(--green);
+			background-color: var(--green-fade);
+			fill: #FFFFFF;
+		}
+	}
+
+	code {
+		color: var(--green);
+	}
+
+	pre code {
+		color: var(--text);
+	}
+
+  .cookie-banner .callout--inner {
+    background-color: var(--green-fade);
+		border-color: var(--green);
+  }
+
+  .button--secondary {
+    color: var(--green);
+    background-color: transparent;
+  }
+
+  input[type="text"], input[type="email"], textarea, select {
+    border: 1px solid #454545;
+    color: #fff;
+    background-color: #232524;
+    &::placeholder {
+      color: #727272;
+    }
+  }
+
+  select {
+    background: #232524 url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='grey' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+  }
+
+  .search--wrapper .search--clear {
+    background-color: var(--green);
+    background-image: url('assets/images/icons/icon_cross_white.svg');
+  }
+
+	hr.hr-green {
+		border-color: color-mix(in srgb, var(--green), black 60%);
+	}
+}

@@ -1,0 +1,44 @@
+/** --------------------------------------------------------------------------------
+ * HERO
+ -------------------------------------------------------------------------------- */
+
+ .hero {
+  background: url('assets/images/hero-img.webp') calc(100% + 300px)/1250px no-repeat;
+  padding: 200px 16px;
+	position: relative;
+	--gradientBaseRGB: 255, 255, 255;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(circle at 100%, rgba(var(--gradientBaseRGB), 0) 10%, rgb(var(--gradientBaseRGB)) 50%) 100% no-repeat;
+	}
+
+  &--content {
+    max-width: 60%;
+		z-index: 1;
+		position: relative;
+  }
+
+  @media (max-width: 699px) {
+    padding: 100px 16px 300px;
+		background-position: 50% 30%;
+
+		&::after {
+			background: radial-gradient(circle at 50% 100%, rgba(var(--gradientBaseRGB), 0) 10%, rgb(var(--gradientBaseRGB)) 60%) 100% no-repeat;
+		}
+
+		&--content {
+      max-width: none;
+    }
+  }
+ 
+  @media (max-width: 599px) {
+    padding-bottom: 200px;
+ 
+    &--content {
+      max-width: none;
+    }
+  }
+}

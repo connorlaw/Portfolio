@@ -1,0 +1,44 @@
+/** --------------------------------------------------------------------------------
+ * FOOTER
+ -------------------------------------------------------------------------------- */
+
+ footer {
+  background-color: var(--text);
+  color: #fff;
+  padding: 250px 0 10px;
+  font-size: 12px;
+
+	.section__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		flex-wrap: wrap;
+
+		.icons {
+			margin-bottom: 2rem;
+			display: flex;
+			gap: 1.25rem;
+
+			a {
+				transition: 0.15s;
+
+				&:hover {
+					opacity: 0.6;
+				}
+			}
+
+			&-single {
+				margin-bottom: 0.75rem;
+			}
+		}
+	}
+
+  a {
+    text-decoration: none;
+  }
+
+  @media (max-width: 499px) {
+    padding-top: 250px;
+    padding-bottom: 200px;
+  }
+}
