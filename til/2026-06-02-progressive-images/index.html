@@ -1,0 +1,258 @@
+<!doctype HTML>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Progressive Image Loading | Connor Law</title>
+    <meta name="author" content="Connor Law">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="UK-based freelance web designer and developer.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon-180.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/apple-touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/apple-touch-icon-120.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/assets/images/logos/logo.svg">
+		<link rel="preload" href="/assets/fonts/rubik.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="/assets/fonts/rubik-italic.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="/assets/fonts/courier-prime.woff2" as="font" crossorigin="anonymous" />
+		
+  </head>
+
+  <body id="">
+    <nav class="nav">
+  <div class="nav__inner">
+    <a href="/"><img alt="Connor Law's logo" src="/assets/images/logos/logo.svg" /></a>
+    <div class="nav__links">
+      <ul>
+        <li>
+          <a class="nav__mob-item" href="/#about">About</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#services">Services</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#how-it-works">How it works</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/case-studies">Case studies</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#tech-stack">Tech</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/til">TIL</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/contact">Contact</a>
+        </li>
+        <li>
+          <div class="nav__links--btn"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="nav__mob-btn">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav__mob">
+      <div class="nav__mob-close">
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li>
+          <a class="nav__mob-item" href="/#about">About</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#services">Services</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#how-it-works">How it works</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/case-studies">Case studies</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#tech-stack">Tech</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/til">TIL</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/contact">Contact</a>
+        </li>
+        <li>
+          <div class="nav__links--btn"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    
+<section class="section">
+  <div class="section__inner">
+    <p class="section__inner--subtitle section--center">
+      Today I Learned
+    </p>
+    <h1 class="section__inner--title section--center">Progressive Image Loading</h1>
+
+    <div class="case-study">
+      <div class="case-study--main til-post">
+
+        <div class="til-post--meta">
+          <time datetime="2026-06-02">2 June 2026</time>
+          
+						•
+            <div class="case-study--tags">
+              
+                
+                  <div class="case-study--tag">HTML</div>
+                
+              
+                
+                  <div class="case-study--tag">CSS</div>
+                
+              
+                
+                  <div class="case-study--tag">JS</div>
+                
+              
+            </div>
+          
+        </div>
+
+        <p>When it comes to optimising images for the web, I don't tend to think too deeply about it. Generally, there are a few quick improvements that I make for images I upload to any project:</p>
+<ul>
+<li>Keep the image dimensions to realistic sizes.</li>
+<li>Use a modern image format like <code>.webp</code>.</li>
+<li>Compress the file size as much as possible with (free) tools like <a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer" class="link">TinyPNG</a>.</li>
+</ul>
+<p>That covers me for 95% of the time; images are noticeably quicker and the load time is generally good.</p>
+<p>The last 5%, however, is where some magic can happen to truly add sparkle to the User Experience (UX).</p>
+<p>I might've done everything I can to slim down the file size of my hero image down or scale its dimensions to a smaller-than-ideal size, but it's still 350kb or 2000px wide. That'll cause that split second delay while the image is loading in the background - and that's noticeable even on a fast internet connection.</p>
+<p>Can something even be done about that? Well, yes...</p>
+<h2>Load those images... progressively!</h2>
+<p>The idea behind <strong>Progressive Image Loading</strong> is that you show a much smaller, much blurrier image in the first instance so that your user can see <em>something</em>, because something is always better than nothing. Genius, right!</p>
+<p>MDN have a fantastic quote that sums up this mentality:</p>
+<blockquote>
+<p>&quot;It's important to deliver something meaningful to the user as soon as possible — the longer they wait for the page to load, the bigger the chance they will leave before waiting for everything to finish.&quot;</p>
+</blockquote>
+<p>The user sees <em>something</em> super fast (since this initial image is so much smaller and less detailed), and it <strong>progressively</strong> loads in the sharper, higher-quality image.</p>
+<p>What does that look like in practise? Here's an example - <em>notice how the image goes from blurry to crisp</em>:</p>
+<p><img src="/assets/images/til/progressive-loading-example.gif" alt="Progressive loading example"></p>
+<p>Better than an image that big suddenly appearing out of nowhere, I'm sure you'll agree!</p>
+<p>What about implementation? Well, it's actually a lot easier than you might think...</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> 
+  <span class="token attr-name">loading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazy<span class="token punctuation">"</span></span>
+  <span class="token attr-name">decoding</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>async<span class="token punctuation">"</span></span>
+  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>low-resolution-img.webp<span class="token punctuation">"</span></span>
+  <span class="token attr-name">data-highResSrc</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>high-resolution-img.webp<span class="token punctuation">"</span></span>
+  <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazy-image<span class="token punctuation">"</span></span>
+<span class="token punctuation">/></span></span></code></pre>
+<pre class="language-css"><code class="language-css"><span class="token selector">.lazy-image</span> <span class="token punctuation">{</span>
+  <span class="token comment">/* Start blurry */</span>
+  <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>10px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> filter 0.4s ease-in-out<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.lazy-image.loaded</span> <span class="token punctuation">{</span>
+  <span class="token comment">/* Remove blur once loaded */</span>
+  <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">blur</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> imgs <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'.lazy-image'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+imgs<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">img</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// 1. Grab the high-res URL from the data attribute</span>
+  <span class="token keyword">const</span> highResUrl <span class="token operator">=</span> img<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">'data-highResSrc'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">// 2. Tell the image to change the source to the high-res version</span>
+  img<span class="token punctuation">.</span>src <span class="token operator">=</span> highResUrl<span class="token punctuation">;</span>
+
+  <span class="token comment">// 3. Once the high-res file finishes downloading, trigger the visual transition</span>
+  img<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    img<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'loaded'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2>What about <code>&lt;picture&gt;</code> and <code>srcset</code>? Don't those do the same thing?</h2>
+<p>Almost! Using HTML's native <code>&lt;picture&gt;</code> element with its ability to list out a <code>srcset</code> does half the job - it only serves to make the actual image delivery <em>quicker</em> by displaying the correctly sized image for the device.</p>
+<p>There's no point loading a 2000x1200px image on a mobile screen that's only 400px wide, so that's what it does: serve the right image for the right screen size.</p>
+<p>But, progressive loading is all about the <em>perceived</em> speed. Research shows that users estimate download times based on <strong>active feedback</strong> rather than the <strong>actual, real-life time</strong>.</p>
+<p>In summary, the ideal solution is a combination of the two - use <code>&lt;picture&gt;</code> to optimise the image delivery time, and progressively load the image to improve the user experience.</p>
+<hr>
+<p>Direct from the source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator" target="_blank" rel="noopener noreferrer" class="link">Border Image Generator</a></p>
+
+      </div>
+    </div>
+
+    <br/>
+
+		<a class="button" href="/til">Back to TIL</a>
+
+    <div id="contact" class="callout left-aligned">
+  <div class="callout--inner">
+    <h2 class="section__inner--title">
+      Let's grow your business,<br/> together
+    </h2>
+    <div class="callout--inner-content">
+      <p>
+        Whether you're after dev work on a brand new site, an updated design, or just have a
+        great business idea you want to get the ball rolling on, <strong>I'm here to help</strong>.
+        Let's collaborate together!
+      </p>
+      <a class="button" href="/contact">
+        Start a project
+      </a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+    <footer>
+  <section class="section">
+    <div class="section__inner">
+			<div>
+				<div class="icons">
+					<a target="_blank" href="https://www.upwork.com/freelancers/connorlaw" rel="noopener noreferrer">
+						<img height="32" width="32" alt="Upwork logo" class="social" src="/assets/images/logos/logo_upwork.svg">
+					</a>
+					<a target="_blank" href="https://uk.linkedin.com/in/connor-law-77b176159" rel="noopener noreferrer">
+						<img height="32" width="32" alt="Linkedin logo" class="social" src="/assets/images/logos/logo_linkedin.svg">
+					</a>
+				</div>
+				<p>&copy; 2026 &middot; Connor Law</p>
+			</div>
+			<div>
+				<div class="icons icons-single">
+					<a target="_blank" href="https://notbyai.fyi" rel="noopener noreferrer">
+						<img height="48" width="150" alt="Developed by a Human: Not by Ai" class="social" src="/assets/images/logos/notbyai.svg">
+					</a>
+				</div>
+				<p>Proudly hand-coded with &#9825;</p>
+			</div>
+    </div>
+  </section>
+</footer>
+
+
+    <div id="cookie-banner" class="cookie-banner callout">
+      <div class="callout--inner">
+        <p class="h3">Hey! Are you cool with cookies?</p>
+        <div>I'm using cookies to track how many people are visiting my site. That's all, I promise.</div>
+        <div class="right-aligned">
+          <a class="button button--secondary" data-cookie-consent="false" href="#" style="margin-right: 4px;">
+            I'd rather you didn't
+          </a>
+          <a class="button" data-cookie-consent="true" href="#">
+            Go for it!
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/script.js"></script>
+  </body>
+</html>
