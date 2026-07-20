@@ -1,0 +1,206 @@
+<!doctype HTML>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Fire EventListener Once | Connor Law</title>
+    <meta name="author" content="Connor Law">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="UK-based freelance web designer and developer.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon-180.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/apple-touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/apple-touch-icon-120.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/assets/images/logos/logo.svg">
+		<link rel="preload" href="/assets/fonts/rubik.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="/assets/fonts/rubik-italic.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="/assets/fonts/courier-prime.woff2" as="font" crossorigin="anonymous" />
+		
+  </head>
+
+  <body id="">
+    <nav class="nav">
+  <div class="nav__inner">
+    <a href="/"><img alt="Connor Law's logo" src="/assets/images/logos/logo.svg" /></a>
+    <div class="nav__links">
+      <ul>
+        <li>
+          <a class="nav__mob-item" href="/#about">About</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#services">Services</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#how-it-works">How it works</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/case-studies">Case studies</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#tech-stack">Tech</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/til">TIL</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/contact">Contact</a>
+        </li>
+        <li>
+          <div class="nav__links--btn"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="nav__mob-btn">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav__mob">
+      <div class="nav__mob-close">
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li>
+          <a class="nav__mob-item" href="/#about">About</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#services">Services</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#how-it-works">How it works</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/case-studies">Case studies</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#tech-stack">Tech</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/til">TIL</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/contact">Contact</a>
+        </li>
+        <li>
+          <div class="nav__links--btn"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    
+<section class="section">
+  <div class="section__inner">
+    <p class="section__inner--subtitle section--center">
+      Today I Learned
+    </p>
+    <h1 class="section__inner--title section--center">Fire EventListener Once</h1>
+
+    <div class="case-study">
+      <div class="case-study--main til-post">
+
+        <div class="til-post--meta">
+          <time datetime="2026-07-20">20 July 2026</time>
+          
+						•
+            <div class="case-study--tags">
+              
+                
+                  <div class="case-study--tag">JS</div>
+                
+              
+            </div>
+          
+        </div>
+
+        <p>I've run into an issue a lot recently when working on a <em>kind-of</em> single-page application (SPA) where simply defining a click event listener on a recurring element causes it to be attached multiple times on each page navigation.</p>
+<p>I won't bore you with the specifics of how the <em>kind-of</em> SPA works under the hood, but suffice it to say that I <em>must</em> define the event listener on the wider page(s) instead of a separate file that's loaded once.</p>
+<p>I <em>could</em> check if the element already has an click event listener attached already and decide what to do based on that, or add a <code>removeEventListener</code> and avoid using anonymous functions in event listeners altogether so that they can be referenced later.</p>
+<p>But, I don't like those ideas as solutions - they're bulkier and less readable. There must be a simpler way, right?</p>
+<p>Luckily for us, <code>addEventListener</code> comes with an option that resolves this incredibly easily: <code>once</code>.</p>
+<p>By supplying <code>once</code> when defining an event listener, it'll fire exactly one time and then remove itself. Simple as that.</p>
+<pre class="language-js"><code class="language-js">button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token function">toggleDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">once</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>If you're wondering how and why this would even be a problem in the first palce, let me give you an example:</p>
+<p>Let's say I have a <code>click</code> event listener on a button that fires a <code>toggleDialog()</code> function. The function will first check if the dialog is open - if not, open the dialog; if so, close the dialog.</p>
+<p>Now imagine that the button has <strong>two</strong> event listeners attached to it, as per the SPA issue I've outlined above. The first event listener calls the <code>toggleDialog()</code> function, sees that the dialog isn't open yet, so opens it.</p>
+<p>But, the second event listener runs immediately, imperceptably fast, and upon calling <code>toggleDialog()</code> sees that the dialog is currently open, so closes it. To the user, you've clicked the button once and the dialog hasn't appeared... nightmare!</p>
+<hr>
+<p>Official docs: <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#once" target="_blank" rel="noopener noreferrer" class="link">MDN Event Listener 'once' Option</a></p>
+
+      </div>
+    </div>
+
+    <br/>
+
+		<a class="button" href="/til">Back to TIL</a>
+
+    <div id="contact" class="callout left-aligned">
+  <div class="callout--inner">
+    <h2 class="section__inner--title">
+      Let's grow your business,<br/> together
+    </h2>
+    <div class="callout--inner-content">
+      <p>
+        Whether you're after dev work on a brand new site, an updated design, or just have a
+        great business idea you want to get the ball rolling on, <strong>I'm here to help</strong>.
+        Let's collaborate together!
+      </p>
+      <a class="button" href="/contact">
+        Start a project
+      </a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+    <footer>
+  <section class="section">
+    <div class="section__inner">
+			<div>
+				<div class="icons">
+					<a target="_blank" href="https://www.upwork.com/freelancers/connorlaw" rel="noopener noreferrer">
+						<img height="32" width="32" alt="Upwork logo" class="social" src="/assets/images/logos/logo_upwork.svg">
+					</a>
+					<a target="_blank" href="https://uk.linkedin.com/in/connor-law-77b176159" rel="noopener noreferrer">
+						<img height="32" width="32" alt="Linkedin logo" class="social" src="/assets/images/logos/logo_linkedin.svg">
+					</a>
+				</div>
+				<p>&copy; 2026 &middot; Connor Law</p>
+			</div>
+			<div>
+				<div class="icons icons-single">
+					<a target="_blank" href="https://notbyai.fyi" rel="noopener noreferrer">
+						<img height="48" width="150" alt="Developed by a Human: Not by Ai" class="social" src="/assets/images/logos/notbyai.svg">
+					</a>
+				</div>
+				<p>Proudly hand-coded with &#9825;</p>
+			</div>
+    </div>
+  </section>
+</footer>
+
+
+    <div id="cookie-banner" class="cookie-banner callout">
+      <div class="callout--inner">
+        <p class="h3">Hey! Are you cool with cookies?</p>
+        <div>I'm using cookies to track how many people are visiting my site. That's all, I promise.</div>
+        <div class="right-aligned">
+          <a class="button button--secondary" data-cookie-consent="false" href="#" style="margin-right: 4px;">
+            I'd rather you didn't
+          </a>
+          <a class="button" data-cookie-consent="true" href="#">
+            Go for it!
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/script.js"></script>
+  </body>
+</html>
