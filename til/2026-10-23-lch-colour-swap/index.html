@@ -1,0 +1,296 @@
+<!doctype HTML>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Contrast-Color &amp; Alternatives | Connor Law</title>
+    <meta name="author" content="Connor Law">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="UK-based freelance web designer and developer.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon-180.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/apple-touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/apple-touch-icon-120.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/assets/images/logos/logo.svg">
+		<link rel="preload" href="/assets/fonts/rubik.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="/assets/fonts/rubik-italic.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="/assets/fonts/courier-prime.woff2" as="font" crossorigin="anonymous" />
+		
+  </head>
+
+  <body id="">
+    <nav class="nav">
+  <div class="nav__inner">
+    <a href="/"><img alt="Connor Law's logo" src="/assets/images/logos/logo.svg" /></a>
+    <div class="nav__links">
+      <ul>
+        <li>
+          <a class="nav__mob-item" href="/#about">About</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#services">Services</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#how-it-works">How it works</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/case-studies">Case studies</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#tech-stack">Tech</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/til">TIL</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/contact">Contact</a>
+        </li>
+        <li>
+          <div class="nav__links--btn"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="nav__mob-btn">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav__mob">
+      <div class="nav__mob-close">
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li>
+          <a class="nav__mob-item" href="/#about">About</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#services">Services</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#how-it-works">How it works</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/case-studies">Case studies</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/#tech-stack">Tech</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/til">TIL</a>
+        </li>
+        <li>
+          <a class="nav__mob-item" href="/contact">Contact</a>
+        </li>
+        <li>
+          <div class="nav__links--btn"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    
+<section class="section">
+  <div class="section__inner">
+    <p class="section__inner--subtitle section--center">
+      Today I Learned
+    </p>
+    <h1 class="section__inner--title section--center">Contrast-Color &amp; Alternatives</h1>
+
+    <div class="case-study">
+      <div class="case-study--main til-post">
+
+        <div class="til-post--meta">
+          <time datetime="2026-10-23">23 October 2026</time>
+          
+						•
+            <div class="case-study--tags">
+              
+                
+                  <div class="case-study--tag">CSS</div>
+                
+              
+            </div>
+          
+        </div>
+
+        <p>Recently I was building a style guide webpage when I reached the 'colours' section and began listing out the palette colours with some slick boxes containing the hex code of the colour sat on top of it, like so:</p>
+<div class="example-box-wrapper">
+	<div class="example-box" style="--box-colour:#003049">#003049</div>
+	<div class="example-box" style="--box-colour:#D62828">#D62828</div>
+	<div class="example-box" style="--box-colour:#F77F00">#F77F00</div>
+	<div class="example-box" style="--box-colour:#FCBF49">#FCBF49</div>
+	<div class="example-box" style="--box-colour:#EAE2B7">#EAE2B7</div>
+</div>
+<p>Can you see the problem straight away? <strong>The text is only legible on <em>some</em> of the boxes - unacceptable!</strong></p>
+<p>Of course we could just add a class to each of the darker boxes with a different text colour so that we can ensure there's plenty of contrast, but that's far too manual and outdated... so what other solutions are there?</p>
+<h2>Can CSS's <code>contrast-color()</code> help?</h2>
+<p>Absolutely! CSS's <code>contrast-color()</code> is a succinct and clear solution to this problem. It works by <strong>taking a colour and returning either white or black, depending on which will have better contrast</strong>, and will always try to meet WCAG AA minimum contrast.</p>
+<p>It's pretty easy to set up too, requiring just 2 lines of CSS code and a style variable per box:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">.box</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--box-colour<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">contrast-color</span><span class="token punctuation">(</span><span class="token function">var</span><span class="token punctuation">(</span>--box-colour<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">--box-colour</span><span class="token punctuation">:</span>#003049<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>#003049<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">--box-colour</span><span class="token punctuation">:</span>#D62828<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>#D62828<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+...</code></pre>
+<div class="example-box-wrapper">
+	<div class="example-box" style="--box-colour:#003049;color: contrast-color(var(--box-colour));">#003049</div>
+	<div class="example-box" style="--box-colour:#D62828;color: contrast-color(var(--box-colour));">#D62828</div>
+	<div class="example-box" style="--box-colour:#F77F00;color: contrast-color(var(--box-colour));">#F77F00</div>
+	<div class="example-box" style="--box-colour:#FCBF49;color: contrast-color(var(--box-colour));">#FCBF49</div>
+	<div class="example-box" style="--box-colour:#EAE2B7;color: contrast-color(var(--box-colour));">#EAE2B7</div>
+</div>
+<p>Perfect!! Sadly, at the time of implementing my style guide <code>contrast-color()</code> was only newly available, and I couldn't guarantee it'd work for all my users and their potentially-outdated browsers.</p>
+<h2>Are there alternatives to <code>contrast-color()</code>?</h2>
+<p>Enter the brilliant, pseudo-hacky solution from <a href="https://til.jakelazaroff.com/css/swap-between-black-and-white-text-based-on-background-color/" target="_blank" rel="noopener noreferrer" class="link">Jake Lazaroff</a> that utilises CSS's <code>lch()</code> colour function:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--box-colour<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">lch</span><span class="token punctuation">(</span>from <span class="token function">var</span><span class="token punctuation">(</span>--box-colour<span class="token punctuation">)</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token punctuation">(</span>49.44 - l<span class="token punctuation">)</span> * infinity<span class="token punctuation">)</span> 0 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<div class="example-box-wrapper">
+	<div class="example-box" style="--box-colour:#003049;color: lch(from var(--box-colour) calc((49.44 - l) * infinity) 0 0);">#003049</div>
+	<div class="example-box" style="--box-colour:#D62828;color: lch(from var(--box-colour) calc((49.44 - l) * infinity) 0 0);">#D62828</div>
+	<div class="example-box" style="--box-colour:#F77F00;color: lch(from var(--box-colour) calc((49.44 - l) * infinity) 0 0);">#F77F00</div>
+	<div class="example-box" style="--box-colour:#FCBF49;color: lch(from var(--box-colour) calc((49.44 - l) * infinity) 0 0);">#FCBF49</div>
+	<div class="example-box" style="--box-colour:#EAE2B7;color: lch(from var(--box-colour) calc((49.44 - l) * infinity) 0 0);">#EAE2B7</div>
+</div>
+<p>It's does the same job as <code>contrast-color()</code>, it's just a little more manual. Let's break it down:</p>
+<ul>
+<li>
+<p><code>lch</code> stands for light, chroma, hue.</p>
+</li>
+<li>
+<p>Usually the part at the start of the function, <code>from var(--box-colour)</code>, would tell the function to get the <code>l</code> (light), <code>c</code> (chroma) and <code>h</code> (hue) from that variable.</p>
+</li>
+<li>
+<p>But in our equation we're only interested in getting the <code>l</code> from the variable and hardcoding the <code>c</code> and <code>h</code> as '0', because those are irrelevant (we just want black or white, remember).</p>
+</li>
+<li>
+<p><strong>The magic happens in the <code>l</code> calc: <code>calc((49.44 - l) * infinity)</code> - we're essentially trying to get an answer that is either infinity or negative infinity. Why? Because the number is clamped by <code>lch</code> within between 0 &amp; 100, so infinity stops at 100 (white) and -infinity stops at 0 (black) in this context.</strong></p>
+</li>
+<li>
+<p>Basically, we're inverting the original box colour's lightness and multiplying it by infinity, and that gives us black or white for the <code>l</code>. Smart stuff!</p>
+</li>
+<li>
+<p>Why 49.44? The original creator (Devon Govett) throughly tested the equation with different RGB colours and this was the most accurate and stable integar to use for inverting the colour's lightness to ensure good contrast.</p>
+</li>
+</ul>
+<h3>Example 1: <code>#003049</code></h3>
+<ol>
+<li><code>#003049</code> has a lightness of 18.021.</li>
+<li>49.44 - 18.021 = 31.419</li>
+<li>31.419 * infinity = infinity (positive)</li>
+<li>infinity gets clamped at 100 (white)</li>
+</ol>
+<p>Result:</p>
+<div class="example-box-wrapper">
+	<div class="example-box" style="--box-colour:#003049;color: contrast-color(var(--box-colour));">#003049</div>
+</div>
+<h3>Example 2: <code>#FCBF49</code></h3>
+<ol>
+<li><code>#FCBF49</code> has a lightness of 81.517.</li>
+<li>49.44 - 81.517 = -32.077</li>
+<li>-32.077 * infinity = -infinity (negative)</li>
+<li>-infinity gets clamped at 0 (black)</li>
+</ol>
+<p>Result:</p>
+<div class="example-box-wrapper">
+	<div class="example-box" style="--box-colour:#FCBF49;color: contrast-color(var(--box-colour));">#FCBF49</div>
+</div>
+<p>Once you break it down, it makes a lot of sense! We just want infinity or -infinity, based on the background colour, which gives us black or white text... it's genius yet so simple!</p>
+<hr>
+<p>Official docs: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color" target="_blank" rel="noopener noreferrer" class="link">MDN contrast-color function</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch" target="_blank" rel="noopener noreferrer" class="link">MDN lch function</a></p>
+<style>
+	.example-box-wrapper {
+		display: inline-flex;
+		align-items: center;
+		flex-wrap: wrap;
+		border-radius: 1rem;
+		overflow: hidden;
+		margin-bottom: 1.25rem;
+	}
+	.example-box {
+		height: 5rem;
+		width: 5rem;
+		padding: 1rem;
+		background: var(--box-colour);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
+      </div>
+    </div>
+
+    <br/>
+
+		<a class="button" href="/til">Back to TIL</a>
+
+    <div id="contact" class="callout left-aligned">
+  <div class="callout--inner">
+    <h2 class="section__inner--title">
+      Let's grow your business,<br/> together
+    </h2>
+    <div class="callout--inner-content">
+      <p>
+        Whether you're after dev work on a brand new site, an updated design, or just have a
+        great business idea you want to get the ball rolling on, <strong>I'm here to help</strong>.
+        Let's collaborate together!
+      </p>
+      <a class="button" href="/contact">
+        Start a project
+      </a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+    <footer>
+  <section class="section">
+    <div class="section__inner">
+			<div>
+				<div class="icons">
+					<a target="_blank" href="https://www.upwork.com/freelancers/connorlaw" rel="noopener noreferrer">
+						<img height="32" width="32" alt="Upwork logo" class="social" src="/assets/images/logos/logo_upwork.svg">
+					</a>
+					<a target="_blank" href="https://uk.linkedin.com/in/connor-law-77b176159" rel="noopener noreferrer">
+						<img height="32" width="32" alt="Linkedin logo" class="social" src="/assets/images/logos/logo_linkedin.svg">
+					</a>
+				</div>
+				<p>&copy; 2026 &middot; Connor Law</p>
+			</div>
+			<div>
+				<div class="icons icons-single">
+					<a target="_blank" href="https://notbyai.fyi" rel="noopener noreferrer">
+						<img height="48" width="150" alt="Developed by a Human: Not by Ai" class="social" src="/assets/images/logos/notbyai.svg">
+					</a>
+				</div>
+				<p>Proudly hand-coded with &#9825;</p>
+			</div>
+    </div>
+  </section>
+</footer>
+
+
+    <div id="cookie-banner" class="cookie-banner callout">
+      <div class="callout--inner">
+        <p class="h3">Hey! Are you cool with cookies?</p>
+        <div>I'm using cookies to track how many people are visiting my site. That's all, I promise.</div>
+        <div class="right-aligned">
+          <a class="button button--secondary" data-cookie-consent="false" href="#" style="margin-right: 4px;">
+            I'd rather you didn't
+          </a>
+          <a class="button" data-cookie-consent="true" href="#">
+            Go for it!
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/script.js"></script>
+  </body>
+</html>
